@@ -1,7 +1,7 @@
-# **GAME TITLE** by TEAM_NAME
-## Course number: title
-## Semester year
-
+# **GAME TITLE** by Something Meta
+## Course number: 601
+## Fall 2025
+This is an edit to cause a merge conflict!
 _This README contains basic information about the project and its artifacts. If kept up to date, it will act as a primary dashboard for the project._
 
 ## Team Members
