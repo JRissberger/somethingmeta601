@@ -12,5 +12,5 @@ _This README contains basic information about the project and its artifacts. If 
 - [build/](build/) - Where to build to for GH pages to deploy it.
 
 ## Other Resources
-- [Task management Board](TBD)
-- [Google Project Doc](TBD)
+- [Task management Board]([TBD](https://somethingmeta.atlassian.net/jira/software/projects/SCRUM/boards/1?sprintStarted=true&atlOrigin=eyJpIjoiZDBiODAxNDJjYjhkNDA1M2ExNWMxNzdlOWVhZjJkMjEiLCJwIjoiaiJ9))
+- [Google Project Doc]([TBD](https://docs.google.com/document/d/19w_cN8Qvps9xNGG6h6ZuJLp9Ed6YaoNN3XjoVP_WPCM/edit?usp=sharing))
