@@ -5,7 +5,8 @@
 ## Fall 2025
 
 Hi im jack :3
-*This README contains basic information about the project and its artifacts. If kept up to date, it will act as a primary dashboard for the project.*
+This is an edit where when this is edited a merge conflict will occur!!
+_This README contains basic information about the project and its artifacts. If kept up to date, it will act as a primary dashboard for the project._
 
 ## Team Members
 
