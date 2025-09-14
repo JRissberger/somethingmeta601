@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private int moveSpeed = 5;
 
+    //Get/Set values
+    public Vector3 mousePosition { get; private set; } = Vector3.zero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,7 @@ public class PlayerController : MonoBehaviour
         //TODO: Camera movement
 
         //Current mouse position
-        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Input.mousePosition;
 
         /*TODO: Handling clickable objects
          * Either mousePosition needs to get passed to other classes
