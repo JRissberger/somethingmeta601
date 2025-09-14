@@ -22,10 +22,22 @@ public class InteractableObject : MonoBehaviour
         //Accessing mouse position
         mousePos = player.mousePosition;
 
-        //TODO: How to access click input? observer?
+        //Detects if the mouse is clicked
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log($"mouse position from other object: {mousePos}");
+        }
+
+        //Trying to use raycasting
+        //Have to convert 2d mouse position to 3d environment
+        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        RaycastHit rayHit;
+
+        //Check if the ray hits the object collider
+        //TODO: handle depth limits, don't want the player to be able to interact with something from far away
+        if (Physics.Raycast(ray, out rayHit))
+        {
+            Debug.Log("Hovering over object");
         }
 
     }
