@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     //Declaring variables
     private CharacterController controller;
     private int moveSpeed = 5;
+    public GameObject orientation;
+    public GameObject parentObjectToTurn;
 
     //Get/Set values
     public Vector3 mousePosition { get; private set; } = Vector3.zero;
@@ -31,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
         //Applies movement to controller
         controller.Move(movement * moveSpeed * Time.deltaTime);
-
+        parentObjectToTurn.transform.rotation = orientation.transform.rotation;
         //TODO: Camera movement
 
         //Current mouse position
