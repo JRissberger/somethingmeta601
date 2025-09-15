@@ -15,7 +15,7 @@ public class FlickerLampLight : MonoBehaviour
     // Update is called once per frame
     public void SwitchLight()
     {
-        Debug.Log("Behold! The light has been the flicked!");
+        
         if (isOn)
         {
             lampLight.enabled = false;
