@@ -39,7 +39,6 @@ public class InteractableObject : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         EventsWhenClicked.Invoke();
-                        Debug.Log($"Clicked object at {mousePos}");
                     }
 
                 }
@@ -48,6 +47,7 @@ public class InteractableObject : MonoBehaviour
 
     }
 
+    //Debug
     public void ConsolePrintClickedObject()
     {
         Debug.Log("You have clicked the " + this.gameObject.name + "!");
