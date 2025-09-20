@@ -16,6 +16,13 @@ public class Computer : MonoBehaviour
     //Gets a reference to the player for movement control
     PlayerController player = null;
 
+    //Sets up the dictionary with all the scene names and the codes that correspond to them
+    Dictionary<string, string> sceneCodes = new Dictionary<string, string>()
+    {
+        {"TEST1", "2DScene1"},
+        {"TEST2", "2DScene2"}
+    };
+
     private void Start()
     {
         //Find the playercontroller component via the tag on player
@@ -49,20 +56,15 @@ public class Computer : MonoBehaviour
         //Makes sure the component was gotten
         if (codeInput != null)
         {
-            Debug.Log(codeInput.text);
-            //Valid Codes
-            switch (codeInput.text)
+            //Tries to load the corresponding scene
+            try
             {
-                //Loads the corresponding scene
-                case "TEST1":
-                    SceneManager.LoadScene("2DScene1");
-                    break;
-                case "TEST2":
-                    SceneManager.LoadScene("2DScene2");
-                    break;
-                default:
-                    Debug.Log("Invalid code entered");
-                    break;
+                SceneManager.LoadScene(sceneCodes[codeInput.text]);
+            }
+            //TODO: response to player for invalid code
+            catch
+            {
+                Debug.Log("Invalid code");
             }
         }
         else
