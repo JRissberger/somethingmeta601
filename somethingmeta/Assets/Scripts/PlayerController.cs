@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private int moveSpeed = 5;
     public GameObject orientation;
     public GameObject parentObjectToTurn;
+
+    //Used for notes
+    [SerializeField] private UnityEvent notes;
+    [SerializeField] KeyCode notesKey = KeyCode.N;
 
     //Get/Set values
     public Vector3 mousePosition { get; private set; } = Vector3.zero;
@@ -27,6 +32,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Notes key
+        if (Input.GetKeyDown(notesKey))
+        {
+            notes.Invoke();
+        }
+
         //Movement controls, user must not be in a menu/inspecting an object
         if (canMove)
         {
