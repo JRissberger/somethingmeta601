@@ -308,7 +308,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7021633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779893191}
+        m_TargetAssemblyTypeName: Notes, Assembly-CSharp
+        m_MethodName: back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7021633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2495,7 +2507,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 683486554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779893191}
+        m_TargetAssemblyTypeName: Notes, Assembly-CSharp
+        m_MethodName: nextNote
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &683486554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3198,7 +3222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 912695841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779893191}
+        m_TargetAssemblyTypeName: Notes, Assembly-CSharp
+        m_MethodName: saveNote
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &912695841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,7 +4115,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1103918757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779893191}
+        m_TargetAssemblyTypeName: Notes, Assembly-CSharp
+        m_MethodName: previousNote
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1103918757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8097,7 +8145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1958508380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779893191}
+        m_TargetAssemblyTypeName: Notes, Assembly-CSharp
+        m_MethodName: deleteNote
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1958508380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8218,7 +8278,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1993457075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779893191}
+        m_TargetAssemblyTypeName: Notes, Assembly-CSharp
+        m_MethodName: createNote
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1993457075
 MonoBehaviour:
   m_ObjectHideFlags: 0
