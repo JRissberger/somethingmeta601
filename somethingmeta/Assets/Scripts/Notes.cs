@@ -38,26 +38,34 @@ public class Notes : MonoBehaviour
     private TMP_InputField textInput;
     private TMP_Text textDisplay;
 
+    //Reference to player to lock movement
+    private PlayerController player;
+
     void Start()
     {
         //Retrieve references to all the UI elements
-        nextButton = notesMenu.transform.Find("NotesMenu/Next");
-        previousButton = notesMenu.transform.Find("NotesMenu/Previous");
-        createButton = notesMenu.transform.Find("NotesMenu/New");
-        deleteButton = notesMenu.transform.Find("NotesMenu/Delete");
-        saveButton = notesMenu.transform.Find("NotesMenu/Save");
-        backButton = notesMenu.transform.Find("NotesMenu/Back");
-        textField = notesMenu.transform.Find("NotesMenu/NoteContent");
-        inputField = notesMenu.transform.Find("NotesMenu/NotesInput");
+        nextButton = notesMenu.transform.Find("Next");
+        previousButton = notesMenu.transform.Find("Previous");
+        createButton = notesMenu.transform.Find("New");
+        deleteButton = notesMenu.transform.Find("Delete");
+        saveButton = notesMenu.transform.Find("Save");
+        backButton = notesMenu.transform.Find("Back");
+        textField = notesMenu.transform.Find("NoteContent");
+        inputField = notesMenu.transform.Find("NotesInput");
 
         textInput = inputField.GetComponent<TMP_InputField>();
         textDisplay = textField.GetComponent<TMP_Text>();
+
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
     //Toggle notes menu
     public void NoteToggle()
     {
         if (!notesActive)
         {
+            //Stop player movement
+            player.canMove = false;
+
             //Update the text field with the current note
             notesMenu.SetActive(true);
             notesActive = true;
@@ -79,6 +87,8 @@ public class Notes : MonoBehaviour
         }
         else
         {
+            //reenable player movement
+            player.canMove = true;
             notesMenu.SetActive(false);
             notesActive = false;
         }

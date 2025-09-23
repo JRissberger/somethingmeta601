@@ -33,10 +33,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Notes key
-        if (Input.GetKeyDown(notesKey))
-        {
-            notes.Invoke();
-        }
+        //if (Input.GetKeyDown(notesKey))
+        //{
+        //    notes.Invoke();
+        //}
 
         //Movement controls, user must not be in a menu/inspecting an object
         if (canMove)
