@@ -1963,7 +1963,7 @@ RectTransform:
   m_Children:
   - {fileID: 1237384462}
   - {fileID: 101493946}
-  m_Father: {fileID: 779893189}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3094,7 +3094,6 @@ Transform:
   - {fileID: 1615597696}
   - {fileID: 889349104}
   - {fileID: 1056773086}
-  - {fileID: 530662485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &779893190
@@ -3135,7 +3134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3825ac29ebd05d142a85b32f9d12d225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesMenu: {fileID: 530662484}
+  notesMenu: {fileID: 1237384461}
 --- !u!1 &838769627
 GameObject:
   m_ObjectHideFlags: 0
@@ -9255,3 +9254,4 @@ SceneRoots:
   - {fileID: 779893189}
   - {fileID: 147784231}
   - {fileID: 556428981}
+  - {fileID: 530662485}
