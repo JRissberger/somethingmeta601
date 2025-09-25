@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
 
     //Used for notes
     [SerializeField] private UnityEvent notes;
-    [SerializeField] KeyCode notesKey = KeyCode.N;
 
     //Get/Set values
     public Vector3 mousePosition { get; private set; } = Vector3.zero;
@@ -32,11 +31,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Notes key
-        //if (Input.GetKeyDown(notesKey))
-        //{
-        //    notes.Invoke();
-        //}
 
         //Movement controls, user must not be in a menu/inspecting an object
         if (canMove)
@@ -57,13 +51,6 @@ public class PlayerController : MonoBehaviour
 
         //Current mouse position
         mousePosition = Input.mousePosition;
-
-        //Mostly debug at this point. Remove?
-        if (Input.GetMouseButtonDown(0))
-        {
-            //XYZ order
-            //Debug.Log($"Mouse position: {mousePosition}");
-        }
 
     }
 }
