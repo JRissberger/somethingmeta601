@@ -1,6 +1,6 @@
 ﻿//
 title: BeastHunterIntroduction
-position: -49,-37
+position: -511,246
 ---
 Hunter: Intro
 ===
@@ -8,20 +8,44 @@ Hunter: Intro
 
 //
 title: BeastHunterIncorrect
-position: 267,-139
+position: 215,-48
 ---
 Hunter: No. No, that can't be right...
 ===
 
 //
 title: BeastHunterEyes
-position: 193,79
+position: -269,249
 ---
 Hunter: EYES
 ===
+
+title: BeastHunterEyesOptions
+position: -27,253
+---
+Hunter: EYES
+===
+
 title: BeastHunterClaws
-position: -78,234
+position: 202,249
 ---
 Hunter: Claws Question!
 ===
 
+title: BeastHunterClawsOptions
+position: 445,245
+---
+Hunter: EYES
+===
+
+title: BeastHunterLocation
+position: 696,243
+---
+Hunter: EYES
+===
+
+title: BeastHunterLocationOptions
+position: 935,240
+---
+Hunter: EYES
+===
