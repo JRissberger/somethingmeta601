@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     //TODO: train of thought here is to edit this from other scripts as needed
     public bool canMove { get; set; } = true;
 
+    //Use this to prevent the player from starting multiple interactions at once 
+    //ie activating computer while inspecting an object
+    public bool canInteract { get; set; } = true;
+
     // Start is called before the first frame update
     void Start()
     {

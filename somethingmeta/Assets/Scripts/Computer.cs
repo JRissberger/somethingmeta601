@@ -32,12 +32,17 @@ public class Computer : MonoBehaviour
     //Enables the computer UI
     public void ComputerOn()
     {
-        //Disable player movement
-        player.canMove = false;
+        //Only turn on computer if the player isn't already interacting with something
+        if (player.canInteract)
+        {
+            //Disable player movement
+            player.canMove = false;
+            player.canInteract = false;
 
-        //Turns on screen
-        //I'd like to have this tied to the actual screen pos if possible, resolution concerns right now though
-        computerScreen.SetActive(true);
+            //Turns on screen
+            //I'd like to have this tied to the actual screen pos if possible, resolution concerns right now though
+            computerScreen.SetActive(true);
+        }
     }
 
     //Disables computer UI
@@ -45,6 +50,7 @@ public class Computer : MonoBehaviour
     {
         //Enable player movement
         player.canMove = true;
+        player.canInteract = true;
 
         //Turns off screen
         computerScreen.SetActive(false);
