@@ -5,12 +5,15 @@ using UnityEngine;
 public class FlagManager : MonoBehaviour
 {
 
-    [SerializeField] private FlagManager instance;
+    public static FlagManager instance;
+    enum puzzleFlags
+    {
+        beastHunter,
+        none
+    }
 
     #region BeastHunterFlags_BH
-    public bool bh_eyesNoticed;
-    public bool bh_clawsNoticed;
-    public bool bh_behindYou;
+    public Flag[] beastHunterFlags;
     #endregion
 
     #region Puzzle2Flags_P2F

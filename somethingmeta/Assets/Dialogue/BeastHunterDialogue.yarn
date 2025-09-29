@@ -2,61 +2,86 @@
 title: BeastHunterIntroduction
 position: -511,246
 ---
-<<declare $bh_eyesNoticed = false>>
-<<declare $bh_clawsNoticed = false>>
-<<declare $bh_behindYou = false>>
+Hunter: You're in some dangerous territory here, kiddo.
+Hunter: There's a beast that hunts in these here woods. Not a good place for a kid to be running around.
+Hunter: I've seen it - brief flashes, at least. But I never get a good look at the thing. It'd be good to know exactly what it looks like.
+Hunter: Would tell us if it has any weaknesses, at least.
+Hunter: It would be best if someone who <b>got a good look at the beast could describe it.</b>
+Hunter: ...
+Hunter: You know someone who has? Good. I have some information I need to hunt it.
 
-Hunter: Intro
-
-<<jump BeastHunterEyes>>
-===
-
-
-//
-title: BeastHunterIncorrect
-position: 215,-48
----
-Hunter: No. No, that can't be right...
-===
-
-//
-title: BeastHunterEyes
-position: -269,249
----
-Hunter: EYES
+<<jump BeastHunterEyesOptions>>
 ===
 
 title: BeastHunterEyesOptions
 position: -27,253
 ---
--> 2 Eyes.
-Hunter: Cringe
--> 4 Eyes.
-Hunter: Cringe
--> 6 Eyes.
-
+Hunter: How many eyes does the beast have?
+<<SetFlag "bh_eyesNoticed" true>>
+    -> 2 Eyes.
+        Hunter: No, no, that can't be right...
+    -> 4 Eyes.
+        Hunter: No, no, that can't be right...
+    -> 6 Eyes.
+        Hunter: No, no, that can't be right...
+    -> A Million eyes. <<if GetFlag("bh_eyesNoticed") == true >>
+        Hunter: Good. That's one step closer.
+        Hunter: Now, I need to know a few more things.
+        <<jump BeastHunterClaws>>
 ===
 
 title: BeastHunterClaws
 position: 202,249
 ---
-Hunter: Claws Question!
-===
-
-title: BeastHunterClawsOptions
-position: 445,245
----
-Hunter: EYES
+Hunter: How many claws does the beast have?
+<<SetFlag "bh_clawsNoticed" true>>
+-> No Claws.
+    Hunter: No, no, that can't be right...
+-> 2 Claws.
+    Hunter: No, no, that can't be right...
+-> 4 Claws.
+    Hunter: No, no, that can't be right...
+-> 9 Claws. <<if GetFlag("bh_clawsNoticed") == true>>
+    Hunter: Good. We're almost there.
+    Hunter: Now, I just need to know...
+    <<jump BeastHunterLocation>>
 ===
 
 title: BeastHunterLocation
 position: 696,243
 ---
-Hunter: EYES
+Hunter: Where is the beast?
+-> Nowhere.
+    -> Behind You.
+        <<jump BeastHunterEnd>>
+    -> Gone.
+        -> Behind You.
+            <<jump BeastHunterEnd>>
+        -> Behind You.
+            <<jump BeastHunterEnd>>
+        -> Behind You.
+            <<jump BeastHunterEnd>>
+    -> Behind You.
+        <<jump BeastHunterEnd>>
+-> Gone.
+    -> Nowhere.
+        -> Behind You.
+            <<jump BeastHunterEnd>>
+        -> Behind You.
+            <<jump BeastHunterEnd>>
+        -> Behind You.
+            <<jump BeastHunterEnd>>
+    -> Behind You.
+        <<jump BeastHunterEnd>>
+    -> Behind You.
+        <<jump BeastHunterEnd>>
+-> Behind You.
+    <<jump BeastHunterEnd>>
 ===
 
-title: BeastHunterLocationOptions
+title: BeastHunterEnd
 position: 935,240
 ---
-Hunter: EYES
+Hunter: What? No-
+<<3DScene>>
 ===
