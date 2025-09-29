@@ -2,7 +2,13 @@
 title: BeastHunterIntroduction
 position: -511,246
 ---
+<<declare $bh_eyesNoticed = false>>
+<<declare $bh_clawsNoticed = false>>
+<<declare $bh_behindYou = false>>
+
 Hunter: Intro
+
+<<jump BeastHunterEyes>>
 ===
 
 
@@ -23,7 +29,12 @@ Hunter: EYES
 title: BeastHunterEyesOptions
 position: -27,253
 ---
-Hunter: EYES
+-> 2 Eyes.
+Hunter: Cringe
+-> 4 Eyes.
+Hunter: Cringe
+-> 6 Eyes.
+
 ===
 
 title: BeastHunterClaws
