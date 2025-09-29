@@ -7,7 +7,7 @@ using Yarn;
 
 public class FlagManager : MonoBehaviour
 {
-
+    //unique self, keeps track and makes sure there is only one instance throughout the project.
     public static FlagManager instance;
     enum puzzleFlags
     {
@@ -34,13 +34,21 @@ public class FlagManager : MonoBehaviour
 
     #region Puzzle6Flags_P6F
     #endregion
-
+    
+    /// <summary>
+    /// Sets all currentNodes for dialogue, creates a Singleton.
+    /// </summary>
     private void Awake()
     {
         bh_currentNode = "BeastHunterIntroduction";
+        //any new first nodes for dialogue should be added here!
         CreateSingleton();
     }
 
+    /// <summary>
+    /// Sets the singleton to self, and makes it so this script transfers between scenes. In the case
+    /// that there is another singleton in this scene, it will delete it.
+    /// </summary>
     void CreateSingleton()
     {
         if (instance == null)
@@ -51,6 +59,9 @@ public class FlagManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    /// <summary>
+    /// Scene Transition - [ takes you to the office, and ] takes you to the dialogue testing scene.
+    /// </summary>
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftBracket))
