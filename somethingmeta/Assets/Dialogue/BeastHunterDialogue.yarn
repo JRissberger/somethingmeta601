@@ -52,30 +52,30 @@ position: 696,243
 ---
 Hunter: Where is the beast?
 -> Nowhere.
-    -> Behind You.
+    -> Behind Me.
         <<jump BeastHunterEnd>>
     -> Gone.
-        -> Behind You.
+        -> Behind Me.
             <<jump BeastHunterEnd>>
-        -> Behind You.
+        -> Behind Me.
             <<jump BeastHunterEnd>>
-        -> Behind You.
+        -> Behind Me.
             <<jump BeastHunterEnd>>
-    -> Behind You.
+    -> Behind Me.
         <<jump BeastHunterEnd>>
 -> Gone.
     -> Nowhere.
-        -> Behind You.
+        -> Behind Me.
             <<jump BeastHunterEnd>>
-        -> Behind You.
+        -> Behind Me.
             <<jump BeastHunterEnd>>
-        -> Behind You.
+        -> Behind Me.
             <<jump BeastHunterEnd>>
-    -> Behind You.
+    -> Behind Me.
         <<jump BeastHunterEnd>>
-    -> Behind You.
+    -> Behind Me.
         <<jump BeastHunterEnd>>
--> Behind You.
+-> Behind Me.
     <<jump BeastHunterEnd>>
 ===
 

@@ -9,19 +9,35 @@ using Yarn.Unity.Legacy;
 public class BeastHunterFlags : MonoBehaviour
 {
     [SerializeField] private DialogueRunner dialogue;
-    
+    [SerializeField] private Dialogue test;
     [SerializeField] private string levelLoaded;
+    private string currentNode;
     private static Flag[] allFlags;
 
     [YarnCommand("SetLatestNode")]
    public void SetLatestNode()
     {
         dialogue.onNodeStart.AddListener(SetNewStartNode);
-        
+    }
+
+
+    public void SetNewStartNode(string nodeName)
+    {
+        currentNode = nodeName;
+        FlagManager.instance.bh_currentNode = currentNode;
+        dialogue.startNode = nodeName;
+
     }
 
     private void Awake()
     {
+
+        SetLatestNode();
+        Debug.Log(FlagManager.instance.bh_currentNode);
+        dialogue.startNode = FlagManager.instance.bh_currentNode;
+
+
+
         allFlags = FlagManager.instance.beastHunterFlags;
         // Create a new command called 'camera_look', which looks at a target. 
         // Note how we're listing 'GameObject' as the parameter type.
@@ -30,17 +46,16 @@ public class BeastHunterFlags : MonoBehaviour
             SetFlag); // the method to run
     }
 
-    private void SetNewStartNode(string nodeName)
-    {
-        dialogue.startNode = nodeName;
-        
-    }
-
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            dialogue.StartDialogue(levelLoaded);
+            dialogue.StartDialogue(currentNode);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            //levelLoaded = dialogue.
+            dialogue.Stop();
         }
     }
 

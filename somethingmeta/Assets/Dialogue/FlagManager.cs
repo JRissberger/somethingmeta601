@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Yarn;
 
 public class FlagManager : MonoBehaviour
 {
@@ -14,6 +17,7 @@ public class FlagManager : MonoBehaviour
 
     #region BeastHunterFlags_BH
     public Flag[] beastHunterFlags;
+    public string bh_currentNode = "BeastHunterIntroduction";
     #endregion
 
     #region Puzzle2Flags_P2F
@@ -33,6 +37,7 @@ public class FlagManager : MonoBehaviour
 
     private void Awake()
     {
+        bh_currentNode = "BeastHunterIntroduction";
         CreateSingleton();
     }
 
@@ -44,5 +49,17 @@ public class FlagManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene("Office");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+           SceneManager.LoadScene("DialogueTesting");
+        }
     }
 }
