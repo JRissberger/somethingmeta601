@@ -53,11 +53,11 @@ public class FlagManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.LeftBracket))
         {
             SceneManager.LoadScene("Office");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.RightBracket))
         {
            SceneManager.LoadScene("DialogueTesting");
         }

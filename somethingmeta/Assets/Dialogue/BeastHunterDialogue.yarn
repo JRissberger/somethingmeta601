@@ -17,7 +17,6 @@ title: BeastHunterEyesOptions
 position: -27,253
 ---
 Hunter: How many eyes does the beast have?
-<<SetFlag "bh_eyesNoticed" true>>
     -> 2 Eyes.
         Hunter: No, no, that can't be right...
     -> 4 Eyes.
@@ -34,7 +33,6 @@ title: BeastHunterClaws
 position: 202,249
 ---
 Hunter: How many claws does the beast have?
-<<SetFlag "bh_clawsNoticed" true>>
 -> No Claws.
     Hunter: No, no, that can't be right...
 -> 2 Claws.
