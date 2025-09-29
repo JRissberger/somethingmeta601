@@ -9,11 +9,13 @@ public class FlagManager : MonoBehaviour
 {
     //unique self, keeps track and makes sure there is only one instance throughout the project.
     public static FlagManager instance;
-    enum puzzleFlags
-    {
-        beastHunter,
-        none
-    }
+
+    //may become useful later, leaving this here for now
+    //enum puzzleFlags
+    //{
+    //    beastHunter,
+    //    none
+    //}
 
     #region BeastHunterFlags_BH
     public Flag[] beastHunterFlags;
