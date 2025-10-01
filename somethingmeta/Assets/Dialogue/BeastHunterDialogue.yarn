@@ -55,6 +55,7 @@ title: BeastHunterLocation
 position: 696,243
 ---
 Hunter: Where is the beast?
+<<SetFlag "bh_beastHunterDead" true>>
 -> Nowhere.
     -> Behind Me.
         <<jump BeastHunterEnd>>

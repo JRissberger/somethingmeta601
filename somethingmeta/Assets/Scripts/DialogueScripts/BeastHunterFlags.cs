@@ -90,6 +90,7 @@ public class BeastHunterFlags : MonoBehaviour
     {
         for (int i = 0; i < allFlags.Length; i++)
         {
+            Debug.Log(allFlags[i]); 
             if (allFlags[i].name.ToLower() == flag.ToLower())
             {
                 allFlags[i].SetActivity(value);
@@ -126,7 +127,7 @@ public class BeastHunterFlags : MonoBehaviour
     [YarnCommand("3DScene")]
     public static void SwitchScene()
     {
-        SceneManager.LoadScene("Office = Unique Interactions");
+        SceneManager.LoadScene("Office - Unique Interactions");
     }
 
 
