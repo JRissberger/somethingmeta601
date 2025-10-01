@@ -56,10 +56,23 @@ public class BeastHunterFlags : MonoBehaviour
         dialogue.AddCommandHandler<string, bool>(
             "SetFlag",     // the name of the command
             SetFlag); // the method to run
+        for (int i = 0; i < allFlags.Length; i++)
+        {
+            Debug.Log(allFlags[i]);
+            if (allFlags[i].name == "bh_beastHunterDead" && allFlags[i].GetActivity() == true)
+            {
+                dialogue.startNode = "BeastHunterDead";
+            }
+        }
+       
+
+
     }
 
     public void Update()
     {
+        
+
         //For testing purposes - comment this out when it is no longer necessary.
 
         //when 0 is pressed, the dialogue starts again.
@@ -121,7 +134,7 @@ public class BeastHunterFlags : MonoBehaviour
     [YarnCommand("3DScene")]
     public static void SwitchScene()
     {
-        SceneManager.LoadScene("Office");
+        SceneManager.LoadScene("Office = Unique Interactions");
     }
 
 
