@@ -124,4 +124,5 @@ public class BeastHunterFlags : MonoBehaviour
         SceneManager.LoadScene("Office");
     }
 
+
 }

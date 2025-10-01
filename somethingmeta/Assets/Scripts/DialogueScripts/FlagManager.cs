@@ -68,7 +68,7 @@ public class FlagManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftBracket))
         {
-            SceneManager.LoadScene("Office");
+            SceneManager.LoadScene("Office - Unique Interactions");
         }
         if (Input.GetKeyDown(KeyCode.RightBracket))
         {
