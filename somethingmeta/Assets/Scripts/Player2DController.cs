@@ -8,7 +8,7 @@ public class Player2DController : MonoBehaviour
     public bool canMove { get; set; } = true;
 
     //Uses a rigidbody bc it's better for 2d movement feel
-    private Rigidbody controller;
+    private Rigidbody2D controller;
 
     private float moveSpeed = 3;
 
@@ -16,7 +16,7 @@ public class Player2DController : MonoBehaviour
     void Start()
     {
         //Get controller
-        controller = GetComponent<Rigidbody>();
+        controller = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
