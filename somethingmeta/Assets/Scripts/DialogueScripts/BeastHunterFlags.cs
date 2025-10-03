@@ -58,7 +58,6 @@ public class BeastHunterFlags : MonoBehaviour
             SetFlag); // the method to run
         
 
-
     }
 
     public void Update()

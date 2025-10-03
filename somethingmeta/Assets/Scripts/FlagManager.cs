@@ -35,7 +35,11 @@ public class FlagManager : MonoBehaviour
 
     #region Puzzle6Flags_P6F
     #endregion
-    
+
+    #region OfficeFlags
+    public Flag[] officeFlags;
+    #endregion
+
     /// <summary>
     /// Sets all currentNodes for dialogue, creates a Singleton.
     /// </summary>

@@ -16,14 +16,10 @@ public class ForceShutoff : MonoBehaviour
     //Transitions the scene back to the 3D office
     public void forceShutoff()
     {
-        SceneManager.LoadScene(sceneName);
-        setPlayerPosition();
-    }
+        //Update the force shutoff flag
+        FlagManager.instance.officeFlags[0].SetActivity(true);
 
-    //Sets the player in the 3D scene to be in front of the computer
-    public void setPlayerPosition()
-    {
-        //Get a reference to the player
+        SceneManager.LoadScene(sceneName);
     }
 
 }
