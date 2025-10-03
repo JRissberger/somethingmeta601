@@ -127,7 +127,7 @@ public class BeastHunterFlags : MonoBehaviour
     [YarnCommand("3DScene")]
     public static void SwitchScene()
     {
-        SceneManager.LoadScene("Office - Unique Interactions");
+        SceneManager.LoadScene("Office");
     }
 
 
