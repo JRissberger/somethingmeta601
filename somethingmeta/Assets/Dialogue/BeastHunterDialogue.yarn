@@ -1,0 +1,101 @@
+﻿//
+title: BeastHunterIntroduction
+position: -511,246
+---
+Hunter: You're in some dangerous territory here, kiddo.
+Hunter: There's a beast that hunts in these here woods. Not a good place for a kid to be running around.
+Hunter: I've seen it - brief flashes, at least. But I never get a good look at the thing. It'd be good to know exactly what it looks like.
+Hunter: Would tell us if it has any weaknesses, at least.
+Hunter: It would be best if someone who <b>got a good look at the beast could describe it.</b>
+Hunter: ...
+Hunter: You know someone who has? Good. I have some information I need to hunt it.
+
+<<jump BeastHunterEyesOptions>>
+===
+
+title: BeastHunterEyesOptions
+position: -27,253
+---
+Hunter: How many eyes does the beast have?
+    -> 2 Eyes.
+        Hunter: No, no, that can't be right...
+        <<3DScene>>
+    -> 4 Eyes.
+        Hunter: No, no, that can't be right...
+        <<3DScene>>
+    -> 6 Eyes.
+        Hunter: No, no, that can't be right...
+        <<3DScene>>
+    -> A Million eyes. <<if GetFlag("bh_eyesNoticed") == true >>
+        Hunter: Good. That's one step closer.
+        Hunter: Now, I need to know a few more things.
+        <<jump BeastHunterClaws>>
+===
+
+title: BeastHunterClaws
+position: 202,249
+---
+Hunter: How many claws does the beast have?
+-> No Claws.
+    Hunter: No, no, that can't be right...
+    <<3DScene>>
+-> 2 Claws.
+    Hunter: No, no, that can't be right...
+    <<3DScene>>
+-> 4 Claws.
+    Hunter: No, no, that can't be right...
+    <<3DScene>>
+-> 9 Claws. <<if GetFlag("bh_clawsNoticed") == true>>
+    Hunter: Good. We're almost there.
+    Hunter: Now, I just need to know...
+    <<jump BeastHunterLocation>>
+===
+
+title: BeastHunterLocation
+position: 696,243
+---
+Hunter: Where is the beast?
+<<SetFlag "bh_beastHunterDead" true>>
+-> Nowhere.
+    -> Behind Me.
+        <<jump BeastHunterEnd>>
+    -> Gone.
+        -> Behind Me.
+            <<jump BeastHunterEnd>>
+        -> Behind Me.
+            <<jump BeastHunterEnd>>
+        -> Behind Me.
+            <<jump BeastHunterEnd>>
+    -> Behind Me.
+        <<jump BeastHunterEnd>>
+-> Gone.
+    -> Nowhere.
+        -> Behind Me.
+            <<jump BeastHunterEnd>>
+        -> Behind Me.
+            <<jump BeastHunterEnd>>
+        -> Behind Me.
+            <<jump BeastHunterEnd>>
+    -> Behind Me.
+        <<jump BeastHunterEnd>>
+    -> Behind Me.
+        <<jump BeastHunterEnd>>
+-> Behind Me.
+    <<jump BeastHunterEnd>>
+===
+
+title: BeastHunterEnd
+position: 935,240
+---
+Hunter: What? No-
+
+<<3DScene>>
+===
+
+title: BeastHunterDead
+position: 935,240
+---
+The hunter is dead on the ground.
+
+<<3DScene>>
+===

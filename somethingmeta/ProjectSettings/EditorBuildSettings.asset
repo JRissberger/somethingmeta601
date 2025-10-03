@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 03c7ef321a334534aa712ba1213b28c7
+  - enabled: 1
+    path: Assets/Scenes/DialogueTesting.unity
+    guid: 04edf0f73a62ecd478ceae569c497b53
+  - enabled: 1
+    path: Assets/Scenes/Office - Unique Interactions.unity
+    guid: 137cea437b399244294e664d8162d9ec
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -20,7 +20,8 @@ public class Computer : MonoBehaviour
     Dictionary<string, string> sceneCodes = new Dictionary<string, string>()
     {
         {"TEST1", "2DScene1"},
-        {"TY4P", "Credits"}
+        {"TY4P", "Credits"},
+        {"S1S4H7SP", "DialogueTesting"}
     };
 
     private void Start()
