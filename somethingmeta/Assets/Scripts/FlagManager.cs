@@ -16,6 +16,8 @@ public class FlagManager : MonoBehaviour
     //    none
     //}
 
+    //For the love of god refactor this to be a dictionary, why did you not do that before josh
+
     #region BeastHunterFlags_BH
     public Flag[] beastHunterFlags;
     public string bh_currentNode = "BeastHunterIntroduction";

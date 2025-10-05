@@ -10,6 +10,10 @@ public class BeastHunterFlags : MonoBehaviour
 {
     //The dialogue runner
     [SerializeField] private DialogueRunner dialogue;
+    [SerializeField] private Flag officeShutDown;
+    [SerializeField] private Flag beastHunterDead;
+    [SerializeField] private GameObject beastHunterSprite;
+    [SerializeField] private GameObject beastHunteDeadrSprite;
     
     //The node that the dialogue will restart from
     private string currentNode;
@@ -44,10 +48,13 @@ public class BeastHunterFlags : MonoBehaviour
     {
 
         SetLatestNode();
-        Debug.Log(FlagManager.instance.bh_currentNode);
         //same thing as SetNewStartNode, but on awake. NOTE that a default node is within the FlagManager.
         dialogue.startNode = FlagManager.instance.bh_currentNode;
 
+        if (beastHunterDead.GetActivity() == true)
+        {
+            dialogue.startNode = "BeastHunterDead";
+        }
 
         //sets allFlags to BeastHunterFlags from the FlagManager
         allFlags = FlagManager.instance.beastHunterFlags;
@@ -58,6 +65,18 @@ public class BeastHunterFlags : MonoBehaviour
             SetFlag); // the method to run
         
 
+    }
+
+    private void Start()
+    {
+        officeShutDown.SetActivity(true);
+        if (beastHunterDead.GetActivity() == true)
+        {
+            beastHunterSprite.SetActive(false);
+            beastHunteDeadrSprite.SetActive(true);
+            
+        }
+        
     }
 
     public void Update()
