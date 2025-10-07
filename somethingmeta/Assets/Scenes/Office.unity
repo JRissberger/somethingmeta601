@@ -3062,8 +3062,6 @@ GameObject:
   - component: {fileID: 661067583}
   - component: {fileID: 661067582}
   - component: {fileID: 661067581}
-  - component: {fileID: 661067585}
-  - component: {fileID: 661067584}
   m_Layer: 0
   m_Name: Floppy Disk
   m_TagString: Interactible
@@ -3160,47 +3158,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661067579}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &661067584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661067579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93556ac29d3f51e438fd3493a5b49fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInspect: {fileID: 661067580}
-  inspectUI: {fileID: 873259055}
---- !u!114 &661067585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661067579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventsWhenClicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 661067584}
-        m_TargetAssemblyTypeName: InspectSystem, Assembly-CSharp
-        m_MethodName: startInspection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &667628745
 GameObject:
   m_ObjectHideFlags: 0
