@@ -18,9 +18,6 @@ public class InspectSystem : MonoBehaviour
     //Checks if inspection is happening
     private bool isInspecting = false;
 
-    //Camera holder reference (camera holder is the part that moves)
-    private GameObject camera = null;
-
     //Player reference (lock movement)
     private PlayerController player = null;
 
@@ -30,7 +27,6 @@ public class InspectSystem : MonoBehaviour
 
     private void Start()
     {
-        camera = GameObject.FindWithTag("CameraHolder");
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
         //Saves the original object position and rotation
@@ -88,7 +84,7 @@ public class InspectSystem : MonoBehaviour
             player.canInteract = false;
 
             //Centers the object in front of the camera
-            objectToInspect.position = camera.transform.position + camera.transform.forward * 1f;
+            objectToInspect.position = player.transform.position + player.transform.forward * 1f;
 
             //Display inspect UI
             inspectUI.SetActive(true);
