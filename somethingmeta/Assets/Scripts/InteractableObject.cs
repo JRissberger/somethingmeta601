@@ -33,7 +33,7 @@ public class InteractableObject : MonoBehaviour
         if (Physics.Raycast(ray.origin, ray.direction, out rayHit, 5f))
         {
             //Debug.Log("Hovering over object");
-            if (rayHit.collider.tag == "Interactible" && rayHit.collider.gameObject == this.gameObject)
+            if (rayHit.collider.gameObject == this.gameObject)
                 {
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
