@@ -15,6 +15,9 @@ public class InventoryManager : MonoBehaviour
     //Inventory array
     private GameObject[] inventoryArray = new GameObject[4];
 
+    //Buttons corresponding to the inventory slots
+    [SerializeField] private Button[] inventoryButtons = new Button[4];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +62,20 @@ public class InventoryManager : MonoBehaviour
                 inventoryArray[i] = item;
 
                 //TODO: update button icon here
+                //Get the sprite from the item
+                SpriteRenderer itemSprite = item.GetComponent<SpriteRenderer>();
+
+                //Attach it to the button
+                //Icon is used so that there's still a background 
+                if (itemSprite != null)
+                {
+                    Image spriteHolder = inventoryButtons[i].transform.Find("Icon").GetComponent<Image>();
+                    spriteHolder.sprite = itemSprite.sprite;
+                }
+
+                //Hides item so it can't be added multiple times
+                item.SetActive(false);
+
                 break;
             }
         }
