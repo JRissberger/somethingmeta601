@@ -1,21 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class InventoryObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private SpriteRenderer sprite = null;
+    [SerializeField] private string itemName = "default";
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    //Moves this object to the inventory
+    //Allow access to name
+    public string ItemName { get; }
 
 }
