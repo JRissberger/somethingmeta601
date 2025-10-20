@@ -10,7 +10,8 @@ public class InventoryManager : MonoBehaviour
     private Player2DController player = null;
     
     //The index of the currently selected item
-    private int selectedItem = 0;
+    //-1 indicates nothing's selected
+    private int selectedItem = -1;
 
     //Inventory array
     private GameObject[] inventoryArray = new GameObject[4];
@@ -22,6 +23,16 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player2DController>();
+
+        //Adds click listeners to the UI buttons
+        for (int i = 0; i < inventoryButtons.Length; i++)
+        {
+            //Saves current index value
+            int current = i;
+
+            //Have to use an arrow function to pass in parameter
+            inventoryButtons[i].onClick.AddListener(() => UpdateSelectedItem(current));
+        }
     }
 
     // Update is called once per frame
@@ -31,27 +42,47 @@ public class InventoryManager : MonoBehaviour
         //Should be a bool from player
         //TODO: currently this updates every frame, should change just on toggle
         //Is there an observer available?
-        if (player.inDialogue)
-        {
-            inventoryUI.gameObject.SetActive(false);
-        }
-        else
-        {
-            inventoryUI.gameObject.SetActive(true);
-        }
+        inventoryUI.gameObject.SetActive(!player.inDialogue);
     }
 
     //Updates the currently selected item when a button is pressed
     public void UpdateSelectedItem(int index)
     {
-        //Button has an index passed from the UI
+        //Temporarily holds the previous object
+        int previousSelected = selectedItem;
 
-        //Make button visually distinct
+        //Resets color of previously selected slot if applicable
+        if (previousSelected >= 0)
+        {
+            Image previousBackground = inventoryButtons[previousSelected].GetComponent<Image>();
+            previousBackground.color = Color.white;
+        }
+        
+        //Updates selected item IF a different one was picked
+        //If it's the same one, just works as a deselect
+        if (previousSelected != index)
+        {
+            //Saves the index of the currently selected item
+            selectedItem = index;
+
+            //Highlights the corresponding inventory slot
+            Image background = inventoryButtons[index].GetComponent<Image>();
+            background.color = Color.yellow;
+
+            //If there's no sprite in the slot, hide the sprite child
+            Image icon = inventoryButtons[index].transform.Find("Icon").GetComponent<Image>();
+            icon.enabled = (icon.sprite != null);
+        }
+        else
+        {
+            //-1 is deselect value
+            selectedItem = -1;
+        }
+
     }
 
     //Add an object to the inventory
     //Gameobject required from the editor--it's a drag and drop
-    //TODO: needs testing
     public void AddToInventory(GameObject item)
     {
         //Find the first empty slot
@@ -61,7 +92,6 @@ public class InventoryManager : MonoBehaviour
             {
                 inventoryArray[i] = item;
 
-                //TODO: update button icon here
                 //Get the sprite from the item
                 SpriteRenderer itemSprite = item.GetComponent<SpriteRenderer>();
 
@@ -71,6 +101,9 @@ public class InventoryManager : MonoBehaviour
                 {
                     Image spriteHolder = inventoryButtons[i].transform.Find("Icon").GetComponent<Image>();
                     spriteHolder.sprite = itemSprite.sprite;
+
+                    //Enables sprite visibility
+                    spriteHolder.enabled = true;
                 }
 
                 //Hides item so it can't be added multiple times
