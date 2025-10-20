@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour
     private int selectedItem = -1;
 
     //Inventory array
-    private GameObject[] inventoryArray = new GameObject[4];
+    private InventoryObject[] inventoryArray = new InventoryObject[4];
 
     //Buttons corresponding to the inventory slots
     [SerializeField] private Button[] inventoryButtons = new Button[4];
@@ -83,7 +83,7 @@ public class InventoryManager : MonoBehaviour
 
     //Add an object to the inventory
     //Gameobject required from the editor--it's a drag and drop
-    public void AddToInventory(GameObject item)
+    public void AddToInventory(InventoryObject item)
     {
         //Find the first empty slot
         for (int i = 0; i < inventoryArray.Length; i++)
@@ -97,23 +97,43 @@ public class InventoryManager : MonoBehaviour
 
                 //Attach it to the button
                 //Icon is used so that there's still a background 
-                if (itemSprite != null)
+                if (item.Sprite != null)
                 {
                     Image spriteHolder = inventoryButtons[i].transform.Find("Icon").GetComponent<Image>();
-                    spriteHolder.sprite = itemSprite.sprite;
+                    spriteHolder.sprite = item.Sprite.sprite;
 
                     //Enables sprite visibility
                     spriteHolder.enabled = true;
                 }
 
                 //Hides item so it can't be added multiple times
-                item.SetActive(false);
+                item.gameObject.SetActive(false);
 
                 break;
             }
         }
     }
 
+    //Removes the item from inventory
+    //Can opt to return it to the overworld or not
+    public void RemoveFromInventory(string itemName, bool returnToWorld)
+    {
+        //Loops through the array to find an item with the specified name
+        for (int i = 0; i < inventoryArray.Length; i++)
+        {
+            //Check for a name match
+            if (inventoryArray[i].GetComponent<InventoryObject>().ItemName.ToLower().Equals(itemName.ToLower()))
+            {
+                //Remove sprite from button
+                Image spriteHolder = inventoryButtons[i].transform.Find("Icon").GetComponent<Image>();
+                spriteHolder.sprite = null;
+                spriteHolder.enabled = false;
+
+                //Remove from array
+                inventoryArray[i] = null;
+            }
+        }
+    }
 
     //Checking correct item
     //Pass in required name, check if current selected item name matches
