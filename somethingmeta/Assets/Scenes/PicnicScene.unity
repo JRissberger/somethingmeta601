@@ -1062,7 +1062,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnKeyPress:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 256271099}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: AddToInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 106854514}
+          m_ObjectArgumentAssemblyTypeName: InventoryObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
       m_Calls: []
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  interactionRange: 2
+  inventoryManager: {fileID: 0}
+  hasItemInteract: 0
+  correctItemName: default
 --- !u!114 &106854514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,7 +1376,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnKeyPress:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 256271099}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: AddToInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 149118258}
+          m_ObjectArgumentAssemblyTypeName: InventoryObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
       m_Calls: []
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  interactionRange: 2
+  inventoryManager: {fileID: 0}
+  hasItemInteract: 0
+  correctItemName: default
 --- !u!114 &149118258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6017,7 +6067,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnKeyPress:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 849421315}
+        m_TargetAssemblyTypeName: Interactable2DObject, Assembly-CSharp
+        m_MethodName: InteractResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: BunnyDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  correctItemHeld:
+    m_PersistentCalls:
       m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  interactionRange: 2
+  inventoryManager: {fileID: 256271099}
+  hasItemInteract: 1
+  correctItemName: grape
 --- !u!114 &849421316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10269,6 +10356,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  interactionRange: 2
+  inventoryManager: {fileID: 0}
+  hasItemInteract: 0
+  correctItemName: default
 --- !u!114 &1673564741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10601,6 +10701,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3859336324316773513, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: nextLineKeyCode
+      value: 101
+      objectReference: {fileID: 0}
     - target: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_Name
       value: Dialogue System
@@ -10677,6 +10781,34 @@ PrefabInstance:
       propertyPath: yarnProject
       value: 
       objectReference: {fileID: 7545569452688597077, guid: c35781d19e9754141b1b738fce2e9c6d, type: 3}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1338928601}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetDialogueBool
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PicnicEventManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12484,7 +12616,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnKeyPress:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 256271099}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: AddToInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1874070852}
+          m_ObjectArgumentAssemblyTypeName: InventoryObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
       m_Calls: []
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  interactionRange: 2
+  inventoryManager: {fileID: 0}
+  hasItemInteract: 0
+  correctItemName: default
 --- !u!114 &1874070852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13293,7 +13450,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnKeyPress:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 256271099}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: AddToInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100045753}
+          m_ObjectArgumentAssemblyTypeName: InventoryObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
       m_Calls: []
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  interactionRange: 2
+  inventoryManager: {fileID: 256271099}
+  hasItemInteract: 0
+  correctItemName: default
 --- !u!114 &2100045753
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,24 +10,49 @@ public class PicnicEventManager : MonoBehaviour
     public string catNode;
     public string foxNode;
     public DialogueRunner DialogueRunner;
+    private bool isDialogueRunning = false;
 
     public void BunnyDialogue()
     {
-        DialogueRunner.StartDialogue(bunnyNode);
+        if (isDialogueRunning == false)
+        {
+            DialogueRunner.StartDialogue(bunnyNode);
+            isDialogueRunning = true;
+        }
     }
 
     public void FoxDialogue()
     {
-        DialogueRunner.StartDialogue(foxNode);
+        if (isDialogueRunning == false)
+        {
+            DialogueRunner.StartDialogue(foxNode);
+            isDialogueRunning = true;
+        }
+        
     }
 
     public void PenguinDialogue()
     {
-        DialogueRunner.StartDialogue(penguinNode);
+        if (isDialogueRunning == false)
+        {
+            DialogueRunner.StartDialogue(penguinNode);
+            isDialogueRunning = true;
+        }
+        
     }
 
     public void CatDialogue()
     {
-        DialogueRunner.StartDialogue(catNode);
+        if (isDialogueRunning == false)
+        {
+            DialogueRunner.StartDialogue(catNode);
+            isDialogueRunning = true;
+        }
+        
+    }
+
+    public void ResetDialogueBool()
+    {
+        isDialogueRunning = false;
     }
 }
