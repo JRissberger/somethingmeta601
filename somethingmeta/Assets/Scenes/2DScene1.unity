@@ -1179,7 +1179,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
   interactionRange: 2
+  inventoryManager: {fileID: 202669454}
+  hasItemInteract: 0
+  correctItemName: default
 --- !u!212 &1051573429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1962,7 +1974,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls: []
   interactionRange: 2
+  inventoryManager: {fileID: 0}
+  hasItemInteract: 0
+  correctItemName: default
 --- !u!212 &1418678507
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -19,6 +19,10 @@ public class InventoryManager : MonoBehaviour
     //Buttons corresponding to the inventory slots
     [SerializeField] private Button[] inventoryButtons = new Button[4];
 
+    //Access to array and current item
+    public InventoryObject[] InventoryArray { get { return inventoryArray; } }
+    public int SelectedItem { get { return selectedItem; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -155,9 +159,5 @@ public class InventoryManager : MonoBehaviour
     {
         RemoveFromInventory(itemName, false);
     }
-
-    //Checking correct item
-    //Pass in required name, check if current selected item name matches
-    //follow flowchart accordingly
 
 }
