@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
         //Should be a bool from player
         //TODO: currently this updates every frame, should change just on toggle
         //Is there an observer available?
-        inventoryUI.gameObject.SetActive(!player.inDialogue);
+        inventoryUI.gameObject.SetActive(true);
     }
 
     //Updates the currently selected item when a button is pressed
