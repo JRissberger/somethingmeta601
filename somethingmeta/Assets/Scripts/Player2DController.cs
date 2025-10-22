@@ -12,6 +12,8 @@ public class Player2DController : MonoBehaviour
 
     private float moveSpeed = 3;
 
+    public bool inDialogue { get; set; } = false;
+
     // Start is called before the first frame update
     void Start()
     {

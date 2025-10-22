@@ -23,10 +23,4 @@ public class Interactable2DObject : MonoBehaviour
             OnKeyPress.Invoke();
         }
     }
-
-    //Test for interaction functionality
-    void interactTest()
-    {
-        Debug.Log("Interacted!");
-    }
 }
