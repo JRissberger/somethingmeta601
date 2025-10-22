@@ -160,4 +160,22 @@ public class InventoryManager : MonoBehaviour
     //Pass in required name, check if current selected item name matches
     //follow flowchart accordingly
 
+    //TODO: move this to interactableobject. will need a reference to inventory manager
+    //Check held item if any, invoke actions accordingly
+    public void checkForCorrectItem(string correctItemName)
+    {
+        InventoryObject currentObject = inventoryArray[selectedItem].GetComponent<InventoryObject>();
+
+        //Check the specified item vs the currently equipped one
+        if (currentObject.ItemName.ToLower().Equals(correctItemName.ToLower()))
+        {
+            //Calls the method that invokes commands tied to if the item is correct
+            currentObject.CorrectItem();
+        }
+        else
+        {
+            currentObject.IncorrectItem();
+        }
+    }
+
 }

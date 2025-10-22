@@ -8,6 +8,9 @@ public class Interactable2DObject : MonoBehaviour
     Player2DController player = null;
     [SerializeField] private UnityEvent OnKeyPress;
 
+    //Generic response to PLAYER to being interacted with--this gets called elsewhere
+    [SerializeField] private UnityEvent genericInteract;
+
     //How close the player has to be to the object to interact with it
     [SerializeField] private float interactionRange = 2.0f;
 
@@ -30,5 +33,11 @@ public class Interactable2DObject : MonoBehaviour
                 OnKeyPress.Invoke();
             }
         }
+    }
+
+    //Generic interaction response
+    public void GenericResponse()
+    {
+        genericInteract.Invoke();
     }
 }
