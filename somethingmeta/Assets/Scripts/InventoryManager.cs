@@ -19,6 +19,10 @@ public class InventoryManager : MonoBehaviour
     //Buttons corresponding to the inventory slots
     [SerializeField] private Button[] inventoryButtons = new Button[4];
 
+    //Access to array and current item
+    public InventoryObject[] InventoryArray { get { return inventoryArray; } }
+    public int SelectedItem { get { return selectedItem; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -154,28 +158,6 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItem(string itemName)
     {
         RemoveFromInventory(itemName, false);
-    }
-
-    //Checking correct item
-    //Pass in required name, check if current selected item name matches
-    //follow flowchart accordingly
-
-    //TODO: move this to interactableobject. will need a reference to inventory manager
-    //Check held item if any, invoke actions accordingly
-    public void checkForCorrectItem(string correctItemName)
-    {
-        InventoryObject currentObject = inventoryArray[selectedItem].GetComponent<InventoryObject>();
-
-        //Check the specified item vs the currently equipped one
-        if (currentObject.ItemName.ToLower().Equals(correctItemName.ToLower()))
-        {
-            //Calls the method that invokes commands tied to if the item is correct
-            currentObject.CorrectItem();
-        }
-        else
-        {
-            currentObject.IncorrectItem();
-        }
     }
 
 }
