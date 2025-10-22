@@ -114,25 +114,46 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+
     //Removes the item from inventory
     //Can opt to return it to the overworld or not
-    public void RemoveFromInventory(string itemName, bool returnToWorld)
+    void RemoveFromInventory(string itemName, bool returnToWorld)
     {
         //Loops through the array to find an item with the specified name
         for (int i = 0; i < inventoryArray.Length; i++)
         {
             //Check for a name match
-            if (inventoryArray[i].GetComponent<InventoryObject>().ItemName.ToLower().Equals(itemName.ToLower()))
+            if (inventoryArray[i] != null)
             {
-                //Remove sprite from button
-                Image spriteHolder = inventoryButtons[i].transform.Find("Icon").GetComponent<Image>();
-                spriteHolder.sprite = null;
-                spriteHolder.enabled = false;
+                if (inventoryArray[i].GetComponent<InventoryObject>().ItemName.ToLower().Equals(itemName.ToLower()))
+                {
+                    //Return to overworld if applicable
+                    inventoryArray[i].gameObject.SetActive(returnToWorld);
 
-                //Remove from array
-                inventoryArray[i] = null;
+                    //Remove sprite from button
+                    Image spriteHolder = inventoryButtons[i].transform.Find("Icon").GetComponent<Image>();
+                    spriteHolder.sprite = null;
+                    spriteHolder.enabled = false;
+
+                    //Remove from array
+                    inventoryArray[i] = null;
+                }
             }
         }
+    }
+
+    //"Overloads" for return to inventory (editor can only have 0-1 parameters)
+
+    //Returns to the overworld
+    public void ReturnItem(string itemName)
+    {
+        RemoveFromInventory(itemName, true);
+    }
+
+    //Removes the item without returning
+    public void RemoveItem(string itemName)
+    {
+        RemoveFromInventory(itemName, false);
     }
 
     //Checking correct item
