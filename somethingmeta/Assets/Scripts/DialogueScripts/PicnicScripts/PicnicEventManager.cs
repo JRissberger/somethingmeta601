@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Yarn.Unity;
 
 public class PicnicEventManager : MonoBehaviour
@@ -11,31 +12,35 @@ public class PicnicEventManager : MonoBehaviour
     public string bunnyCorrectNode;
     public string bunnyIncorrectNode;
     private bool bunnyHappy = false;
-
+    [SerializeField] private SpriteRenderer bunnySprite;
 
     [Header("Penguin Dialogue")]
     public string penguinGenericNode;
     public string penguinCorrectNode;
     public string penguinIncorrectNode;
     private bool penguinHappy = false;
-
+    [SerializeField] private SpriteRenderer penguinSprite;
 
     [Header("Cat Dialogue")]
     public string catGenericNode;
     public string catCorrectNode;
     public string catIncorrectNode;
     private bool catHappy = false;
-
+    [SerializeField] private SpriteRenderer catSprite;
 
     [Header("Fox Dialogue")]
     public string foxGenericNode;
     public string foxCorrectNode;
     public string foxIncorrectNode;
     private bool foxHappy = false;
+    [SerializeField] private SpriteRenderer foxSprite;
 
+    [SerializeField] private Sprite deadRabbit;
 
     public DialogueRunner DialogueRunner;
     private bool isDialogueRunning = false;
+
+    
 
     public void BunnyDialogue()
     {
@@ -65,6 +70,7 @@ public class PicnicEventManager : MonoBehaviour
     public void BunnyGivenItem()
     {
         bunnyHappy = true;
+        DialogueRunner.StartDialogue(bunnyCorrectNode);
     }
 
 
@@ -72,8 +78,14 @@ public class PicnicEventManager : MonoBehaviour
     {
         if (isDialogueRunning == false)
         {
-            
-            DialogueRunner.StartDialogue(bunnyCorrectNode);
+            if (foxHappy)
+            {
+                DialogueRunner.StartDialogue(foxCorrectNode);
+            }
+            else
+            {
+                DialogueRunner.StartDialogue(foxGenericNode);
+            }
             isDialogueRunning = true;
         }
     }
@@ -90,14 +102,21 @@ public class PicnicEventManager : MonoBehaviour
     public void FoxGivenItem()
     {
         foxHappy = true;
+        DialogueRunner.StartDialogue(foxCorrectNode);
     }
 
     public void PenguinDialogue()
     {
         if (isDialogueRunning == false)
         {
-            Debug.Log("Me when i debug the log");
-            DialogueRunner.StartDialogue(penguinGenericNode);
+            if (penguinHappy)
+            {
+                DialogueRunner.StartDialogue(penguinCorrectNode);
+            }
+            else
+            {
+                DialogueRunner.StartDialogue(penguinGenericNode);
+            }
             isDialogueRunning = true;
         }
     }
@@ -114,13 +133,21 @@ public class PicnicEventManager : MonoBehaviour
     public void PenguinGivenItem()
     {
         penguinHappy = true;
+        DialogueRunner.StartDialogue(penguinCorrectNode);
     }
 
     public void CatDialogue()
     {
         if (isDialogueRunning == false)
         {
-            DialogueRunner.StartDialogue(catGenericNode);
+            if (catHappy)
+            {
+                DialogueRunner.StartDialogue(catCorrectNode);
+            }
+            else
+            {
+                DialogueRunner.StartDialogue(catGenericNode);
+            }
             isDialogueRunning = true;
         }
 
@@ -137,10 +164,24 @@ public class PicnicEventManager : MonoBehaviour
     public void CatGivenItem()
     {
         catHappy = true;
+        DialogueRunner.StartDialogue(catCorrectNode);
     }
 
     public void ResetDialogueBool()
     {
         isDialogueRunning = false;
+    }
+
+    public void CorruptPicnic()
+    {
+        //kill me
+        bunnySprite.sprite = deadRabbit;
+        bunnySprite.gameObject.transform.localScale = (bunnySprite.size * new Vector3(0.5f, 0.5f, 0.5f));
+        penguinSprite.sprite = deadRabbit;
+        penguinSprite.gameObject.transform.localScale = (penguinSprite.size * new Vector3(0.5f, 0.5f, 0.5f));
+        catSprite.sprite = deadRabbit;
+        catSprite.gameObject.transform.localScale = (catSprite.size * new Vector3(0.5f, 0.5f, 0.5f));
+        foxSprite.sprite = deadRabbit;
+        foxSprite.gameObject.transform.localScale = (foxSprite.size * new Vector3(0.5f, 0.5f, 0.5f));
     }
 }

@@ -26,7 +26,7 @@ public class PicnicDevTools : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            eventManager.FoxDialogue();
+            eventManager.CorruptPicnic();
         }
     }
 
