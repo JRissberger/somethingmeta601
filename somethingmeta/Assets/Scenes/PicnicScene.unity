@@ -1085,7 +1085,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactionRange: 2
-  inventoryManager: {fileID: 0}
+  inventoryManager: {fileID: 256271099}
   hasItemInteract: 0
   correctItemName: default
 --- !u!114 &106854514
@@ -2098,7 +2098,7 @@ Transform:
   m_GameObject: {fileID: 222077414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.304832, y: -0.40451908, z: 2.5353198}
+  m_LocalPosition: {x: 9.4, y: -0.55, z: 2.5353198}
   m_LocalScale: {x: 3.8225, y: 3.8225, z: 3.8225}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4438,6 +4438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 645498308}
   - component: {fileID: 645498309}
+  - component: {fileID: 645498310}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -4514,6 +4515,94 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &645498310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645498307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330d27b0a76424048b9233b73ef4f61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKeyPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 645498310}
+        m_TargetAssemblyTypeName: Interactable2DObject, Assembly-CSharp
+        m_MethodName: InteractResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: BunnyDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: PenguinGivenItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: PenguinDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: PenguinUnhappy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  interactionRange: 6
+  inventoryManager: {fileID: 256271099}
+  hasItemInteract: 1
+  correctItemName: Ice Cream
 --- !u!1 &646805536
 GameObject:
   m_ObjectHideFlags: 0
@@ -5976,7 +6065,6 @@ GameObject:
   - component: {fileID: 849421313}
   - component: {fileID: 849421314}
   - component: {fileID: 849421315}
-  - component: {fileID: 849421316}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -6141,18 +6229,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 256271099}
   hasItemInteract: 1
   correctItemName: grape
---- !u!114 &849421316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849421312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90036e2c80cf4464c805b1fcd4f82230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &850994112
 GameObject:
   m_ObjectHideFlags: 0
@@ -9401,6 +9477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448515705}
   - component: {fileID: 1448515706}
+  - component: {fileID: 1448515707}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -9477,6 +9554,94 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1448515707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448515704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330d27b0a76424048b9233b73ef4f61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKeyPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1448515707}
+        m_TargetAssemblyTypeName: Interactable2DObject, Assembly-CSharp
+        m_MethodName: InteractResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: CatDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: CatGivenItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: CatDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: CatUnhappy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  interactionRange: 2
+  inventoryManager: {fileID: 256271099}
+  hasItemInteract: 1
+  correctItemName: banana
 --- !u!1 &1514654631
 GameObject:
   m_ObjectHideFlags: 0
@@ -10826,8 +10991,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7545569452688597077, guid: c35781d19e9754141b1b738fce2e9c6d, type: 3}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 43576123}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -10846,8 +11031,16 @@ PrefabInstance:
       value: ResetDialogueBool
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PicnicEventManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -10984,7 +11177,7 @@ Transform:
   m_GameObject: {fileID: 1715403865}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 7.56, z: -12.03}
+  m_LocalPosition: {x: -6.92, y: 19.18, z: -0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12052,6 +12245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1828964280}
   - component: {fileID: 1828964281}
+  - component: {fileID: 1828964282}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -12128,6 +12322,94 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1828964282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828964279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330d27b0a76424048b9233b73ef4f61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKeyPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1828964282}
+        m_TargetAssemblyTypeName: Interactable2DObject, Assembly-CSharp
+        m_MethodName: InteractResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  genericInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: FoxDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  correctItemHeld:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: FoxGivenItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: FoxDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  incorrectItemHeld:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: FoxUnhappy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  interactionRange: 2
+  inventoryManager: {fileID: 256271099}
+  hasItemInteract: 1
+  correctItemName: apple
 --- !u!1 &1831407944
 GameObject:
   m_ObjectHideFlags: 0

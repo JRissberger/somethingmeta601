@@ -5,25 +5,28 @@ using Yarn.Unity;
 
 public class PicnicEventManager : MonoBehaviour
 {
+
     [Header("Bunny Dialogue")]
     public string bunnyGenericNode;
-
     public string bunnyCorrectNode;
     public string bunnyIncorrectNode;
     private bool bunnyHappy = false;
 
+
     [Header("Penguin Dialogue")]
     public string penguinGenericNode;
-
     public string penguinCorrectNode;
     public string penguinIncorrectNode;
     private bool penguinHappy = false;
+
+
     [Header("Cat Dialogue")]
     public string catGenericNode;
-
     public string catCorrectNode;
     public string catIncorrectNode;
     private bool catHappy = false;
+
+
     [Header("Fox Dialogue")]
     public string foxGenericNode;
     public string foxCorrectNode;
@@ -46,7 +49,7 @@ public class PicnicEventManager : MonoBehaviour
             {
                 DialogueRunner.StartDialogue(bunnyGenericNode);
             }
-                isDialogueRunning = true;
+            isDialogueRunning = true;
         }
     }
 
@@ -63,16 +66,16 @@ public class PicnicEventManager : MonoBehaviour
     {
         bunnyHappy = true;
     }
-  
+
 
     public void FoxDialogue()
     {
         if (isDialogueRunning == false)
         {
-            DialogueRunner.StartDialogue(foxGenericNode);
+            
+            DialogueRunner.StartDialogue(bunnyCorrectNode);
             isDialogueRunning = true;
         }
-        
     }
 
     public void FoxUnhappy()
@@ -93,10 +96,10 @@ public class PicnicEventManager : MonoBehaviour
     {
         if (isDialogueRunning == false)
         {
+            Debug.Log("Me when i debug the log");
             DialogueRunner.StartDialogue(penguinGenericNode);
             isDialogueRunning = true;
         }
-        
     }
 
     public void PenguinUnhappy()
@@ -120,7 +123,7 @@ public class PicnicEventManager : MonoBehaviour
             DialogueRunner.StartDialogue(catGenericNode);
             isDialogueRunning = true;
         }
-        
+
     }
     public void CatUnhappy()
     {
