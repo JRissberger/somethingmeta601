@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1224971172170046075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7589257074474031912}
+  - component: {fileID: 7958874767082380313}
+  m_Layer: 0
+  m_Name: Dialogue Singleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7589257074474031912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224971172170046075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2588397, y: 0.036241837, z: 6.5776258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7958874767082380313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224971172170046075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe3ba9f301ccc34c9c93d74f93b6883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beastHunterFlags:
+  - {fileID: 11400000, guid: 3e28490a062c3754c99411856c1995fd, type: 2}
+  - {fileID: 11400000, guid: a7add419e39faa34cb0512f4797152a4, type: 2}
+  - {fileID: 11400000, guid: 48be9993440c14747bc603863576df1b, type: 2}
+  - {fileID: 11400000, guid: 9a93990a7a691b74f89179089e07edc0, type: 2}
+  bh_currentNode: BeastHunterIntroduction
+  officeFlags:
+  - {fileID: 11400000, guid: 146206d15ce6e1f45afcf25580b77359, type: 2}

@@ -1,0 +1,62 @@
+﻿title: BunnyGeneric
+---
+Bunny: Hey! You there! Help your king, bring me my favorite food!
+===
+
+title: BunnyCorrect
+---
+Bunny: What a royal gift! Grapes are certainly befitting! I suppose I’ll ask another servant to peel them for me.
+===
+
+title: BunnyIncorrect
+---
+Bunny: This is not befitting of a king! Away at once!
+===
+
+title: PenguinGeneric
+---
+Penguin: Hi!!! Welcome to the picnic, friend! Think you can get me my favorite food? It’s always been my favorite, because it reminds me of home!
+===
+
+title: PenguinCorrect
+---
+Penguin: Yeah! Ice cream! Thank you, thank you!
+===
+
+title: PenguinIncorrect
+---
+Penguin: No, that’s not it… that’s much too warm.
+===
+
+title: CatGeneric
+---
+Cat: Hello there. Do you think you could get me my favorite food? I can’t look beautiful on an empty stomach.
+===
+
+title: CatCorrect
+---
+Cat: Oh, how perfect! Yes, I love bananas! Thank you so much!
+===
+
+title: CatIncorrect
+---
+Cat: Oh, not quite. Take a look around, I’m sure you’ll find something to suit my tropical tastes.
+===
+
+title: FoxGeneric
+---
+Fox: Hey hey hey! I’m soooo so hungry! My favorite food though? Come on, by now everyone knows my favorite food!
+
+===
+
+title: FoxCorrect
+---
+Fox: Thank you thank you thank you!!! Apples are my favorite, how did you know???
+
+===
+
+title: FoxIncorrect
+---
+Fox: Oh come onnnn, that’s not it! You should know this, it’s practically a headline!
+
+===

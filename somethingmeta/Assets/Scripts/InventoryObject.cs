@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.Events;
 
 public class InventoryObject : MonoBehaviour
 {
@@ -12,5 +13,4 @@ public class InventoryObject : MonoBehaviour
     public string ItemName { get { return itemName; } }
 
     public SpriteRenderer Sprite { get { return sprite; } }
-
 }
