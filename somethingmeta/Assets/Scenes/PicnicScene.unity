@@ -6097,10 +6097,46 @@ MonoBehaviour:
         m_CallState: 2
   correctItemHeld:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: BunnyGivenItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: BunnyDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   incorrectItemHeld:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1338928601}
+        m_TargetAssemblyTypeName: PicnicEventManager, Assembly-CSharp
+        m_MethodName: BunnyUnhappy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   interactionRange: 2
   inventoryManager: {fileID: 256271099}
   hasItemInteract: 1
@@ -8912,10 +8948,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bfbc88ee090884dabc98e2a2bb0622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bunnyNode: BunnyGeneric
-  penguinNode: PenguinGeneric
-  catNode: CatGeneric
-  foxNode: FoxGeneric
+  bunnyGenericNode: BunnyGeneric
+  bunnyCorrectNode: BunnyCorrect
+  bunnyIncorrectNode: BunnyIncorrect
+  penguinGenericNode: PenguinGeneric
+  penguinCorrectNode: PenguinCorrect
+  penguinIncorrectNode: PenguinIncorrect
+  catGenericNode: CatGeneric
+  catCorrectNode: CatCorrect
+  catIncorrectNode: CatIncorrect
+  foxGenericNode: FoxGeneric
+  foxCorrectNode: FoxCorrect
+  foxIncorrectNode: FoxIncorrect
   DialogueRunner: {fileID: 1705443469}
 --- !u!1 &1360553937
 GameObject:
