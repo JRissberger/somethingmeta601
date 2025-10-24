@@ -2943,6 +2943,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573707947}
   m_CullTransparentMesh: 1
+--- !u!1001 &591070500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_text
+      value: "In this heart-pounding, bloody action title, players take the role
+        of a fox, chewing their way through the fruit king\u2019s forces to retrieve
+        their precious apples..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0151515
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.497
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.0870523
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046994519234440193, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_Name
+      value: Newspaper Scrap
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78299827fefb767489642b664170d2c8, type: 3}
 --- !u!1 &607455060
 GameObject:
   m_ObjectHideFlags: 0
@@ -10723,6 +10794,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48be9993440c14747bc603863576df1b, type: 2}
   - {fileID: 11400000, guid: 9a93990a7a691b74f89179089e07edc0, type: 2}
   bh_currentNode: BeastHunterIntroduction
+  picnicFlags: []
   officeFlags: []
 --- !u!1 &2059786865
 GameObject:
@@ -11117,3 +11189,4 @@ SceneRoots:
   - {fileID: 1678354765}
   - {fileID: 3425617940176386522}
   - {fileID: 1280239800}
+  - {fileID: 591070500}
