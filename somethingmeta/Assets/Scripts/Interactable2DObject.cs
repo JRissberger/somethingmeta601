@@ -53,7 +53,7 @@ public class Interactable2DObject : MonoBehaviour
     //Generic interaction response
     public void InteractResponse()
     {
-        genericInteract.Invoke();
+        //genericInteract.Invoke();
 
         //If there's no item interaction or the player isn't holding an item
         if (!hasItemInteract || inventoryManager.SelectedItem < 0)
@@ -91,6 +91,7 @@ public class Interactable2DObject : MonoBehaviour
         }
         else
         {
+            Debug.Log("FUCK");
             IncorrectItem();
         }
     }

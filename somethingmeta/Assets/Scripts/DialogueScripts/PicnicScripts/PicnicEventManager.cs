@@ -128,6 +128,7 @@ public class PicnicEventManager : MonoBehaviour
     {
         if (isDialogueRunning == false)
         {
+            Debug.Log("THIS IS RUNNING");
             DialogueRunner.StartDialogue(penguinIncorrectNode);
             isDialogueRunning = true;
         }
