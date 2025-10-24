@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Office - Unique Interactions.unity
     guid: 137cea437b399244294e664d8162d9ec
+  - enabled: 1
+    path: Assets/Scenes/PicnicScene.unity
+    guid: 45cbc6b5d93d34c4faf45a43f586d351
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

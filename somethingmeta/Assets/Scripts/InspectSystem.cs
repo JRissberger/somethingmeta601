@@ -88,6 +88,7 @@ public class InspectSystem : MonoBehaviour
 
             //Display inspect UI
             inspectUI.SetActive(true);
+
         }
     }
 

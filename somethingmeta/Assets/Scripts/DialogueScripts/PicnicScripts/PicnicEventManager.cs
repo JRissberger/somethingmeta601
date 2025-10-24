@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Yarn.Unity;
 
@@ -35,7 +36,9 @@ public class PicnicEventManager : MonoBehaviour
     private bool foxHappy = false;
     [SerializeField] private SpriteRenderer foxSprite;
 
+    [SerializeField] private string SquirrelNode;
     [SerializeField] private Sprite deadRabbit;
+    [SerializeField] private Canvas inventoryCanvas;
 
     public DialogueRunner DialogueRunner;
     private bool isDialogueRunning = false;
@@ -172,6 +175,15 @@ public class PicnicEventManager : MonoBehaviour
         isDialogueRunning = false;
     }
 
+    public void SquirrelGeneric()
+    {
+        if (isDialogueRunning == false)
+        {
+            DialogueRunner.StartDialogue(SquirrelNode);
+            isDialogueRunning = true;
+        }
+    }
+
     public void CorruptPicnic()
     {
         //kill me
@@ -184,4 +196,33 @@ public class PicnicEventManager : MonoBehaviour
         foxSprite.sprite = deadRabbit;
         foxSprite.gameObject.transform.localScale = (foxSprite.size * new Vector3(0.5f, 0.5f, 0.5f));
     }
+
+    public void HideInventory()
+    {
+        inventoryCanvas.enabled = false;
+    }
+
+    public void ShowInventory()
+    {
+        inventoryCanvas.enabled = true;
+    }
+
+    public void Load2DScene()
+    {
+        //Makes sure the component was gotten
+       
+            //Tries to load the corresponding scene
+            try
+            {
+                SceneManager.LoadScene("Office");
+            }
+            //TODO: response to player for invalid code
+            catch
+            {
+                Debug.Log("Invalid code");
+            }
+        
+        
+    }
+
 }
