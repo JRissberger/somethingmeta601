@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: office_forceShutoff
   m_EditorClassIdentifier: 
   name: office_forceShutoff
-  activated: 0
+  activated: 1

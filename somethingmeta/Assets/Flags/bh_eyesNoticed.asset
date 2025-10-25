@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: bh_eyesNoticed
   m_EditorClassIdentifier: 
   name: bh_eyesNoticed
-  activated: 0
+  activated: 1

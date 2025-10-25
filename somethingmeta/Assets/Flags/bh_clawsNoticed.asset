@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: bh_clawsNoticed
   m_EditorClassIdentifier: 
   name: bh_clawsNoticed
-  activated: 0
+  activated: 1
