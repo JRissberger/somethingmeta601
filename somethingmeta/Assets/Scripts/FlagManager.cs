@@ -23,7 +23,8 @@ public class FlagManager : MonoBehaviour
     public string bh_currentNode = "BeastHunterIntroduction";
     #endregion
 
-    #region Puzzle2Flags_P2F
+    #region PicnicFlags
+    public Flag[] picnicFlags;
     #endregion
 
     #region Puzzle3Flags_P3F
