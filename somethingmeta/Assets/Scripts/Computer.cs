@@ -95,7 +95,10 @@ public class Computer : MonoBehaviour
         //Hiding every object in the current scene
         foreach (GameObject gameObject in SceneManager.GetActiveScene().GetRootGameObjects())
         {
-            gameObject.SetActive(false);
+            if (gameObject.name != "NotesUI")
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         //Swap to the new scene

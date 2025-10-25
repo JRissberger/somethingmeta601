@@ -2152,7 +2152,7 @@ RectTransform:
   m_Children:
   - {fileID: 1237384462}
   - {fileID: 101493946}
-  m_Father: {fileID: 1675201513}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8543,7 +8543,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 275220434}
-  - {fileID: 530662485}
   - {fileID: 873259056}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10723,6 +10722,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48be9993440c14747bc603863576df1b, type: 2}
   - {fileID: 11400000, guid: 9a93990a7a691b74f89179089e07edc0, type: 2}
   bh_currentNode: BeastHunterIntroduction
+  picnicFlags: []
   officeFlags: []
 --- !u!1 &2059786865
 GameObject:
@@ -11117,3 +11117,4 @@ SceneRoots:
   - {fileID: 1678354765}
   - {fileID: 3425617940176386522}
   - {fileID: 1280239800}
+  - {fileID: 530662485}
