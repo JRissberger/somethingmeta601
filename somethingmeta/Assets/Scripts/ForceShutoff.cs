@@ -18,7 +18,7 @@ public class ForceShutoff : MonoBehaviour
     public void forceShutoff()
     {
         //Update the force shutoff flag
-        FlagManager.instance.officeFlags[0].SetActivity(true);
+        //FlagManager.instance.officeFlags[0].SetActivity(true);
 
         //Unload current scene and swap to office
         StartCoroutine(unloadScene());
