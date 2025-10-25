@@ -19,13 +19,13 @@ position: -27,253
 Hunter: How many eyes does the beast have?
     -> 2 Eyes.
         Hunter: No, no, that can't be right...
-        <<3DScene>>
+        <<3DScene DialogueSystem>>
     -> 4 Eyes.
         Hunter: No, no, that can't be right...
-        <<3DScene>>
+        <<3DScene DialogueSystem>>
     -> 6 Eyes.
         Hunter: No, no, that can't be right...
-        <<3DScene>>
+        <<3DScene DialogueSystem>>
     -> A Million eyes. <<if GetFlag("bh_eyesNoticed") == true >>
         Hunter: Good. That's one step closer.
         Hunter: Now, I need to know a few more things.
@@ -38,13 +38,13 @@ position: 202,249
 Hunter: How many claws does the beast have?
 -> No Claws.
     Hunter: No, no, that can't be right...
-    <<3DScene>>
+    <<3DScene DialogueSystem>>
 -> 2 Claws.
     Hunter: No, no, that can't be right...
-    <<3DScene>>
+    <<3DScene DialogueSystem>>
 -> 4 Claws.
     Hunter: No, no, that can't be right...
-    <<3DScene>>
+    <<3DScene DialogueSystem>>
 -> 9 Claws. <<if GetFlag("bh_clawsNoticed") == true>>
     Hunter: Good. We're almost there.
     Hunter: Now, I just need to know...
@@ -89,7 +89,7 @@ position: 935,240
 ---
 Hunter: What? No-
 
-<<3DScene>>
+<<3DScene DialogueSystem>>
 ===
 
 title: BeastHunterDead
@@ -97,5 +97,5 @@ position: 935,240
 ---
 The hunter is dead on the ground.
 
-<<3DScene>>
+<<3DScene DialogueSystem>>
 ===

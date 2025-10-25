@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using Yarn;
 using Yarn.Unity;
 using Yarn.Unity.Legacy;
@@ -14,7 +15,10 @@ public class BeastHunterFlags : MonoBehaviour
     [SerializeField] private Flag beastHunterDead;
     [SerializeField] private GameObject beastHunterSprite;
     [SerializeField] private GameObject beastHunteDeadrSprite;
-    
+
+    //Event system--generally going to be used to call forceShutoff
+    [SerializeField] private UnityEvent forceReturn;
+
     //The node that the dialogue will restart from
     private string currentNode;
     //All flags that are relevant to the beast hunter puzzle, pulls from the FlagManager Singleton.
@@ -143,9 +147,9 @@ public class BeastHunterFlags : MonoBehaviour
     /// Sets the scene to the Office Scene.
     /// </summary>
     [YarnCommand("3DScene")]
-    public static void SwitchScene()
+    public void SwitchScene()
     {
-        SceneManager.LoadScene("Office");
+        forceReturn.Invoke();
     }
 
 
