@@ -17,8 +17,9 @@ public class ForceShutoff : MonoBehaviour
     //Transitions the scene back to the 3D office
     public void forceShutoff()
     {
-        //Update the force shutoff flag
-        FlagManager.instance.officeFlags[0].SetActivity(true);
+        Debug.Log("forceShutoff called");
+        //Update the force shutoff flag NOTE: likely deprecated
+        //FlagManager.instance.officeFlags[0].SetActivity(true);
 
         //Unload current scene and swap to office
         StartCoroutine(unloadScene());
