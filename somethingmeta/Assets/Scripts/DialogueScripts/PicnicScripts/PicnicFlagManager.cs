@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PicnicFlagManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PicnicFlagManager : MonoBehaviour
     public bool penguinHappy { get; set; }
     public bool catHappy { get; set; }
     public bool foxHappy { get; set; }
+
+    [SerializeField] private Text NextCodeText;
 
     [SerializeField] private PicnicEventManager PicnicEventManager;
 

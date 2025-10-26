@@ -21,8 +21,8 @@ public class Computer : MonoBehaviour
     {
         {"TEST1", "2DScene1"},
         {"TY4P", "Credits"},
-        {"S1S4H7SP", "DialogueTesting"},
-        {"PICNIC", "PicnicScene" }
+        {"SB7YVT8", "DialogueTesting"},
+        {"S3HUN9E", "PicnicScene" }
     };
 
     private void Start()

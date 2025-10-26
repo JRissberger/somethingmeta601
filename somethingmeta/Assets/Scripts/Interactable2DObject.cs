@@ -29,19 +29,32 @@ public class Interactable2DObject : MonoBehaviour
     //Default is so that if there's no item interact the interactResponse method doesnt break
     [SerializeField] private string correctItemName = "default";
 
+    //checks if the level has properly loaded; this is a shitty solution but it works.
+    private bool hasLoaded = false;
+
     // Start is called before the first frame update
-    void Start()
+    void OnLevelWasLoaded()
     {
-        player = GameObject.FindWithTag("Player").GetComponent<Player2DController>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //checks if the player has loaded. if not, tries again next frame. otherwise, sets hasLoaded to true and skips this entirely.
+        if (!hasLoaded)
+        {
+            player = GameObject.FindWithTag("Player").GetComponent<Player2DController>();
+            if (player != null)
+            {
+                hasLoaded = true;
+            }
+        }
         //Interact key is E, can change this later if needed
         if (Input.GetKeyDown(KeyCode.E))
         {
             //Checks if the player is within range
+            
             float distance = Vector2.Distance(player.transform.position, transform.position);
             if (distance <= interactionRange)
             {
@@ -50,7 +63,9 @@ public class Interactable2DObject : MonoBehaviour
         }
     }
 
-    //Generic interaction response
+    /// <summary>
+    /// Generic interaction response
+    /// </summary>
     public void InteractResponse()
     {
         //genericInteract.Invoke();
@@ -66,7 +81,9 @@ public class Interactable2DObject : MonoBehaviour
         }
     }
 
-    //Calls events based on if the item is correct or not (determined by InventoryManager)
+    /// <summary>
+    /// Calls events based on if the item is correct or not (determined by InventoryManager)
+    /// </summary>
     public void CorrectItem()
     {
         correctItemHeld.Invoke();
@@ -78,7 +95,7 @@ public class Interactable2DObject : MonoBehaviour
     }
 
 
-    //Checks if there's a held item in the inventory, invokes the corresponding 
+    ///Checks if there's a held item in the inventory, invokes the corresponding 
     public void checkForCorrectItem(string correctItemName)
     {
         InventoryObject currentObject = inventoryManager.InventoryArray[inventoryManager.SelectedItem].GetComponent<InventoryObject>();

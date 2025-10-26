@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Yarn.Unity;
@@ -43,7 +45,16 @@ public class PicnicEventManager : MonoBehaviour
     public DialogueRunner DialogueRunner;
     private bool isDialogueRunning = false;
 
-    
+    [SerializeField] private UnityEvent forceReturn;
+    [SerializeField] private Flag officeShutoff;
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Load2DScene();
+        }
+    }
 
     public void BunnyDialogue()
     {
@@ -196,7 +207,23 @@ public class PicnicEventManager : MonoBehaviour
         catSprite.gameObject.transform.localScale = (catSprite.size * new Vector3(0.5f, 0.5f, 0.5f));
         foxSprite.sprite = deadRabbit;
         foxSprite.gameObject.transform.localScale = (foxSprite.size * new Vector3(0.5f, 0.5f, 0.5f));
+
+        StartCoroutine(DeleteScene(0.45f));
+
     }
+
+    private IEnumerator DeleteScene(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        bunnySprite.gameObject.SetActive(false);
+        penguinSprite.gameObject.SetActive(false);
+        catSprite.gameObject.SetActive(false);
+        foxSprite.gameObject.SetActive(false);
+        yield return new WaitForSeconds(delayTime);
+        Load2DScene();
+    }
+
+    
 
     public void HideInventory()
     {
