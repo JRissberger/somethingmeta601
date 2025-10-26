@@ -6525,7 +6525,7 @@ PrefabInstance:
       objectReference: {fileID: 873259055}
     - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_text
-      value: I made some shitass picnic shitass scene. test it please! Code is <b>S3HUN9E</b>
+      value: Test this please! Code is <b>S3HUN9E</b>
       objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalScale.x
