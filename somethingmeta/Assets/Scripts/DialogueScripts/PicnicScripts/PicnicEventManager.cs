@@ -10,6 +10,7 @@ using Yarn.Unity;
 public class PicnicEventManager : MonoBehaviour
 {
 
+    //Dialogue Nodes, sprite, and boolean for Bunny Character
     [Header("Bunny Dialogue")]
     public string bunnyGenericNode;
     public string bunnyCorrectNode;
@@ -17,6 +18,7 @@ public class PicnicEventManager : MonoBehaviour
     private bool bunnyHappy = false;
     [SerializeField] private SpriteRenderer bunnySprite;
 
+    //Dialogue Nodes, sprite, and boolean for Penguin Character
     [Header("Penguin Dialogue")]
     public string penguinGenericNode;
     public string penguinCorrectNode;
@@ -24,6 +26,7 @@ public class PicnicEventManager : MonoBehaviour
     private bool penguinHappy = false;
     [SerializeField] private SpriteRenderer penguinSprite;
 
+    //Dialogue Nodes, sprite, and boolean for Cat Character
     [Header("Cat Dialogue")]
     public string catGenericNode;
     public string catCorrectNode;
@@ -31,6 +34,7 @@ public class PicnicEventManager : MonoBehaviour
     private bool catHappy = false;
     [SerializeField] private SpriteRenderer catSprite;
 
+    //Dialogue Nodes, sprite, and boolean for Fox Character
     [Header("Fox Dialogue")]
     public string foxGenericNode;
     public string foxCorrectNode;
@@ -38,14 +42,21 @@ public class PicnicEventManager : MonoBehaviour
     private bool foxHappy = false;
     [SerializeField] private SpriteRenderer foxSprite;
 
+    //Squirrel dialogue
     [SerializeField] private string SquirrelNode;
+    //dead rabbit sprite
     [SerializeField] private Sprite deadRabbit;
+    //inventory visual
     [SerializeField] private Canvas inventoryCanvas;
 
+    //YarnSpinner DialogueRunner
     public DialogueRunner DialogueRunner;
+    //checks if dialogue is currently running
     private bool isDialogueRunning = false;
 
+    //Runs when forceReturn is called
     [SerializeField] private UnityEvent forceReturn;
+    //flag that checks if the player is at the computer.
     [SerializeField] private Flag officeShutoff;
 
     public void Update()
@@ -56,6 +67,9 @@ public class PicnicEventManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void BunnyDialogue()
     {
         if (isDialogueRunning == false)
