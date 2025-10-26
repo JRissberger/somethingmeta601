@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: bh_beastHunterDead
   m_EditorClassIdentifier: 
   name: bh_beastHunterDead
-  activated: 0
+  activated: 1
