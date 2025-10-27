@@ -32,14 +32,15 @@ public class PlayerController : MonoBehaviour
         //Gets the controller component
         controller = GetComponent<CharacterController>();
 
-        //Checks if the scene was just loaded from a forced shutoff event
-        if (FlagManager.instance.officeFlags[0].GetActivity())
-        {
-            //Sets the player position to be right in front of the computer
-            transform.position = new Vector3(-1.25f, 1.6f, 5.3f);
-            //Then deactivates the flag
-            FlagManager.instance.officeFlags[0].SetActivity(false);
-        }
+        ////Checks if the scene was just loaded from a forced shutoff event
+        //if (FlagManager.instance.officeFlags[0].GetActivity())
+        //{
+        //    Debug.Log("Forced Shutoff!");
+        //    //Sets the player position to be right in front of the computer
+        //    transform.position = new Vector3(-1.25f, 1.6f, 5.3f);
+        //    //Then deactivates the flag
+        //    FlagManager.instance.officeFlags[0].SetActivity(false);
+        //}
     }
 
     // Update is called once per frame

@@ -21,7 +21,8 @@ public class Computer : MonoBehaviour
     {
         {"TEST1", "2DScene1"},
         {"TY4P", "Credits"},
-        {"S1S4H7SP", "DialogueTesting"}
+        {"SB7YVT8", "DialogueTesting"},
+        {"S3HUN9E", "PicnicScene" }
     };
 
     private void Start()
@@ -66,7 +67,7 @@ public class Computer : MonoBehaviour
             //Tries to load the corresponding scene
             try
             {
-                SceneManager.LoadScene(sceneCodes[codeInput.text]);
+                StartCoroutine(LoadSceneAsync(sceneCodes[codeInput.text]));
             }
             //TODO: response to player for invalid code
             catch
@@ -78,6 +79,32 @@ public class Computer : MonoBehaviour
         {
             Debug.Log("No input field found");
         }
+    }
+
+    //Coroutine loads scene in background
+    //Means Load2DScene can wait for the load to finish before swapping scenes
+    private IEnumerator LoadSceneAsync(string sceneName)
+    {
+        AsyncOperation asyncLoadScene = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+        //Loop until the scene is loaded
+        while (!asyncLoadScene.isDone)
+        {
+            yield return null;
+        }
+
+        //Hiding every object in the current scene
+        foreach (GameObject gameObject in SceneManager.GetActiveScene().GetRootGameObjects())
+        {
+            if (gameObject.name != "NotesUI")
+            {
+                gameObject.SetActive(false);
+            }
+        }
+
+        //Swap to the new scene
+        //Have to search for the scene by name since setActiveScene needs a Scene object
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
     }
 
 }

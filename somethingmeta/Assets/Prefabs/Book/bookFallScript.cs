@@ -14,7 +14,7 @@ public class bookFallScript : MonoBehaviour
         animator.SetBool("bookFall", true);
     }
 
-    public void Start()
+    public void OnEnable()
     {
         interactableObject.enabled = false;
         if (beastHunterDead.GetActivity() == true)

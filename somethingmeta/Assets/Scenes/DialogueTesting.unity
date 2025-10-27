@@ -239,6 +239,9 @@ MonoBehaviour:
   beastHunterDead: {fileID: 11400000, guid: 9a93990a7a691b74f89179089e07edc0, type: 2}
   beastHunterSprite: {fileID: 2132839576}
   beastHunteDeadrSprite: {fileID: 1194796394}
+  forceReturn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &56442974
 Transform:
   m_ObjectHideFlags: 0
@@ -365,6 +368,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &633427443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633427445}
+  - component: {fileID: 633427444}
+  m_Layer: 0
+  m_Name: Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &633427444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633427443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9995c7099675b3e4c90c99d06d93a470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Office
+--- !u!4 &633427445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633427443}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &799066234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -427,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_Name
-      value: Dialogue System
+      value: DialogueSystem
       objectReference: {fileID: 0}
     - target: {fileID: 7985477256237130417, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -723,6 +771,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48be9993440c14747bc603863576df1b, type: 2}
   - {fileID: 11400000, guid: 9a93990a7a691b74f89179089e07edc0, type: 2}
   bh_currentNode: BeastHunterIntroduction
+  picnicFlags: []
   officeFlags:
   - {fileID: 11400000, guid: 146206d15ce6e1f45afcf25580b77359, type: 2}
 --- !u!1 &1322609230
@@ -965,6 +1014,21 @@ MonoBehaviour:
   beastHunterDead: {fileID: 11400000, guid: 9a93990a7a691b74f89179089e07edc0, type: 2}
   beastHunterSprite: {fileID: 2132839576}
   beastHunteDeadrSprite: {fileID: 1194796394}
+  forceReturn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 633427444}
+        m_TargetAssemblyTypeName: ForceShutoff, Assembly-CSharp
+        m_MethodName: forceShutoff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2132839576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,3 +1128,4 @@ SceneRoots:
   - {fileID: 29831870}
   - {fileID: 2132839578}
   - {fileID: 1194796396}
+  - {fileID: 633427445}
