@@ -16,12 +16,15 @@ public class Computer : MonoBehaviour
     //Gets a reference to the player for movement control
     PlayerController player = null;
 
+    //Reference to the fade transition
+    FadeTransition fadeTransition = null;
+
     //Sets up the dictionary with all the scene names and the codes that correspond to them
     Dictionary<string, string> sceneCodes = new Dictionary<string, string>()
     {
         {"TEST1", "2DScene1"},
         {"TY4P", "Credits"},
-        {"SB7YVT8", "DialogueTesting"},
+        {"SB7YVT8", "BeastHunter"},
         {"S3HUN9E", "PicnicScene" }
     };
 
@@ -29,6 +32,8 @@ public class Computer : MonoBehaviour
     {
         //Find the playercontroller component via the tag on player
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
+        fadeTransition = GameObject.Find("FadeTransition").GetComponent<FadeTransition>();
     }
 
     //Enables the computer UI
@@ -70,7 +75,7 @@ public class Computer : MonoBehaviour
             //Tries to load the corresponding scene
             try
             {
-                StartCoroutine(LoadSceneAsync(sceneCodes[codeInput.text]));
+                StartCoroutine(SceneTransition(sceneCodes[codeInput.text]));
             }
             //TODO: response to player for invalid code
             catch
@@ -82,6 +87,19 @@ public class Computer : MonoBehaviour
         {
             Debug.Log("No input field found");
         }
+    }
+
+    //Runs the full fade and load transition so the coroutines aren't overlapping and you can actually see the thing fade
+    public IEnumerator SceneTransition(string sceneName)
+    {
+        //Fade out
+        //yield return StartCoroutine(fadeTransition.FadeOut());
+
+        //Loads scene
+        yield return StartCoroutine(LoadSceneAsync(sceneName));
+
+        //Fade in
+        //yield return StartCoroutine(fadeTransition.FadeIn());
     }
 
     //Coroutine loads scene in background
@@ -99,7 +117,7 @@ public class Computer : MonoBehaviour
         //Hiding every object in the current scene
         foreach (GameObject gameObject in SceneManager.GetActiveScene().GetRootGameObjects())
         {
-            if (gameObject.name != "NotesUI")
+            if (gameObject.name != "NotesUI" && gameObject.name != "FadeTransition")
             {
                 gameObject.SetActive(false);
             }

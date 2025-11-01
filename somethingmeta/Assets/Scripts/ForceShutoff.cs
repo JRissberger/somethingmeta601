@@ -12,7 +12,15 @@ public class ForceShutoff : MonoBehaviour
     //Get the character once the scene has changed
     private PlayerController player;
 
+    //Reference to the fade transition
+    FadeTransition fadeTransition = null;
+
     //TODO: If we want any glitch effects, program them here
+
+    private void Start()
+    {
+        fadeTransition = GameObject.Find("FadeTransition").GetComponent<FadeTransition>();
+    }
 
     //Transitions the scene back to the 3D office
     public void forceShutoff()
@@ -22,8 +30,20 @@ public class ForceShutoff : MonoBehaviour
         //FlagManager.instance.officeFlags[0].SetActivity(true);
 
         //Unload current scene and swap to office
-        StartCoroutine(unloadScene());
+        StartCoroutine(SceneTransition());
 
+    }
+    //Runs the full fade and load transition so the coroutines aren't overlapping and you can actually see the thing fade
+    public IEnumerator SceneTransition()
+    {
+        //Fade out
+        //yield return StartCoroutine(fadeTransition.FadeOut());
+
+        //Loads scene
+        yield return StartCoroutine(unloadScene());
+
+        //Fade in
+        //yield return StartCoroutine(fadeTransition.FadeIn());
     }
 
     //Using a corutine to not freeze anything
