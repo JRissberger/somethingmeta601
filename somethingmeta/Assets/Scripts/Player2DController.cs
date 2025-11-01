@@ -10,7 +10,7 @@ public class Player2DController : MonoBehaviour
     //Uses a rigidbody bc it's better for 2d movement feel
     private Rigidbody2D controller;
 
-    private float moveSpeed = 3;
+    private float moveSpeed = 5;
 
     public bool inDialogue { get; set; } = false;
 

@@ -61,6 +61,9 @@ public class Computer : MonoBehaviour
     //Loads the scene corresponding to the code entered
     public void Load2DScene()
     {
+        //No more case sensitivity!
+        codeInput.text = codeInput.text.ToUpper();
+        
         //Makes sure the component was gotten
         if (codeInput != null)
         {

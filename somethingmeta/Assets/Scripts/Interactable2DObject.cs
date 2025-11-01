@@ -16,7 +16,7 @@ public class Interactable2DObject : MonoBehaviour
     [SerializeField] private UnityEvent incorrectItemHeld;
 
     //How close the player has to be to the object to interact with it
-    [SerializeField] private float interactionRange = 2.0f;
+    [SerializeField] private float interactionRange = 0.1f;
 
     //Reference to the inventory manager for item check handling
     //TODO: It may be better to get the manager at startup rather than being passed in
@@ -31,6 +31,9 @@ public class Interactable2DObject : MonoBehaviour
 
     //checks if the level has properly loaded; this is a shitty solution but it works.
     private bool hasLoaded = false;
+
+    //Tracks if the player is in range
+    private bool inRange = false;
 
     // Start is called before the first frame update
     void OnLevelWasLoaded()
@@ -50,16 +53,26 @@ public class Interactable2DObject : MonoBehaviour
                 hasLoaded = true;
             }
         }
-        //Interact key is E, can change this later if needed
-        if (Input.GetKeyDown(KeyCode.E))
+
+        //Interact if the player is in range and presses E
+        if (inRange && Input.GetKeyDown(KeyCode.E))
         {
-            //Checks if the player is within range
-            
-            float distance = Vector2.Distance(player.transform.position, transform.position);
-            if (distance <= interactionRange)
-            {
-                OnKeyPress.Invoke();
-            }
+            OnKeyPress.Invoke();
+        }
+    }
+    //Checks if the player is in the range of the trigger boxcollider
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            inRange = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            inRange = false;
         }
     }
 
@@ -71,7 +84,7 @@ public class Interactable2DObject : MonoBehaviour
         //genericInteract.Invoke();
 
         //If there's no item interaction or the player isn't holding an item
-        if (!hasItemInteract || inventoryManager.SelectedItem < 0)
+        if (!hasItemInteract || inventoryManager.SelectedItem < 0 || inventoryManager.InventoryArray[inventoryManager.SelectedItem] == null)
         {
             genericInteract.Invoke();
         }
@@ -108,7 +121,7 @@ public class Interactable2DObject : MonoBehaviour
         }
         else
         {
-            Debug.Log("FUCK");
+            Debug.Log("Incorrect item");
             IncorrectItem();
         }
     }
