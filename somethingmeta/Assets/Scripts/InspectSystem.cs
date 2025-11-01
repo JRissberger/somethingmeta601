@@ -15,6 +15,8 @@ public class InspectSystem : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
+    private Quaternion inspectRotation;
+
     //Checks if inspection is happening
     private bool isInspecting = false;
 
@@ -32,6 +34,9 @@ public class InspectSystem : MonoBehaviour
         //Saves the original object position and rotation
         originalPosition = objectToInspect.position;
         originalRotation = objectToInspect.rotation;
+
+        inspectRotation = Quaternion.identity;
+
     }
 
     // Update is called once per frame
@@ -78,18 +83,28 @@ public class InspectSystem : MonoBehaviour
         //Technically this can get called mid inspection because of the event system
         if (!isInspecting && player.canInteract)
         {
-            //Records the original position
+
             isInspecting = true;
             player.canMove = false;
             player.canInteract = false;
 
-            //Centers the object in front of the camera
+            //Centers the object in front of the player
             objectToInspect.position = player.transform.position + player.transform.forward * 1f;
 
             //Display inspect UI
             inspectUI.SetActive(true);
 
+            Debug.Log(objectToInspect.rotation);
+            StartCoroutine(ResetRotation());
         }
+    }
+
+    //In which I brute force a rotation reset
+    //Because for some reason the first time it gets set, the update order is odd enough that it doesn't display
+    private IEnumerator ResetRotation()
+    {
+        yield return null;
+        objectToInspect.rotation = Quaternion.identity;
     }
 
     //Ends inspection (happens when player presses esc)
