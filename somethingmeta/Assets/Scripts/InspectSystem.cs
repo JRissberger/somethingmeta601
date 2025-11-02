@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InspectSystem : MonoBehaviour
 {
@@ -26,6 +27,14 @@ public class InspectSystem : MonoBehaviour
     //Inspection UI
     //Have to pass in via editor since it's hidden by default, can't search for it
     [SerializeField] private GameObject inspectUI;
+
+    //Does the object have hidden text?
+    [SerializeField] private bool hasObscuredText = false;
+
+    //Text elements for if there's hidden text to toggle
+    [SerializeField] private TMP_Text obscuredText;
+    [SerializeField] private TMP_Text legibleText;
+
 
     private void Start()
     {
@@ -94,8 +103,14 @@ public class InspectSystem : MonoBehaviour
             //Display inspect UI
             inspectUI.SetActive(true);
 
-            Debug.Log(objectToInspect.rotation);
             StartCoroutine(ResetRotation());
+
+            //Switches to revealed text if applicable
+            if (hasObscuredText)
+            {
+                Debug.Log("Showing Text");
+                RevealText();
+            }
         }
     }
 
@@ -118,5 +133,32 @@ public class InspectSystem : MonoBehaviour
         player.canMove = true;
         player.canInteract = true;
         inspectUI.SetActive(false);
+
+        //Switches to obscured text if applicable
+        if (hasObscuredText)
+        {
+            HideText();
+        }
+    }
+
+    //Toggles for hidden text if applicable
+    private void RevealText()
+    {
+        //Only run if there's been text elements assigned
+        if (obscuredText && legibleText)
+        {
+            obscuredText.gameObject.SetActive(false);
+            legibleText.gameObject.SetActive(true);
+        }
+    }
+
+    private void HideText()
+    {
+        //Only run if there's been text elements assigned
+        if (obscuredText && legibleText)
+        {
+            obscuredText.gameObject.SetActive(true);
+            legibleText.gameObject.SetActive(false);
+        }
     }
 }
