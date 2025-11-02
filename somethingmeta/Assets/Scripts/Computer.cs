@@ -19,6 +19,9 @@ public class Computer : MonoBehaviour
     //Reference to the fade transition
     FadeTransition fadeTransition = null;
 
+    //Scene transition manager
+    [SerializeField] TransitionManager transitionManager;
+
     //Sets up the dictionary with all the scene names and the codes that correspond to them
     Dictionary<string, string> sceneCodes = new Dictionary<string, string>()
     {
@@ -75,7 +78,10 @@ public class Computer : MonoBehaviour
             //Tries to load the corresponding scene
             try
             {
-                StartCoroutine(SceneTransition(sceneCodes[codeInput.text]));
+                //StartCoroutine(SceneTransition(sceneCodes[codeInput.text]));
+                //Calls transition manager
+                transitionManager.SwitchScenes(sceneCodes[codeInput.text]);
+
             }
             //TODO: response to player for invalid code
             catch
@@ -89,43 +95,42 @@ public class Computer : MonoBehaviour
         }
     }
 
-    //Runs the full fade and load transition so the coroutines aren't overlapping and you can actually see the thing fade
-    public IEnumerator SceneTransition(string sceneName)
-    {
-        //Fade out
-        //yield return StartCoroutine(fadeTransition.FadeOut());
+    ////Runs the full fade and load transition so the coroutines aren't overlapping and you can actually see the thing fade
+    //public IEnumerator SceneTransition(string sceneName)
+    //{
+    //    //Fade out
+    //    yield return StartCoroutine(fadeTransition.FadeOut());
 
-        //Loads scene
-        yield return StartCoroutine(LoadSceneAsync(sceneName));
+    //    //Loads scene
+    //    yield return StartCoroutine(LoadSceneAsync(sceneName));
 
-        //Fade in
-        //yield return StartCoroutine(fadeTransition.FadeIn());
-    }
+    //    //Fade in is handled separately since the object this script is attached to gets disabled
+    //}
 
-    //Coroutine loads scene in background
-    //Means Load2DScene can wait for the load to finish before swapping scenes
-    private IEnumerator LoadSceneAsync(string sceneName)
-    {
-        AsyncOperation asyncLoadScene = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+    ////Coroutine loads scene in background
+    ////Means Load2DScene can wait for the load to finish before swapping scenes
+    //private IEnumerator LoadSceneAsync(string sceneName)
+    //{
+    //    AsyncOperation asyncLoadScene = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-        //Loop until the scene is loaded
-        while (!asyncLoadScene.isDone)
-        {
-            yield return null;
-        }
+    //    //Loop until the scene is loaded
+    //    while (!asyncLoadScene.isDone)
+    //    {
+    //        yield return null;
+    //    }
 
-        //Hiding every object in the current scene
-        foreach (GameObject gameObject in SceneManager.GetActiveScene().GetRootGameObjects())
-        {
-            if (gameObject.name != "NotesUI" && gameObject.name != "FadeTransition")
-            {
-                gameObject.SetActive(false);
-            }
-        }
+    //    //Hiding every object in the current scene
+    //    foreach (GameObject gameObject in SceneManager.GetActiveScene().GetRootGameObjects())
+    //    {
+    //        if (gameObject.name != "NotesUI" && gameObject.name != "FadeTransition")
+    //        {
+    //            gameObject.SetActive(false);
+    //        }
+    //    }
 
-        //Swap to the new scene
-        //Have to search for the scene by name since setActiveScene needs a Scene object
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
-    }
+    //    //Swap to the new scene
+    //    //Have to search for the scene by name since setActiveScene needs a Scene object
+    //    SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+    //}
 
 }

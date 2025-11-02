@@ -6,7 +6,7 @@ public class FadeTransition : MonoBehaviour
 {
     //Canvas group element has the alpha value being edited
     [SerializeField] CanvasGroup canvas;
-    [SerializeField] float fadeLength = 0.5f;
+    [SerializeField] float fadeLength = 0.3f;
 
     //Fades out the cover (fades in the scene)
     public IEnumerator FadeIn()
