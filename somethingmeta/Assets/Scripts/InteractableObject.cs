@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements.Experimental;
 public class InteractableObject : MonoBehaviour
 {
     //Declaring variables
     PlayerController player = null;
     Vector3 mousePos = Vector3.zero;
     [SerializeField] private UnityEvent EventsWhenClicked;
-
+    [SerializeField] private Outline outline;
     // Start is called before the first frame update
     void Start()
     {
+        outline = gameObject.AddComponent<Outline>();
+        outline.OutlineMode = Outline.Mode.OutlineAll;
+        outline.OutlineColor = Color.yellow;
+        outline.OutlineWidth = 5f;
+        outline.enabled = false;
         //Find the playercontroller component via the tag on player
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
@@ -20,6 +26,8 @@ public class InteractableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        outline.enabled = false;
+
         //Accessing mouse position
         mousePos = player.mousePosition;
 
@@ -35,15 +43,21 @@ public class InteractableObject : MonoBehaviour
             //Debug.Log("Hovering over object");
             if (rayHit.collider.gameObject == this.gameObject)
                 {
+                outline.enabled = true;
+
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
                     {
                         EventsWhenClicked.Invoke();
                     }
-
-                }
+                
 
             }
+
+            
+
+        }
+        
 
     }
 
