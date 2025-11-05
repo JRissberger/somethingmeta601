@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements.Experimental;
@@ -7,26 +8,34 @@ public class InteractableObject : MonoBehaviour
 {
     //Declaring variables
     PlayerController player = null;
+    private TextMeshProUGUI interactionTextUI;
     Vector3 mousePos = Vector3.zero;
+    [SerializeField] private string interactText = "UNKNOWN INTERACTION TEXT";
     [SerializeField] private UnityEvent EventsWhenClicked;
-    [SerializeField] private Outline outline;
+    private Outline outline;
     // Start is called before the first frame update
     void Start()
     {
+        //Creating and determining what the outline looks like.
         outline = gameObject.AddComponent<Outline>();
         outline.OutlineMode = Outline.Mode.OutlineAll;
         outline.OutlineColor = Color.yellow;
         outline.OutlineWidth = 5f;
         outline.enabled = false;
+
+        
         //Find the playercontroller component via the tag on player
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-
+        interactionTextUI = GameObject.FindWithTag("InteractText").GetComponent<TextMeshProUGUI>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //turns off the outline every frame.
         outline.enabled = false;
+        interactionTextUI.text = "";
 
         //Accessing mouse position
         mousePos = player.mousePosition;
@@ -42,8 +51,10 @@ public class InteractableObject : MonoBehaviour
         {
             //Debug.Log("Hovering over object");
             if (rayHit.collider.gameObject == this.gameObject)
-                {
+            {
+                //turns on the outline if the object is getting hit by the raycast. 
                 outline.enabled = true;
+                interactionTextUI.text = interactText;
 
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
@@ -52,6 +63,10 @@ public class InteractableObject : MonoBehaviour
                     }
                 
 
+            }
+            else
+            {
+                interactionTextUI.text = "";
             }
 
             
