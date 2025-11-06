@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 136840541}
   m_Layer: 0
   m_Name: Obscured Text
-  m_TagString: Untagged
+  m_TagString: Interactible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2233,7 +2233,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353851436}
+    - targetCorrespondingSourceObject: {fileID: 6159819195323411483, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1825424330}
+    - targetCorrespondingSourceObject: {fileID: 7963189301177548054, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739715195}
   m_SourcePrefab: {fileID: 100100000, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
 --- !u!224 &343130665 stripped
 RectTransform:
@@ -3243,6 +3252,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3312505565328445947, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: interactText
+      value: Read Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312505565328445947, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: EventsWhenClicked.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3866,6 +3879,10 @@ PrefabInstance:
       propertyPath: hasObscuredText
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3312505565328445947, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: interactText
+      value: Read Newspaper
+      objectReference: {fileID: 0}
     - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_text
       value: "In this heart-pounding, bloody action title, players take the role
@@ -4190,7 +4207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: UNKNOWN INTERACTION TEXT
+  interactText: Inspect Floppy Disk
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls:
@@ -4813,7 +4830,7 @@ Transform:
   m_GameObject: {fileID: 779893187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalPosition: {x: -4.917, y: 1.6, z: -4.5360003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7347,6 +7364,10 @@ PrefabInstance:
       propertyPath: inspectUI
       value: 
       objectReference: {fileID: 873259055}
+    - target: {fileID: 3312505565328445947, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: interactText
+      value: Read Note
+      objectReference: {fileID: 0}
     - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_text
       value: Test this please! Code is <b>S3HUN9E</b>
@@ -7412,6 +7433,32 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78299827fefb767489642b664170d2c8, type: 3}
+--- !u!1 &1353851435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
+  m_PrefabInstance: {fileID: 336416620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1353851436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353851435}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.248421, z: 1.4545565}
+  m_Center: {x: 0.0000000030118292, y: 1.6109303, z: -0.28381827}
 --- !u!1 &1368234584
 GameObject:
   m_ObjectHideFlags: 0
@@ -7747,7 +7794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: UNKNOWN INTERACTION TEXT
+  interactText: Turn On Computer
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls:
@@ -8418,7 +8465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: UNKNOWN INTERACTION TEXT
+  interactText: Inspect Paper Crown
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls:
@@ -9261,7 +9308,7 @@ Transform:
   m_GameObject: {fileID: 1527562584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.065, y: 2.014, z: 0.387}
+  m_LocalPosition: {x: -4.982, y: 2.014, z: -4.149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10205,6 +10252,10 @@ PrefabInstance:
       propertyPath: hasObscuredText
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3312505565328445947, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: interactText
+      value: Read Note
+      objectReference: {fileID: 0}
     - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_text
       value: 'I''ve put together some dialogue with the Beast Hunter,  can you take
@@ -10350,6 +10401,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 24ae5efeac4e8e04892d43233a1073f5, type: 3}
       propertyPath: m_Name
       value: paperCrown_model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24ae5efeac4e8e04892d43233a1073f5, type: 3}
+      propertyPath: m_TagString
+      value: Interactible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10618,6 +10673,33 @@ Transform:
   - {fileID: 761050737}
   m_Father: {fileID: 439049215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1739715193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7963189301177548054, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
+  m_PrefabInstance: {fileID: 336416620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1739715195
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739715193}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6558347715830034149, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
 --- !u!1 &1742077901
 GameObject:
   m_ObjectHideFlags: 0
@@ -11344,6 +11426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 3645614243887161499, guid: a7ccb3eaeab7b944cb053db31e2f033f, type: 3}
+      propertyPath: interactText
+      value: Inspect Book
+      objectReference: {fileID: 0}
     - target: {fileID: 3897368825795787963, guid: a7ccb3eaeab7b944cb053db31e2f033f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.6306322
@@ -11627,6 +11713,32 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1825424328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6159819195323411483, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
+  m_PrefabInstance: {fileID: 336416620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1825424330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825424328}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8464247, y: 1.1263758, z: 0.6600674}
+  m_Center: {x: 0.00000009924169, y: -0.44220874, z: 2.6035976}
 --- !u!1 &1831673616
 GameObject:
   m_ObjectHideFlags: 0

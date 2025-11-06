@@ -11,6 +11,7 @@ public class InteractableObject : MonoBehaviour
     private TextMeshProUGUI interactionTextUI;
     Vector3 mousePos = Vector3.zero;
     [SerializeField] private string interactText = "UNKNOWN INTERACTION TEXT";
+    private bool endLook = false;
     [SerializeField] private UnityEvent EventsWhenClicked;
     private Outline outline;
     // Start is called before the first frame update
@@ -35,8 +36,7 @@ public class InteractableObject : MonoBehaviour
     {
         //turns off the outline every frame.
         outline.enabled = false;
-        interactionTextUI.text = "";
-
+        
         //Accessing mouse position
         mousePos = player.mousePosition;
 
@@ -49,30 +49,40 @@ public class InteractableObject : MonoBehaviour
         //TODO: handle depth limits, don't want the player to be able to interact with something from far away
         if (Physics.Raycast(ray.origin, ray.direction, out rayHit, 5f))
         {
+            Debug.DrawRay(ray.origin, ray.direction);
+
             //Debug.Log("Hovering over object");
             if (rayHit.collider.gameObject == this.gameObject)
             {
                 //turns on the outline if the object is getting hit by the raycast. 
                 outline.enabled = true;
-                interactionTextUI.text = interactText;
+                
+                Debug.Log(this.gameObject.name);
 
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
                     {
                         EventsWhenClicked.Invoke();
                     }
+
                 
-
             }
-            else
-            {
-                interactionTextUI.text = "";
-            }
-
-            
-
         }
-        
+        if (outline.enabled)
+        {
+            Debug.Log("If this does not work imma kms");
+            endLook = true;
+            interactionTextUI.text = interactText;
+        }
+        else
+        {
+            if (endLook)
+            {
+                interactionTextUI.text = ""; 
+            }
+            endLook = false;
+        }
+
 
     }
 
