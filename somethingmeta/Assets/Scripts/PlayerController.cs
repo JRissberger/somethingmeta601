@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public GameObject orientation;
     public GameObject parentObjectToTurn;
 
+    //Used for positioning the held object
+    [SerializeField] GameObject camera;
+
     //Used for notes
     [SerializeField] private UnityEvent notes;
 
@@ -62,9 +65,12 @@ public class PlayerController : MonoBehaviour
             parentObjectToTurn.transform.rotation = orientation.transform.rotation;
 
             //If there's a held object, update its position relative to the player
+            //relative to camera??
             if (heldObject)
             {
-                heldObject.UpdatePosition(transform.position + transform.forward * 1f);
+                //Holding the object to bottom right of camera view
+                heldObject.UpdatePosition(camera.transform.position + camera.transform.forward * 1f
+                + camera.transform.right * 0.5f - camera.transform.up * 0.25f); 
             }
 
         }

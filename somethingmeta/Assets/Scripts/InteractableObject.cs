@@ -15,14 +15,6 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private UnityEvent EventsWhenClicked;
     private Outline outline;
 
-    //if the object is being held, keep the outline disabled
-    private bool isHeld = false;
-    public bool IsHeld
-    {
-        get { return isHeld; }
-        set { isHeld = value; }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +53,7 @@ public class InteractableObject : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction);
 
             //Debug.Log("Hovering over object");
-            if (rayHit.collider.gameObject == this.gameObject && !isHeld)
+            if (rayHit.collider.gameObject == this.gameObject)
             {
                 //turns on the outline if the object is getting hit by the raycast. 
                 outline.enabled = true;
@@ -72,9 +64,7 @@ public class InteractableObject : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         EventsWhenClicked.Invoke();
-                    }
-
-                
+                    }     
             }
         }
         if (outline.enabled)

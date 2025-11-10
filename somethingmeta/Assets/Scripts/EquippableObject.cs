@@ -18,10 +18,23 @@ public class EquippableObject : MonoBehaviour
         originalPosition = this.gameObject.transform.position;
     }
 
+    private void Update()
+    {
+        //For now, pressing E drops the item. can change later if needed
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            DropObject();
+        }
+    }
+
     //Equips the object to the player
+    //Player can only hold one item at a time
     public void EquipObject()
     {
-        player.HeldObject = this;
+        if (!player.HeldObject)
+        {
+            player.HeldObject = this;
+        }
     }
 
     //Called by the player script to update the position of a held object 
@@ -30,11 +43,15 @@ public class EquippableObject : MonoBehaviour
         this.transform.position = position;
     }
 
-    //Drops the currently held object
-    //TODO: key press? where will it go? onto the floor in front of the player? back to the og position?
+    //Drops the currently object if held
+    //TODO: may change to just drop the object in front of the player?
     public void DropObject()
     {
-        player.HeldObject = null;
-        this.gameObject.transform.position = originalPosition;
+        if (player.HeldObject == this)
+        {
+            player.HeldObject = null;
+            this.gameObject.transform.position = originalPosition;
+        }
+
     }
 }

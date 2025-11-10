@@ -4806,6 +4806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 889349103}
   parentObjectToTurn: {fileID: 779893187}
+  camera: {fileID: 931410303}
   notes:
     m_PersistentCalls:
       m_Calls:
@@ -6838,6 +6839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acde35ac781183c449b8649e6d16c82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1150305283
 MonoBehaviour:
   m_ObjectHideFlags: 0
