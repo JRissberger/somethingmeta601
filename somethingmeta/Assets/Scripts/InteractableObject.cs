@@ -14,6 +14,16 @@ public class InteractableObject : MonoBehaviour
     private bool endLook = false;
     [SerializeField] private UnityEvent EventsWhenClicked;
     private Outline outline;
+
+    //Is an equipped item expected for an interaction
+    [SerializeField] private bool hasItemInteract = false;
+
+    //Equipped item to look for (checks EquippableObject since heldItem also stores as that type)
+    [SerializeField] private EquippableObject correctItem = null;
+
+    //Interactions with correct item
+    [SerializeField] private UnityEvent CorrectItemEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,15 +72,23 @@ public class InteractableObject : MonoBehaviour
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
                     {
-                        EventsWhenClicked.Invoke();
-                    }
+                        //Is there an interaction with a held object AND the held object is correct
+                        if (hasItemInteract && player.HeldObject == correctItem)
+                        {
+                            CorrectItemEvent.Invoke();
+                        }
 
-                
+                        //Otherwise just call the generic interact event
+                        else
+                        {
+                            EventsWhenClicked.Invoke();
+                        }
+                        
+                    }     
             }
         }
         if (outline.enabled)
         {
-            Debug.Log("If this does not work imma kms");
             endLook = true;
             interactionTextUI.text = interactText;
         }
