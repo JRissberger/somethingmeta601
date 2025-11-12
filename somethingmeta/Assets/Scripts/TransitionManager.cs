@@ -29,6 +29,30 @@ public class TransitionManager : MonoBehaviour
         yield return StartCoroutine(fadeTransition.FadeIn());
     }
 
+    //Returns to office (no loading since it already existsF)
+    public void ReturnToOffice()
+    {
+        StartCoroutine(OfficeTransition());
+    }
+
+    public IEnumerator OfficeTransition()
+    {
+        //Fade out
+        yield return StartCoroutine(fadeTransition.FadeOut());
+
+        //Loads scene
+        yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        yield return SceneManager.SetActiveScene(SceneManager.GetSceneByName("Office"));
+
+        //Re enable everything
+        foreach(GameObject gameObject in SceneManager.GetSceneByName("Office").GetRootGameObjects())
+        {
+            gameObject.SetActive(true);
+        }
+
+        //Fade in
+        yield return StartCoroutine(fadeTransition.FadeIn());
+    }
     //Coroutine loads scene in background
     //Means Load2DScene can wait for the load to finish before swapping scenes
     private IEnumerator LoadSceneAsync(string sceneName)

@@ -32,8 +32,8 @@ public class ForceShutoff : MonoBehaviour
         Debug.Log("forceShutoff called");
 
         //Unload current scene and swap to office
-        transitionManager.SwitchScenes("Office");
-
+        transitionManager.ReturnToOffice();
+        
     }
     ////Runs the full fade and load transition so the coroutines aren't overlapping and you can actually see the thing fade
     //public IEnumerator SceneTransition()

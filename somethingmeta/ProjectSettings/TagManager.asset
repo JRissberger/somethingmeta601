@@ -9,6 +9,7 @@ TagManager:
   - CameraHolder
   - InspectUI
   - InteractText
+  - Threshold
   layers:
   - Default
   - TransparentFX

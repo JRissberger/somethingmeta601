@@ -28,7 +28,8 @@ public class Computer : MonoBehaviour
         {"TEST1", "2DScene1"},
         {"TY4P", "Credits"},
         {"SB7YVT8", "BeastHunter"},
-        {"S3HUN9E", "PicnicScene" }
+        {"S3HUN9E", "PicnicScene"},
+        {"LAB", "Labyrinth"}
     };
 
     private void Start()
