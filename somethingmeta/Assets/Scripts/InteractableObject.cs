@@ -10,7 +10,7 @@ public class InteractableObject : MonoBehaviour
     PlayerController player = null;
     private TextMeshProUGUI interactionTextUI;
     Vector3 mousePos = Vector3.zero;
-    [SerializeField] private string interactText = "UNKNOWN INTERACTION TEXT";
+    [SerializeField] public string interactText = "UNKNOWN INTERACTION TEXT";
     private bool endLook = false;
     [SerializeField] private UnityEvent EventsWhenClicked;
     private Outline outline;
@@ -67,7 +67,7 @@ public class InteractableObject : MonoBehaviour
                 //turns on the outline if the object is getting hit by the raycast. 
                 outline.enabled = true;
                 
-                Debug.Log(this.gameObject.name);
+                
 
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
