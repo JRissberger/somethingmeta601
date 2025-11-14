@@ -57,7 +57,6 @@ public class InteractableObject : MonoBehaviour
                 //turns on the outline if the object is getting hit by the raycast. 
                 outline.enabled = true;
                 
-                Debug.Log(this.gameObject.name);
 
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
@@ -70,7 +69,6 @@ public class InteractableObject : MonoBehaviour
         }
         if (outline.enabled)
         {
-            Debug.Log("If this does not work imma kms");
             endLook = true;
             interactionTextUI.text = interactText;
         }
