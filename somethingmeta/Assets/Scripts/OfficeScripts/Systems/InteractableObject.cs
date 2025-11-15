@@ -10,20 +10,10 @@ public class InteractableObject : MonoBehaviour
     PlayerController player = null;
     private TextMeshProUGUI interactionTextUI;
     Vector3 mousePos = Vector3.zero;
-    [SerializeField] public string interactText = "UNKNOWN INTERACTION TEXT";
+    [SerializeField] private string interactText = "UNKNOWN INTERACTION TEXT";
     private bool endLook = false;
     [SerializeField] private UnityEvent EventsWhenClicked;
     private Outline outline;
-
-    //Is an equipped item expected for an interaction
-    [SerializeField] private bool hasItemInteract = false;
-
-    //Equipped item to look for (checks EquippableObject since heldItem also stores as that type)
-    [SerializeField] private EquippableObject correctItem = null;
-
-    //Interactions with correct item
-    [SerializeField] private UnityEvent CorrectItemEvent;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -67,24 +57,14 @@ public class InteractableObject : MonoBehaviour
                 //turns on the outline if the object is getting hit by the raycast. 
                 outline.enabled = true;
                 
-                
 
                     //Detects if the mouse is clicked while over the object
                     if (Input.GetMouseButtonDown(0))
                     {
-                        //Is there an interaction with a held object AND the held object is correct
-                        if (hasItemInteract && player.HeldObject == correctItem)
-                        {
-                            CorrectItemEvent.Invoke();
-                        }
+                        EventsWhenClicked.Invoke();
+                    }
 
-                        //Otherwise just call the generic interact event
-                        else
-                        {
-                            EventsWhenClicked.Invoke();
-                        }
-                        
-                    }     
+                
             }
         }
         if (outline.enabled)
