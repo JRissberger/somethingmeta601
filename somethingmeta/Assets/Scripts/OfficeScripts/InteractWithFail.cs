@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class InteractWithFail : InteractableObject
+public class InteractWithFail : MonoBehaviour
 {
     //Declaring variables
     PlayerController player = null;
