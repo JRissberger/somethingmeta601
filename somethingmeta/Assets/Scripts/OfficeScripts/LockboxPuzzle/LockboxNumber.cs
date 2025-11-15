@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LockboxNumber : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class LockboxNumber : MonoBehaviour
 
     //Needs to be accessible by the manager
     public int Number { get { return number; } }
+
+    //Reference to the text display to update
+    [SerializeField] private TMP_Text numberText;
 
     //Increases the number by 1 when clicked
     public void IterateNumber()
@@ -23,7 +27,8 @@ public class LockboxNumber : MonoBehaviour
             number++;
         }
 
-        Debug.Log(number);
+        //Update the number display
+        numberText.text = number.ToString();
     }
 
 }
