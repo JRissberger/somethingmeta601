@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StartScreenCrash : MonoBehaviour
 {
+    [SerializeField] Computer computer;
     public void ShowCrash()
     {
         this.gameObject.SetActive(true);
@@ -14,6 +15,7 @@ public class StartScreenCrash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             this.gameObject.SetActive(false);
+            computer.ComputerOff();
         }
     }
 }
