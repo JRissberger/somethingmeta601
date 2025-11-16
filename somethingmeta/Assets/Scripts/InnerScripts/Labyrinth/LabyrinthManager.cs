@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class LabyrinthManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class LabyrinthManager : MonoBehaviour
     //Canvas with the crash info
     [SerializeField] private GameObject crashScreen;
 
+    //Temporary horror screen
+    [SerializeField] private GameObject horrorScreen;
     //Used for the transition back to office
     [SerializeField] private ForceShutoff transition;
 
@@ -22,6 +25,9 @@ public class LabyrinthManager : MonoBehaviour
     //Used since the crash routine takes multiple frames, keeps it from being called multiple times
     //Since the check for crash is in update which runs every frame
     private bool isCrashing = false;
+
+    //runs dialogue for the dev note
+    [SerializeField] DialogueRunner dialogueRunner;
 
     //Loops to check for any triggers
 
@@ -58,6 +64,15 @@ public class LabyrinthManager : MonoBehaviour
         transition.forceShutoff();
     }
 
+    //CURRENTLY PLACEHOLDER
+
+    public void FinishLabyrinth()
+    {
+        horrorScreen.SetActive(true);
+        Debug.Log("I FOUND YOU");
+        StartCoroutine(waitTransition());
+    }
+
     private void Update()
     {
         //Checks what the counter's at
@@ -69,5 +84,10 @@ public class LabyrinthManager : MonoBehaviour
             isCrashing = true;
             crashGame();
         }
+    }
+
+    public void RunDevNote(string name)
+    {
+        dialogueRunner.StartDialogue(name);
     }
 }

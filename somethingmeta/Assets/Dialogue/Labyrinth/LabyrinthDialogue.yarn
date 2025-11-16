@@ -1,0 +1,10 @@
+﻿title: LabyrinthDialogue
+---
+Grace, what the hell. The memory problems haven't been fixed yet? I can’t test the maze if it crashes after 6 tiles. - Adrian.
+Added Items to reset maze, follows golden path. Used the bananas as a placeholder. Will get back to later. - Grace
+===
+
+title: LabyrinthReset
+---
+MEMORY RESET
+===
