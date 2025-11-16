@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: UNKNOWN INTERACTION TEXT
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls:
@@ -63,6 +64,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4279163437193501646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +83,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToInspect: {fileID: 1187807523156770897}
   inspectUI: {fileID: 0}
+  hasObscuredText: 0
+  obscuredText: {fileID: 0}
+  legibleText: {fileID: 0}
 --- !u!95 &8105748395974653773
 Animator:
   serializedVersion: 7
@@ -185,7 +194,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 239378781582670930, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8105748395974653773}
   beastHunterDead: {fileID: 11400000, guid: 9a93990a7a691b74f89179089e07edc0, type: 2}
+  interactableObject: {fileID: 0}
 --- !u!1001 &5671211143342892502
 PrefabInstance:
   m_ObjectHideFlags: 0

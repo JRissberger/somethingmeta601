@@ -1,0 +1,59 @@
+﻿title: AL_Start
+---
+Move with WASD. Press E to interact with things in the world. 
+Click on an inventory slot to equip an item - Some interactions can change based on what you have!
+===
+
+title: AL_GuardGeneric
+---
+The guard outside the cell is asleep with a key in his pocket. He's too far for you to take the key.
+Sleeping guard asset needed, Connie. - Adrian
+===
+
+title: AL_GuardCorrect
+---
+Using the Fang, you are able to grab the key.
+===
+
+title: AL_FangNote
+---
+You pick up a long, jagged fang. it looks just sharp enough to get through the bars.
+===
+
+title: AL_DoorGeneric
+---
+The door is locked. You need a key to open it.
+===
+
+title: AL_DevNote
+---
+I'm still not sure I like having our protagonist start in a prison. Just feels mean after everything in Forest Quest 1. - Connie
+If you have a problem with it, then you try designing something useful for once. - Adrian
+===
+
+title: AL_PondGeneric
+---
+You see something at the bottom. You could probably pull it out with something long.
+===
+
+title: AL_PondIncorrect
+---
+This item isn’t long enough to reach the bottom of the pond.
+===
+
+title: AL_PondCorrect
+---
+You pull up a collar and a Box! However, something at the bottom pulls your stick underwater.
+You place the box on the ground, and look at the dog collar.
+The word “Gizmo” is scratched out and replaced with the number 8.
+===
+
+title: AL_BoxGeneric
+---
+An ornate box with a keyhole. What could be inside?
+===
+
+title: AL_BoxCorrect
+---
+You use the Key to open the Box. You find a gem hidden inside.
+===

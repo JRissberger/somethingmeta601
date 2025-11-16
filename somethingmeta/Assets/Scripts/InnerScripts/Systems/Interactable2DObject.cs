@@ -35,11 +35,6 @@ public class Interactable2DObject : MonoBehaviour
     //Tracks if the player is in range
     private bool inRange = false;
 
-    // Start is called before the first frame update
-    void OnLevelWasLoaded()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

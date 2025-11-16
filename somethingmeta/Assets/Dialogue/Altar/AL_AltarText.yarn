@@ -1,0 +1,37 @@
+﻿title: AL_BullAltarGeneric
+---
+You find an Altar with the symbol of a Bull above it. There’s some text on the altar.
+“Bring me the power of the Bull.”
+===
+
+title: AL_BullAltarCorrect
+---
+You place your one bull heart onto the altar. 
+===
+
+title: AL_BullAltarIncorrect
+---
+You sense this was the incorrect item.
+===
+
+title: AL_SnakeAltarGeneric
+---
+You find an Altar with the symbol of a Snake above it. There’s some text on the altar.
+“Bring me the deadliness of the Snake.”
+===
+
+title: AL_SnakeAltarCorrect
+---
+You place your bottle with 9 drops of venom inside onto the altar. 
+===
+
+title: AL_SnakeAltarIncorrect
+---
+You sense this was the incorrect item.
+===
+
+title: AL_DogAltarGeneric
+---
+You find an Altar with the symbol of a Dog above it. There’s some text on the altar.
+
+===
