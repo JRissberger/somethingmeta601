@@ -16,8 +16,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 43.2
+<<<<<<< HEAD
     width: 2048
     height: 1060.8
+=======
+    width: 1536
+    height: 868.8
+>>>>>>> computer-texture-test
   m_ShowMode: 4
   m_Title: Game
   m_RootView: {fileID: 2}
@@ -44,8 +49,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 2048
     height: 1060.8
+=======
+    width: 1536
+    height: 868.8
+>>>>>>> computer-texture-test
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +79,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 2048
+=======
+    width: 1536
+>>>>>>> computer-texture-test
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +104,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 1040.8
     width: 2048
+=======
+    y: 848.8
+    width: 1536
+>>>>>>> computer-texture-test
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +133,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 2048
     height: 1010.80005
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
   controlID: 68297
+=======
+    width: 1536
+    height: 818.8
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 55
+>>>>>>> computer-texture-test
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +167,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1650.4
     height: 1010.80005
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
   controlID: 68298
+=======
+    width: 1245.6
+    height: 818.8
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 56
+>>>>>>> computer-texture-test
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +201,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1650.4
     height: 730.4
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 68299
+=======
+    width: 1245.6
+    height: 585.6
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 57
+>>>>>>> computer-texture-test
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +233,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 432
     height: 730.4
+=======
+    width: 326.4
+    height: 585.6
+>>>>>>> computer-texture-test
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -211,10 +262,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 432
     y: 0
     width: 1218.4
     height: 730.4
+=======
+    x: 326.4
+    y: 0
+    width: 919.19995
+    height: 585.6
+>>>>>>> computer-texture-test
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -239,16 +297,29 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 730.4
     width: 1650.4
     height: 280.40002
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 15}
+=======
+    y: 585.6
+    width: 1245.6
+    height: 233.20001
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 16}
+>>>>>>> computer-texture-test
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 17}
+<<<<<<< HEAD
+=======
+  - {fileID: 18}
+>>>>>>> computer-texture-test
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
@@ -266,10 +337,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1650.4
     y: 0
     width: 397.59998
     height: 1010.80005
+=======
+    x: 1245.6
+    y: 0
+    width: 290.40002
+    height: 818.8
+>>>>>>> computer-texture-test
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -298,10 +376,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 432
     y: 73.6
     width: 1216.4
     height: 709.4
+=======
+    x: 326.4
+    y: 73.6
+    width: 917.19995
+    height: 564.6
+>>>>>>> computer-texture-test
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -319,7 +404,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 1216.4, y: 684}
+=======
+  m_TargetSize: {x: 917.19995, y: 516}
+>>>>>>> computer-texture-test
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -334,10 +423,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -486.56003
     m_HBaseRangeMax: 486.56003
     m_VBaseRangeMin: -273.6
     m_VBaseRangeMax: 273.6
+=======
+    m_HBaseRangeMin: -366.87997
+    m_HBaseRangeMax: 366.87997
+    m_VBaseRangeMin: -206.40001
+    m_VBaseRangeMax: 206.40001
+>>>>>>> computer-texture-test
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -355,16 +451,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 1216.4
       height: 688.4
     m_Scale: {x: 1.25, y: 1.25}
     m_Translation: {x: 608.2, y: 344.2}
+=======
+      width: 917.19995
+      height: 543.6
+    m_Scale: {x: 1.25, y: 1.25}
+    m_Translation: {x: 458.59998, y: 271.8}
+>>>>>>> computer-texture-test
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -486.56
       y: -275.36002
       width: 973.12
@@ -372,6 +476,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1520.5, y: 886.75}
+=======
+      x: -366.87997
+      y: -217.43999
+      width: 733.75995
+      height: 434.87997
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1146.5, y: 705.75}
+>>>>>>> computer-texture-test
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -399,9 +512,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 19
     width: 431
     height: 709.4
+=======
+    y: 73.6
+    width: 325.4
+    height: 564.6
+>>>>>>> computer-texture-test
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -416,9 +535,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: c420fdff645efdff6e5efdff745efdff785efdff1c66fdff9a68fdff9680fdff8a83fdff2a9efdff82a3fdffda44feffb298feff7838ffff9e5dffff0060ffff14d6000042d6000064d60000f8d600005cd70000f6d7000050d8000096d80000f8d8000000d9000064d9000072d90000a0d900009e0c02002c0f0200980f0200d40f02002216020064160200441902008c190200b0190200101a0200161b02007e1b02006c1c0200b81c0200fa1c0200321d0200401d0200781d0200
+=======
+      m_SelectedIDs: e4a20000
+      m_LastClickedID: 41700
+      m_ExpandedIDs: a2faffffb0faffffeefafffffca00000bca2000020a300000ca40000
+>>>>>>> computer-texture-test
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -464,10 +589,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 433
     y: 19
     width: 1216.4
     height: 709.4
+=======
+    x: 326.4
+    y: 73.6
+    width: 917.19995
+    height: 564.6
+>>>>>>> computer-texture-test
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -910,9 +1042,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -7.3628907, y: -0.73192334, z: 3.1209626}
     speed: 2
     m_Value: {x: 661.027, y: 526.7744, z: -822.56793}
+=======
+    m_Target: {x: -1.1615213, y: 2.5215874, z: 6.824248}
+    speed: 2
+    m_Value: {x: -1.1615213, y: 2.5215874, z: 6.824248}
+>>>>>>> computer-texture-test
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -958,6 +1096,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.21761206, y: 0.2713182, z: -0.06344318, w: -0.9356091}
     speed: 2
     m_Value: {x: -0.050574094, y: 0.018181093, z: -0.0010871779, w: -0.9987413}
@@ -965,6 +1104,15 @@ MonoBehaviour:
     m_Target: 3.6594977
     speed: 2
     m_Value: 10
+=======
+    m_Target: {x: 0.12507008, y: -0.013963238, z: 0.0017759285, w: 0.99206316}
+    speed: 2
+    m_Value: {x: 0.1250682, y: -0.013963029, z: 0.0017759019, w: 0.99204826}
+  m_Size:
+    m_Target: 1.7055795
+    speed: 2
+    m_Value: 1.7055795
+>>>>>>> computer-texture-test
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -982,7 +1130,11 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
+<<<<<<< HEAD
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+=======
+  m_LastSceneViewRotation: {x: -0.20548768, y: 0.020840734, z: -0.004376978, w: -0.978428}
+>>>>>>> computer-texture-test
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 14}
@@ -1003,6 +1155,98 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Animator\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 275.6
+    y: 72
+    width: 778.80005
+    height: 405.4
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: 4174697653022569958, guid: 9965e949d2f5a3248a44c54f584c664a, type: 2}
+    - {fileID: 4919780724204599126, guid: a91a00f89426d2d4cad4673004728a64, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.6303158
+      e01: 0
+      e02: 0
+      e03: -16.515778
+      e10: 0
+      e11: 0.6303158
+      e12: 0
+      e13: 101.25894
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.6303158
+      e01: 0
+      e02: 0
+      e03: -16.515778
+      e10: 0
+      e11: 0.6303158
+      e12: 0
+      e13: 98.10737
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: a91a00f89426d2d4cad4673004728a64, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 4919780724204599126, guid: a91a00f89426d2d4cad4673004728a64, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+>>>>>>> computer-texture-test
   m_EditorHideFlags: 1
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -1017,9 +1261,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 749.4
     width: 1649.4
     height: 259.40002
+=======
+    y: 659.2
+    width: 1244.6
+    height: 212.20001
+>>>>>>> computer-texture-test
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1042,7 +1292,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes
+=======
+    - Assets/3D Models/Materials
+>>>>>>> computer-texture-test
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1052,6 +1306,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Profiles\jc7467\Desktop\somethingmeta601\somethingmeta
@@ -1062,6 +1317,18 @@ MonoBehaviour:
     m_SelectedIDs: 86d50000
     m_LastClickedID: 54662
     m_ExpandedIDs: 000000004ca90000
+=======
+  - Assets/3D Models/Materials
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\dylan\Desktop\repos\something meta\somethingmeta601\somethingmeta
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 52a60000
+    m_LastClickedID: 42578
+    m_ExpandedIDs: 00000000a8a500000ca60000ffffff7f
+>>>>>>> computer-texture-test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1078,7 +1345,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1090,7 +1357,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004ca90000
+=======
+    m_ExpandedIDs: 00000000a8a50000
+>>>>>>> computer-texture-test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1170,9 +1441,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 804
     width: 1649.4
     height: 259.40002
+=======
+    y: 550.4
+    width: 1042.2
+    height: 321
+>>>>>>> computer-texture-test
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1244,10 +1521,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1651.4
     y: 19
     width: 396.59998
     height: 989.80005
+=======
+    x: 1245.6
+    y: 73.6
+    width: 289.40002
+    height: 797.8
+>>>>>>> computer-texture-test
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1266,7 +1550,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 157.60004
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
