@@ -2974,7 +2974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggers: []
   crashScreen: {fileID: 1641550173}
-  horrorScreen: {fileID: 0}
+  horrorScreen: {fileID: 828098098}
   transition: {fileID: 481211157}
   dialogueRunner: {fileID: 1037831098}
 --- !u!4 &481211156
@@ -4946,6 +4946,7 @@ GameObject:
   - component: {fileID: 869567399}
   - component: {fileID: 869567398}
   - component: {fileID: 869567400}
+  - component: {fileID: 869567401}
   m_Layer: 0
   m_Name: picnicIceCream
   m_TagString: Untagged
@@ -5062,6 +5063,42 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   hasItemInteract: 0
   correctItemName: default
+--- !u!58 &869567401
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869567397}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.5997297
 --- !u!1 &898076135
 GameObject:
   m_ObjectHideFlags: 0
