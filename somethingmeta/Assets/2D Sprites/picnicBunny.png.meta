@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: picnicBunny_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2187
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8907b74521e8c1429e32553e0eaade0
+      internalID: -994578939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_1
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2187
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c805676a655421d4eb8036028d74b82e
+      internalID: 1847650708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_2
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 2187
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6b9484e0570324796795c9ff5d0243
+      internalID: 860230115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_3
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 2187
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e24aad682db1b4381c6a1c001a583a
+      internalID: 1978160733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1458
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9674eb81308575c4d93e0cb1383fbd2b
+      internalID: -1514743452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1458
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f831ea7189c7b4db7f1b8d1acf937e
+      internalID: 775364481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_6
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 1458
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b407e902e25c944984ac4bdbf2c154a
+      internalID: -2111463626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_7
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1458
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c66ab1108417b44d9543582020296b2
+      internalID: -1923519332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 729
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc709723b791834b846fa57208e0efb
+      internalID: 223930956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_9
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 729
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe56a7eeed463474a939e0bd34fd8af3
+      internalID: -2136414812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_10
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 729
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddfdf0e3b341099449a9096012778d2a
+      internalID: 1746524823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_11
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 729
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fce90b0b78e3840a22765697046a49
+      internalID: -948763004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f595d0e11ce2bc243bcb51b2062de716
+      internalID: -1835012379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_13
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25923d9fce6892c4d98fc3aebb41658e
+      internalID: 939036748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_14
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 0
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5d95e225c92944ba66eb3264d3db79
+      internalID: -1604684576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picnicBunny_15
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 0
+        width: 337
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ce5d4b7ae87f644ae96aeb25f7565a
+      internalID: 785595939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +455,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      picnicBunny_0: -994578939
+      picnicBunny_1: 1847650708
+      picnicBunny_10: 1746524823
+      picnicBunny_11: -948763004
+      picnicBunny_12: -1835012379
+      picnicBunny_13: 939036748
+      picnicBunny_14: -1604684576
+      picnicBunny_15: 785595939
+      picnicBunny_2: 860230115
+      picnicBunny_3: 1978160733
+      picnicBunny_4: -1514743452
+      picnicBunny_5: 775364481
+      picnicBunny_6: -2111463626
+      picnicBunny_7: -1923519332
+      picnicBunny_8: 223930956
+      picnicBunny_9: -2136414812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

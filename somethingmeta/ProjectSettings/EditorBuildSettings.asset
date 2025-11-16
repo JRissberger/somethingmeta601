@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 72b6ea7bf04ed034ab7ab927ec295c4f
+  - enabled: 1
+    path: Assets/Scenes/AltarPuzzle.unity
+    guid: 6aa4dc1416502e64a8cc6c57b0001b37
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

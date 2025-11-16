@@ -1,0 +1,33 @@
+﻿title: AL_ShelfGeneric
+---
+You see a shelf with a hook and a bottle above you. It’s too far to reach.
+===
+
+title: AL_ShelfCorrect
+---
+You use the stick to push the hook and bottle off the shelf. You catch the bottle as it falls.
+You realize the hook fits on top of the stick perfectly.
+
+===
+
+title: AL_ShelfIncorrect
+---
+This item cannot reach the shelf.
+===
+
+title: AL_StatueGeneric
+---
+The statue speaks to you.
+“I hold the power of the bull. If you want it, I expect something valuable in return.”
+===
+
+title: AL_StatueCorrect
+---
+“Good. Here is the power of the Bull. Use it well.”
+The statue takes the gem, and reveals the heart of a bull. You take it.
+===
+
+title: AL_StatueIncorrect
+---
+"No."
+===

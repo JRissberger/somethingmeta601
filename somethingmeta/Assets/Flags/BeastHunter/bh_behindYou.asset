@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: bh_behindYou
   m_EditorClassIdentifier: 
   name: bh_behindYou
+  activated: 0
