@@ -1612,6 +1612,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &222525871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2617979742040773864, guid: ff85630c86d28f54791768b93ff196c4, type: 3}
+  m_PrefabInstance: {fileID: 2367185394195594332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &225010929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,6 +3727,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2408094372766059169, guid: bac95dc08572e644ead00af7c467b172, type: 3}
   m_PrefabInstance: {fileID: 390551055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &391822617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a5f89a392859fa74aa28cfb2a725f3c8, type: 3}
+  m_PrefabInstance: {fileID: 1852881143}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &393095334 stripped
 MonoBehaviour:
@@ -16068,25 +16078,43 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1793194127}
     m_Modifications:
+    - target: {fileID: 2007083941805701597, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: inspectUI
+      value: 
+      objectReference: {fileID: 873259055}
     - target: {fileID: 3312505565328445947, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: interactText
       value: Read Note
       objectReference: {fileID: 0}
+    - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_text
+      value: The labyrinth is STILL entirely broken. How the hell am I supposed to
+        do my job when the whole puzzle crashes when I boot it?  And the code's still
+        SC0NNIE, that needs to be change too. - Adrian
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_fontSize
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334232208604596513, guid: 78299827fefb767489642b664170d2c8, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.43431002
+      value: 0.5993913
       objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.43431
+      value: 0.5993912
       objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0043431004
+      value: 0.005993913
       objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2546296
+      value: -0.076971
       objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16094,7 +16122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3463679
+      value: -0.21959
       objectReference: {fileID: 0}
     - target: {fileID: 3704694084977504376, guid: 78299827fefb767489642b664170d2c8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19340,13 +19368,85 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5f89a392859fa74aa28cfb2a725f3c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1852881145}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5f89a392859fa74aa28cfb2a725f3c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1852881146}
   m_SourcePrefab: {fileID: 100100000, guid: a5f89a392859fa74aa28cfb2a725f3c8, type: 3}
 --- !u!4 &1852881144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a5f89a392859fa74aa28cfb2a725f3c8, type: 3}
   m_PrefabInstance: {fileID: 1852881143}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1852881145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391822617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Move Paper
+  EventsWhenClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 391822617}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 222525871}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &1852881146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391822617}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10445206, y: 0.017001348, z: 0.116044246}
+  m_Center: {x: -0.14270848, y: 0.0020246275, z: 0.002484869}
 --- !u!1 &1852985245
 GameObject:
   m_ObjectHideFlags: 0
@@ -21758,6 +21858,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5874575209785624944, guid: baca3a0d62bac2b48a96a7fc00e1c0e8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21819,6 +21923,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 400e6ad96e0416142af2eeba6e35389c, type: 2}
+    - target: {fileID: 4396448868155128402, guid: ff85630c86d28f54791768b93ff196c4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21889,6 +21997,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 155847389}
     m_Modifications:
+    - target: {fileID: 2150122021002430599, guid: bac95dc08572e644ead00af7c467b172, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2408094372766059169, guid: bac95dc08572e644ead00af7c467b172, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.281
