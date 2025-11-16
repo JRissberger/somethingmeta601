@@ -4627,16 +4627,40 @@ MonoBehaviour:
   correctItemHeld:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1198377632}
+        m_TargetAssemblyTypeName: AL_PondScript, Assembly-CSharp
+        m_MethodName: StartDialogue
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AL_GuardCorrect
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454901363}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: RemoveItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fang
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454901363}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: AddToInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: -4690937949738886015, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+          m_ObjectArgumentAssemblyTypeName: InventoryObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fang
           m_BoolArgument: 0
         m_CallState: 2
   incorrectItemHeld:
@@ -13391,7 +13415,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Key
+          m_StringArgument: PrisonKey
           m_BoolArgument: 0
         m_CallState: 2
   incorrectItemHeld:
@@ -13400,7 +13424,7 @@ MonoBehaviour:
   interactionRange: 1
   inventoryManager: {fileID: 454901363}
   hasItemInteract: 1
-  correctItemName: Fang
+  correctItemName: PrisonKey
 --- !u!61 &1482496934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15853,37 +15877,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1761390902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1761390903}
-  m_Layer: 0
-  m_Name: PlaceHolderSprites
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1761390903
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761390902}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -212, y: 3.1905615, z: -10.897212}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770658907
 GameObject:
   m_ObjectHideFlags: 0
@@ -17919,11 +17912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: autoStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: SquirrelIntro
+      value: AL_Start
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -18200,7 +18193,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -19613,6 +19606,63 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &5064484349921802654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3553681764021435069, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_Name
+      value: KeySprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -212
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1905615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.897212
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557165172254224109, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1780c42e47a8cac4fb0f499cde423876, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -19624,7 +19674,7 @@ SceneRoots:
   - {fileID: 1527187626}
   - {fileID: 1915175811}
   - {fileID: 508946129}
-  - {fileID: 1761390903}
+  - {fileID: 5064484349921802654}
   - {fileID: 1873494838}
   - {fileID: 787015978}
   - {fileID: 1429844255}
