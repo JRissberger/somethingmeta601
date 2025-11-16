@@ -10,6 +10,7 @@ public class EquippableObject : MonoBehaviour
     //Stores the original position before the player can move the object
     //May be used for drop object for the time being
     private Vector3 originalPosition;
+    private Quaternion originalRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -34,13 +35,13 @@ public class EquippableObject : MonoBehaviour
         if (!player.HeldObject)
         {
             player.HeldObject = this;
-        }
-    }
 
-    //Called by the player script to update the position of a held object 
-    public void UpdatePosition(Vector3 position)
-    {
-        this.transform.position = position;
+            transform.SetParent(player.Camera.transform);
+
+            //Put it in the bottom right
+            transform.localPosition = new Vector3(0.5f, -0.35f, 1f);
+            transform.localRotation = Quaternion.identity;
+        }
     }
 
     //Drops the currently object if held
@@ -50,7 +51,9 @@ public class EquippableObject : MonoBehaviour
         if (player.HeldObject == this)
         {
             player.HeldObject = null;
+            transform.SetParent(null);
             this.gameObject.transform.position = originalPosition;
+            this.gameObject.transform.rotation = originalRotation;
         }
 
     }
