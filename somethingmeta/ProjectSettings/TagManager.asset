@@ -8,6 +8,8 @@ TagManager:
   - CodeEntry
   - CameraHolder
   - InspectUI
+  - InteractText
+  - Threshold
   layers:
   - Default
   - TransparentFX
