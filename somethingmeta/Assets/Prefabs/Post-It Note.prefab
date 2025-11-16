@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: UNKNOWN INTERACTION TEXT
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls:
@@ -273,6 +274,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2007083941805701597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +293,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToInspect: {fileID: 3704694084977504376}
   inspectUI: {fileID: 0}
+  hasObscuredText: 0
+  obscuredText: {fileID: 0}
+  legibleText: {fileID: 0}
 --- !u!1 &6327183448866933985
 GameObject:
   m_ObjectHideFlags: 0

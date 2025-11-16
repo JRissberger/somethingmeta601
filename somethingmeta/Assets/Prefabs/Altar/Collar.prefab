@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 816617019310504858}
   - component: {fileID: -4690937949738886015}
   m_Layer: 0
-  m_Name: KeySprite
+  m_Name: Collar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 00a9bb216bb2d384b9c5e74c67740bc1, type: 3}
-  m_Color: {r: 0.8499261, g: 0.86415094, b: 0.21848346, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 00a9bb216bb2d384b9c5e74c67740bc1, type: 3}
+  m_Color: {r: 0.5849056, g: 0.3975163, b: 0.08552865, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,4 +100,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 816617019310504858}
-  itemName: PrisonKey
+  itemName: Collar

@@ -1,4 +1,19 @@
-﻿title: Altar_ForestText
+﻿title: AL_StickGeneric
 ---
-This is an example of a Yarn Spinner script. Write your dialogue here!
+You find a long stick. You might be able to reach something with it...
+===
+
+title: AL_KeyGeneric
+---
+You find a key. You wonder what it opens…
+===
+
+title: AL_SnakeGeneric
+---
+You find a venomous snake! It doesn’t seem to bite.
+===
+
+title: AL_SnakeCorrect
+---
+Using your bottle, you grab 9 drops of venom.
 ===

@@ -33,5 +33,20 @@ You sense this was the incorrect item.
 title: AL_DogAltarGeneric
 ---
 You find an Altar with the symbol of a Dog above it. There’s some text on the altar.
+“Bring me the loyalty of the Dog.”
+===
 
+title: AL_DogAltarCorrect
+---
+You place the Collar with the number 8 on it onto the altar.
+===
+
+title: AL_DogAltarIncorrect
+---
+You sense this was the incorrect item.
+===
+
+title: ALDoorAltar
+---
+The door is locked. There may be a way to open it around.
 ===
