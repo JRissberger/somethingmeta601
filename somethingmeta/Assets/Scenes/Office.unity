@@ -5211,11 +5211,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &661067586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5907,6 +5902,7 @@ GameObject:
   - component: {fileID: 779893189}
   - component: {fileID: 779893188}
   - component: {fileID: 779893190}
+  - component: {fileID: 779893191}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5988,6 +5984,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &779893191
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779893187}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!1 &806374185
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,11 +6388,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!135 &839082168
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8353,11 +8371,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1150305284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10456,11 +10469,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1393902812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10965,35 +10973,6 @@ MonoBehaviour:
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls: []
-  hasItemInteract: 1
-  correctItem: {fileID: 661067586}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 661067586}
-        m_TargetAssemblyTypeName: EquippableObject, Assembly-CSharp
-        m_MethodName: DropObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1419509708}
-        m_TargetAssemblyTypeName: ComputerStartFloppyInsert, Assembly-CSharp
-        m_MethodName: InsertFloppy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1419509708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11187,11 +11166,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1448985999
 GameObject:
   m_ObjectHideFlags: 0
@@ -11378,11 +11352,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1449442241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 24ae5efeac4e8e04892d43233a1073f5, type: 3}
@@ -11983,11 +11952,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!135 &1480485850
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12590,11 +12554,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1516548463
 GameObject:
   m_ObjectHideFlags: 0
@@ -13817,11 +13776,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hasItemInteract: 0
-  correctItem: {fileID: 0}
-  CorrectItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1618870257
 BoxCollider:
   m_ObjectHideFlags: 0
