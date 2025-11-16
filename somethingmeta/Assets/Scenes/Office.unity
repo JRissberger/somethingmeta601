@@ -1024,6 +1024,11 @@ MonoBehaviour:
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls: []
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &169413456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4081,7 +4086,7 @@ GameObject:
   - component: {fileID: 661067582}
   - component: {fileID: 661067581}
   - component: {fileID: 661067585}
-  - component: {fileID: 661067584}
+  - component: {fileID: 661067586}
   m_Layer: 0
   m_Name: Floppy Disk
   m_TagString: Interactible
@@ -4178,23 +4183,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661067579}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &661067584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661067579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93556ac29d3f51e438fd3493a5b49fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInspect: {fileID: 661067580}
-  inspectUI: {fileID: 873259055}
-  hasObscuredText: 0
-  obscuredText: {fileID: 0}
-  legibleText: {fileID: 0}
 --- !u!114 &661067585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4211,9 +4199,9 @@ MonoBehaviour:
   EventsWhenClicked:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 661067584}
-        m_TargetAssemblyTypeName: InspectSystem, Assembly-CSharp
-        m_MethodName: startInspection
+      - m_Target: {fileID: 661067586}
+        m_TargetAssemblyTypeName: EquippableObject, Assembly-CSharp
+        m_MethodName: EquipObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4223,6 +4211,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &661067586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661067579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acde35ac781183c449b8649e6d16c82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &667628745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4806,6 +4811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 889349103}
   parentObjectToTurn: {fileID: 779893187}
+  camera: {fileID: 931410303}
   notes:
     m_PersistentCalls:
       m_Calls:
@@ -5242,6 +5248,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &839082168
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6729,6 +6740,8 @@ GameObject:
   - component: {fileID: 1150305281}
   - component: {fileID: 1150305280}
   - component: {fileID: 1150305279}
+  - component: {fileID: 1150305283}
+  - component: {fileID: 1150305282}
   m_Layer: 0
   m_Name: Computer Mouse
   m_TagString: Untagged
@@ -6824,6 +6837,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150305277}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1150305282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150305277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acde35ac781183c449b8649e6d16c82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1150305283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150305277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: UNKNOWN INTERACTION TEXT
+  EventsWhenClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1150305282}
+        m_TargetAssemblyTypeName: EquippableObject, Assembly-CSharp
+        m_MethodName: EquipObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1155478823
 GameObject:
   m_ObjectHideFlags: 0
@@ -7810,6 +7868,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1393902812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8199,6 +8262,7 @@ GameObject:
   - component: {fileID: 1419509706}
   - component: {fileID: 1419509705}
   - component: {fileID: 1419509704}
+  - component: {fileID: 1419509707}
   m_Layer: 0
   m_Name: Floppy Disk Insert
   m_TagString: Untagged
@@ -8295,6 +8359,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419509702}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1419509707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419509702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444ae60be2e288d47b7b241dc3508660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: UNKNOWN INTERACTION TEXT
+  EventsWhenClicked:
+    m_PersistentCalls:
+      m_Calls: []
+  hasItemInteract: 1
+  correctItem: {fileID: 661067586}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 661067586}
+        m_TargetAssemblyTypeName: EquippableObject, Assembly-CSharp
+        m_MethodName: DropObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1448985999
 GameObject:
   m_ObjectHideFlags: 0
@@ -8481,6 +8578,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1449442241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 24ae5efeac4e8e04892d43233a1073f5, type: 3}
@@ -9149,6 +9251,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasItemInteract: 0
+  correctItem: {fileID: 0}
+  CorrectItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1516548463
 GameObject:
   m_ObjectHideFlags: 0

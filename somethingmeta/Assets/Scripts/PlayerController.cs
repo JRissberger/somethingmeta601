@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     public GameObject orientation;
     public GameObject parentObjectToTurn;
 
+    //Used for positioning the held object
+    [SerializeField] GameObject camera;
+
+    //Parenting the held object to the camera, giving access to it
+    public GameObject Camera { get { return camera; } }
     //Used for notes
     [SerializeField] private UnityEvent notes;
 
@@ -26,21 +31,20 @@ public class PlayerController : MonoBehaviour
     //ie activating computer while inspecting an object
     public bool canInteract { get; set; } = true;
 
+    //The current object held by the player
+    //Updated by EquippableObject
+    private EquippableObject heldObject = null;
+    public EquippableObject HeldObject
+    {
+        get { return heldObject; }
+        set { heldObject = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         //Gets the controller component
         controller = GetComponent<CharacterController>();
-
-        ////Checks if the scene was just loaded from a forced shutoff event
-        //if (FlagManager.instance.officeFlags[0].GetActivity())
-        //{
-        //    Debug.Log("Forced Shutoff!");
-        //    //Sets the player position to be right in front of the computer
-        //    transform.position = new Vector3(-1.25f, 1.6f, 5.3f);
-        //    //Then deactivates the flag
-        //    FlagManager.instance.officeFlags[0].SetActivity(false);
-        //}
     }
 
     // Update is called once per frame
