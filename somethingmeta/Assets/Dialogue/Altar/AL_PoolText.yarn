@@ -1,0 +1,20 @@
+﻿title: AL_DevNote
+---
+This is an example of a Yarn Spinner script. Write your dialogue here!
+===
+
+title: AL_FangNote
+---
+You pick up a long, jagged fang. it looks just sharp enough to get through the bars.
+===
+
+title: AL_GuardGeneric
+---
+The guard outside the cell is asleep with a key in his pocket. He's too far for you to take the key.
+Sleeping guard asset needed, Connie. - Adrian
+===
+
+title: AL_StickGeneric
+---
+You find a long stick. You might be able to reach something with it...
+===
