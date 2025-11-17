@@ -19,6 +19,10 @@ public class BeastHunterFlags : MonoBehaviour
     //Event system--generally going to be used to call forceShutoff
     [SerializeField] private UnityEvent forceReturn;
 
+    [SerializeField] private GameObject crashScreen;
+    [SerializeField] private GameObject evilCrashScreen;
+    [SerializeField] private GameObject terminatedCrashScreen;
+
     //The node that the dialogue will restart from
     private string currentNode;
     //All flags that are relevant to the beast hunter puzzle, pulls from the FlagManager Singleton.
@@ -149,8 +153,35 @@ public class BeastHunterFlags : MonoBehaviour
     [YarnCommand("3DScene")]
     public void SwitchScene()
     {
+        crashScreen.SetActive(true);
+        StartCoroutine(Wait());
         forceReturn.Invoke();
     }
 
+    [YarnCommand("3DSceneEvil")]
+    public void EvilSwitchScene()
+    {
+        evilCrashScreen.SetActive(true);
+
+        StartCoroutine(Wait());
+
+        forceReturn.Invoke();
+    }
+
+    [YarnCommand("3DSceneTerminated")]
+    public void TerminatedSwitchScene()
+    {
+        terminatedCrashScreen.SetActive(true);
+
+        StartCoroutine(Wait());
+
+        forceReturn.Invoke();
+    }
+
+    //Used since yarnspinner commands can't call this directly
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3f);
+    }
 
 }
