@@ -89,7 +89,7 @@ position: 935,240
 ---
 Hunter: What? No-
 
-<<3DScene DialogueSystem>>
+<<3DSceneEvil DialogueSystem>>
 ===
 
 title: BeastHunterDead
@@ -97,5 +97,5 @@ position: 935,240
 ---
 The hunter is dead on the ground.
 
-<<3DScene DialogueSystem>>
+<<3DSceneTerminated DialogueSystem>>
 ===

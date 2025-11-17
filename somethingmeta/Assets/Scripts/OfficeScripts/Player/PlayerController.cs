@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     //Declaring variables
     private CharacterController controller;
-    private int moveSpeed = 5;
+    private int moveSpeed = 4;
     public GameObject orientation;
     public GameObject parentObjectToTurn;
 
@@ -67,6 +67,10 @@ public class PlayerController : MonoBehaviour
             parentObjectToTurn.transform.rotation = orientation.transform.rotation;
 
         }
+
+        //NOTE: trying a fix for popup, manually applying gravity
+        Vector3 yMove = new Vector3(0, -9.81f, 0);
+        controller.Move(yMove * Time.deltaTime);
 
         //Current mouse position
         mousePosition = Input.mousePosition;

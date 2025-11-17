@@ -25,6 +25,11 @@ title: AL_DoorGeneric
 The door is locked. You need a key to open it.
 ===
 
+title: AL_DoorCorrect
+---
+You use the guard's key to open the door.
+===
+
 title: AL_DevNote
 ---
 I'm still not sure I like having our protagonist start in a prison. Just feels mean after everything in Forest Quest 1. - Connie
