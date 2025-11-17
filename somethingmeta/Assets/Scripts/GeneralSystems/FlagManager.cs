@@ -67,18 +67,4 @@ public class FlagManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    /// <summary>
-    /// Scene Transition - [ takes you to the office, and ] takes you to the dialogue testing scene.
-    /// </summary>
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftBracket))
-        {
-            SceneManager.LoadScene("Office");
-        }
-        if (Input.GetKeyDown(KeyCode.RightBracket))
-        {
-           SceneManager.LoadScene("DialogueTesting");
-        }
-    }
 }
