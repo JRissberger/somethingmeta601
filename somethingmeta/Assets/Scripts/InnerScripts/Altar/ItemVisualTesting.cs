@@ -19,10 +19,10 @@ public class ItemVisualTesting : MonoBehaviour
     {
         if (player != null)
         {
-            if (player.SelectedItem != -1 && player.InventoryArray[player.SelectedItem].GetComponent<InventoryObject>() != null)
+            if (player.SelectedItem != -1 && player.InventoryArray[player.SelectedItem] != null)
             {
                 text.text = "Held Item: " + player.InventoryArray[player.SelectedItem].GetComponent<InventoryObject>().ItemName;
-                
+
             }
             else
             {
