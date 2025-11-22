@@ -37,5 +37,12 @@ public class Player2DController : MonoBehaviour
             controller.velocity = movement;
 
         }
+
+        //Keep the player from "sliding" when movement is locked during an interaction
+        //Sets velocity back to 0
+        else
+        {
+            controller.velocity = Vector2.zero;
+        }
     }
 }
