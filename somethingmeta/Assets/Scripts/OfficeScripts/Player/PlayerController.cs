@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public GameObject orientation;
     public GameObject parentObjectToTurn;
 
+    //Light that's enabled/disabled while inspecting
+    [SerializeField] private GameObject inspectLight;
+
     //Used for positioning the held object
     [SerializeField] GameObject camera;
 
@@ -75,5 +78,12 @@ public class PlayerController : MonoBehaviour
         //Current mouse position
         mousePosition = Input.mousePosition;
 
+    }
+
+    //Toggles the light that's enabled while inspecting an object
+    //This gets called by the inspect system script, defined here so each object doesn't have to reference the light
+    public void ToggleInspectLight()
+    {
+        inspectLight.SetActive(!inspectLight.activeSelf);
     }
 }

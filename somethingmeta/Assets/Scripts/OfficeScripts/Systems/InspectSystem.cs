@@ -97,6 +97,9 @@ public class InspectSystem : MonoBehaviour
             player.canMove = false;
             player.canInteract = false;
 
+            //Enables the light used for inspection
+            player.ToggleInspectLight();
+
             //Centers the object in front of the player
             objectToInspect.position = player.transform.position + player.transform.forward * 1f;
 
@@ -133,6 +136,9 @@ public class InspectSystem : MonoBehaviour
         player.canMove = true;
         player.canInteract = true;
         inspectUI.SetActive(false);
+
+        //Disables the light used for inspection
+        player.ToggleInspectLight();
 
         //Switches to obscured text if applicable
         if (hasObscuredText)
