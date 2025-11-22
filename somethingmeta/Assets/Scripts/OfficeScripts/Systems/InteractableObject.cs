@@ -62,12 +62,10 @@ public class InteractableObject : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction);
 
             //Debug.Log("Hovering over object");
-            if (rayHit.collider.gameObject == this.gameObject)
+            if (rayHit.collider.gameObject == this.gameObject && player.canInteract)
             {
                 //turns on the outline if the object is getting hit by the raycast. 
                 outline.enabled = true;
-
-                Debug.Log(this.gameObject.name);
 
                 //Detects if the mouse is clicked while over the object
                 if (Input.GetMouseButtonDown(0))
