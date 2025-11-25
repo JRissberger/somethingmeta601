@@ -27,6 +27,8 @@ public class InspectSystem : MonoBehaviour
     //Inspection UI
     //Have to pass in via editor since it's hidden by default, can't search for it
     [SerializeField] private GameObject inspectUI;
+    //How far in front of the player to place the object when inspecting
+    [SerializeField] private float inspectDistance = 1.0f;
 
     //Does the object have hidden text?
     [SerializeField] private bool hasObscuredText = false;
@@ -101,7 +103,7 @@ public class InspectSystem : MonoBehaviour
             player.ToggleInspectLight();
 
             //Centers the object in front of the player
-            objectToInspect.position = player.transform.position + player.transform.forward * 1f;
+            objectToInspect.position = player.transform.position + player.transform.forward * inspectDistance;
 
             //Display inspect UI
             inspectUI.SetActive(true);

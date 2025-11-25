@@ -19,7 +19,7 @@ public class LabyrinthManager : MonoBehaviour
     [SerializeField] private ForceShutoff transition;
 
     //Counter for how many times the player has crossed a threshold
-    //Crashes the game if it's at 6
+    //Crashes the game if it's at 7
     private float counter = 0;
 
     //Used since the crash routine takes multiple frames, keeps it from being called multiple times
@@ -78,7 +78,7 @@ public class LabyrinthManager : MonoBehaviour
         //Checks what the counter's at
         //TODO: bc of the counter setup, could technically end up at 5.5 
         //if a user backs up partway through. might change this?
-        if (counter >= 6 && !isCrashing)
+        if (counter >= 7 && !isCrashing)
         {
             //Has a bool so it doesn't KEEP CALLING THE SAME CRASH ROUTINE
             isCrashing = true;

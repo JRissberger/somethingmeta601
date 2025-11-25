@@ -102,6 +102,13 @@ public class InteractableObject : MonoBehaviour
 
     }
 
+    //Clear out interact text if an object is toggled to not active
+    public void disableObject()
+    {
+        this.gameObject.SetActive(false);
+        interactText = "";
+    }
+
     //Debug
     public void ConsolePrintClickedObject()
     {
