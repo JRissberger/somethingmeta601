@@ -10,6 +10,8 @@ public class LabyrinthManager : MonoBehaviour
     //Will depend on how assets are set up
     [SerializeField] private List<BoxCollider2D> triggers;
 
+    private bool isRunning = false;
+
     //Canvas with the crash info
     [SerializeField] private GameObject crashScreen;
 
@@ -88,6 +90,16 @@ public class LabyrinthManager : MonoBehaviour
 
     public void RunDevNote(string name)
     {
-        dialogueRunner.StartDialogue(name);
+        if (!isRunning)
+        {
+            dialogueRunner.StartDialogue(name);
+            isRunning = true;
+        }
+       
+    }
+
+    public void FinishRunning()
+    {
+        isRunning = false;
     }
 }
