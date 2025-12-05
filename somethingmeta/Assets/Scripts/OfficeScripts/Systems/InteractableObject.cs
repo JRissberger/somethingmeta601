@@ -24,6 +24,9 @@ public class InteractableObject : MonoBehaviour
     //Interactions with correct item
     [SerializeField] private UnityEvent CorrectItemEvent;
 
+    //Pass in the audiosource if applicable
+    [SerializeField] private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +83,13 @@ public class InteractableObject : MonoBehaviour
                     else
                     {
                         EventsWhenClicked.Invoke();
+                    }
+
+                    //If there's an audio source, play the audio
+                    if (audioSource != null)
+                    {
+                        Debug.Log("Playing audio");
+                        audioSource.Play();
                     }
 
                 }
