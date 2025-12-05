@@ -19,18 +19,6 @@ public class AL_PondScript : MonoBehaviour
         dialogue.StartDialogue(name);
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            forceShutoff.forceShutoff();
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            crashGame();
-        }
-    }
-
     //Switch to crash screen, then forcequit
     //Enable crash panel, wait X amount of seconds
     public void crashGame()

@@ -20,6 +20,9 @@ public class LabyrinthManager : MonoBehaviour
     //Used for the transition back to office
     [SerializeField] private ForceShutoff transition;
 
+    [SerializeField] private TransitionManager transitionManager;
+
+    [SerializeField] private Animator hand;
     //Counter for how many times the player has crossed a threshold
     //Crashes the game if it's at 7
     private float counter = 0;
@@ -41,6 +44,7 @@ public class LabyrinthManager : MonoBehaviour
         counter += 0.5f;
         Debug.Log(counter);
     }
+
 
     //Resets the counter
     //Used when interacting with an object in the labyrinth
@@ -96,6 +100,18 @@ public class LabyrinthManager : MonoBehaviour
             isRunning = true;
         }
        
+    }
+
+    public void HandGrabbing(string outerscene)
+    {
+        hand.SetBool("ItemGrabbed", true);
+        StartCoroutine(StartOutro(outerscene));
+    }
+
+    private IEnumerator StartOutro(string outerscene)
+    {
+        yield return new WaitForSeconds(1.3f);
+        transition.switchScenes(outerscene);
     }
 
     public void FinishRunning()
