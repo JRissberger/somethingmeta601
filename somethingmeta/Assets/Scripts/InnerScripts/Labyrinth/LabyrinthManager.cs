@@ -34,6 +34,9 @@ public class LabyrinthManager : MonoBehaviour
     //runs dialogue for the dev note
     [SerializeField] DialogueRunner dialogueRunner;
 
+    //Crash sound
+    [SerializeField] AudioSource crashSound;
+
     //Loops to check for any triggers
 
     //Increments the counter
@@ -59,6 +62,7 @@ public class LabyrinthManager : MonoBehaviour
     private void crashGame()
     {
         crashScreen.SetActive(true);
+        playCrashSound();
         Debug.Log("Game crash");
         StartCoroutine(waitTransition());
     }
@@ -75,8 +79,17 @@ public class LabyrinthManager : MonoBehaviour
     public void FinishLabyrinth()
     {
         horrorScreen.SetActive(true);
+        playCrashSound();
         Debug.Log("I FOUND YOU");
         StartCoroutine(waitTransition());
+    }
+
+    private void playCrashSound()
+    {
+        if (crashSound != null)
+        {
+            crashSound.Play();
+        }
     }
 
     private void Update()

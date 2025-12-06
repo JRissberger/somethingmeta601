@@ -12,6 +12,7 @@ public class AL_PondScript : MonoBehaviour
     //Canvas with the crash info
     [SerializeField] private GameObject crashScreen;
 
+    [SerializeField] private AudioSource crashSound;
 
     // Start is called before the first frame update
     public void StartDialogue(string name)
@@ -23,8 +24,12 @@ public class AL_PondScript : MonoBehaviour
     //Enable crash panel, wait X amount of seconds
     public void crashGame()
     {
+        if (crashSound != null)
+        {
+            Debug.Log("Playing sound");
+            crashSound.Play();
+        }
         crashScreen.SetActive(true);
-        Debug.Log("Game crash");
         StartCoroutine(waitTransition());
     }
 
