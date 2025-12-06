@@ -24,8 +24,15 @@ public class InteractableObject : MonoBehaviour
     //Interactions with correct item
     [SerializeField] private UnityEvent CorrectItemEvent;
 
-    //Pass in the audiosource if applicable
+    //Pass in the audiosource if applicable -- use for generic audio 
     [SerializeField] private AudioSource audioSource;
+
+    //Pass in the audiosource if applicable -- use for correct item audio
+    [SerializeField] private AudioSource correctAudio;
+
+    //Used to disable parts of an object at a time
+    [SerializeField] private List<GameObject> itemsToDisable;
+
 
     // Start is called before the first frame update
     void Start()
@@ -77,19 +84,30 @@ public class InteractableObject : MonoBehaviour
                     if (hasItemInteract && player.HeldObject == correctItem)
                     {
                         CorrectItemEvent.Invoke();
+
+
+                        //If there's an audio source, play the audio
+                        //Prioritize correct item audio if applicable
+                        if (correctAudio != null)
+                        {                       
+                            correctAudio.Play();
+                        }
+                        else if (audioSource != null)
+                        {
+                            audioSource.Play();
+                        }
                     }
 
                     //Otherwise just call the generic interact event
                     else
                     {
                         EventsWhenClicked.Invoke();
-                    }
 
-                    //If there's an audio source, play the audio
-                    if (audioSource != null)
-                    {
-                        Debug.Log("Playing audio");
-                        audioSource.Play();
+                        //If there's an audio source, play the audio
+                        if (audioSource != null)
+                        {
+                            audioSource.Play();
+                        }
                     }
 
                 }
@@ -115,10 +133,33 @@ public class InteractableObject : MonoBehaviour
     //Clear out interact text if an object is toggled to not active
     public void disableObject()
     {
-        this.gameObject.SetActive(false);
+        //Disable the visible objects first while waiting for sound
+        if (audioSource != null)
+        {
+            foreach (GameObject item in itemsToDisable)
+            {
+                item.SetActive(false);
+            }
+            StartCoroutine(waitForSound());
+            //The full gameobject gets disabled in the coroutine after the sound's done
+        }
+
+        //Otherwise just toggle everything off
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+        
         interactText = "";
     }
 
+    IEnumerator waitForSound()
+    {
+        //Wait for start and stop since sometimes this can run before the audio starts
+        yield return new WaitUntil(() => audioSource.isPlaying);
+        yield return new WaitUntil(() => !audioSource.isPlaying);
+        this.gameObject.SetActive(false);
+    }
     //Debug
     public void ConsolePrintClickedObject()
     {

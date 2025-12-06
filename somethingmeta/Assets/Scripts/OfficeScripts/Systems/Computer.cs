@@ -22,6 +22,12 @@ public class Computer : MonoBehaviour
     //Scene transition manager
     [SerializeField] TransitionManager transitionManager;
 
+    //Audio that plays when turning off the computer
+    [SerializeField] AudioSource computerOffAudio;
+
+    //Turn on computer
+    [SerializeField] AudioSource computerOnAudio;
+
     //Sets up the dictionary with all the scene names and the codes that correspond to them
     Dictionary<string, string> sceneCodes = new Dictionary<string, string>()
     {
@@ -50,6 +56,13 @@ public class Computer : MonoBehaviour
             //Disable player movement
             player.canMove = false;
             player.canInteract = false;
+            player.inComputerMenu = true;
+
+            //Play audio
+            if (computerOnAudio != null)
+            {
+                computerOnAudio.Play();
+            }
 
             //Turns on screen
             //I'd like to have this tied to the actual screen pos if possible, resolution concerns right now though
@@ -63,7 +76,13 @@ public class Computer : MonoBehaviour
         //Enable player movement
         player.canMove = true;
         player.canInteract = true;
+        player.inComputerMenu = false;
 
+        //Plays audio
+        if (computerOffAudio != null)
+        {
+            computerOffAudio.Play();
+        }
         //Turns off screen
         computerScreen.SetActive(false);
     }
