@@ -23,6 +23,8 @@ public class BeastHunterFlags : MonoBehaviour
     [SerializeField] private GameObject evilCrashScreen;
     [SerializeField] private GameObject terminatedCrashScreen;
 
+    [SerializeField] private AudioSource errorSound;
+
     //The node that the dialogue will restart from
     private string currentNode;
     //All flags that are relevant to the beast hunter puzzle, pulls from the FlagManager Singleton.
@@ -156,6 +158,7 @@ public class BeastHunterFlags : MonoBehaviour
     public void SwitchScene()
     {
         crashScreen.SetActive(true);
+        PlayCrashSound();
         StartCoroutine(Wait());
         forceReturn.Invoke();
     }
@@ -164,7 +167,7 @@ public class BeastHunterFlags : MonoBehaviour
     public void EvilSwitchScene()
     {
         evilCrashScreen.SetActive(true);
-
+        PlayCrashSound();
         StartCoroutine(Wait());
 
         forceReturn.Invoke();
@@ -174,7 +177,7 @@ public class BeastHunterFlags : MonoBehaviour
     public void TerminatedSwitchScene()
     {
         terminatedCrashScreen.SetActive(true);
-
+        PlayCrashSound();
         StartCoroutine(Wait());
 
         forceReturn.Invoke();
@@ -184,6 +187,15 @@ public class BeastHunterFlags : MonoBehaviour
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(3f);
+    }
+
+    //Plays the crash sound
+    public void PlayCrashSound()
+    {
+        if (errorSound  != null)
+        {
+            errorSound.Play();
+        }
     }
 
     public void StartDialogue()

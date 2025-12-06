@@ -12504,7 +12504,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 30
@@ -19899,6 +19899,9 @@ MonoBehaviour:
   CorrectItemEvent:
     m_PersistentCalls:
       m_Calls: []
+  audioSource: {fileID: 0}
+  correctAudio: {fileID: 0}
+  itemsToDisable: []
 --- !u!1 &1739715193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7963189301177548054, guid: 3fd06a2956dc7574ebbb108d5698acfd, type: 3}
