@@ -9,6 +9,8 @@ public class FloppyDiskPuzzle : MonoBehaviour
     [SerializeField] GameObject[] floppyDiskPlacement;
     [SerializeField] GameObject completeFloppyDisk;
 
+    [SerializeField] AudioSource placeSound;
+
     //References player to update equipped object
     private PlayerController player = null;
 
@@ -51,6 +53,10 @@ public class FloppyDiskPuzzle : MonoBehaviour
 
     private void PlaceFloppyPiece(int piece)
     {
+        if (placeSound != null)
+        {
+            placeSound.Play();
+        }
         floppyDiskPlacement[piece].SetActive(true);
     }
 

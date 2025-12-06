@@ -10,6 +10,9 @@ public class TransitionManager : MonoBehaviour
 
     [SerializeField] FadeTransition fadeTransition;
 
+    //Audio for returning to the office
+    [SerializeField] AudioSource computerOffAudio;
+
     //Only run one scene switch at a time!
     //Prevents "mitosis" bug of loading multiple copies of the same scene
     public bool inTransition { get; private set; } = false;
@@ -56,6 +59,11 @@ public class TransitionManager : MonoBehaviour
         foreach(GameObject gameObject in SceneManager.GetSceneByName("Office").GetRootGameObjects())
         {
             gameObject.SetActive(true);
+        }
+
+        if (computerOffAudio != null)
+        {
+            computerOffAudio.Play();
         }
 
         //Fade in
