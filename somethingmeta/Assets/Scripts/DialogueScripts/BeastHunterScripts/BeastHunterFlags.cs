@@ -54,7 +54,10 @@ public class BeastHunterFlags : MonoBehaviour
 
     private void Awake()
     {
-
+        if (FlagManager.instance.bh_currentNode == null)
+        {
+            FlagManager.instance.bh_currentNode = "BeastHunterIntroduction";
+        }
         SetLatestNode();
         //same thing as SetNewStartNode, but on awake. NOTE that a default node is within the FlagManager.
         dialogue.startNode = FlagManager.instance.bh_currentNode;
@@ -93,17 +96,17 @@ public class BeastHunterFlags : MonoBehaviour
 
         //For testing purposes - comment this out when it is no longer necessary.
 
-        //when 0 is pressed, the dialogue starts again.
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            dialogue.StartDialogue(currentNode);
-        }
-        //when 9 is pressed, immediately end the dialogue.
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            //levelLoaded = dialogue.
-            dialogue.Stop();
-        }
+        ////when 0 is pressed, the dialogue starts again.
+        //if (Input.GetKeyDown(KeyCode.Alpha0))
+        //{
+        //    dialogue.StartDialogue(currentNode);
+        //}
+        ////when 9 is pressed, immediately end the dialogue.
+        //if (Input.GetKeyDown(KeyCode.Alpha9))
+        //{
+        //    //levelLoaded = dialogue.
+        //    dialogue.Stop();
+        //}
     }
 
     //[YarnCommand("SetFlag")]
@@ -133,7 +136,6 @@ public class BeastHunterFlags : MonoBehaviour
     [YarnFunction("GetFlag")]
     public static bool GetFlag(string flag)
     {
-        UnityEngine.Debug.Log("THIS IS RUNNING");
         Debug.Log(flag);
         for (int i = 0; i < allFlags.Length; i++)
         {
@@ -182,6 +184,12 @@ public class BeastHunterFlags : MonoBehaviour
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(3f);
+    }
+
+    public void StartDialogue()
+    {
+        Debug.Log(currentNode);
+        dialogue.StartDialogue("BeastHunterIntroduction");
     }
 
 }
