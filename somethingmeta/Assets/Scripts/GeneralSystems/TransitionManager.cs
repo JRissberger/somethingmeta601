@@ -61,11 +61,6 @@ public class TransitionManager : MonoBehaviour
             gameObject.SetActive(true);
         }
 
-        if (computerOffAudio != null)
-        {
-            computerOffAudio.Play();
-        }
-
         //Fade in
         yield return StartCoroutine(fadeTransition.FadeIn());
     }
