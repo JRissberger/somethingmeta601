@@ -36,7 +36,8 @@ public class Computer : MonoBehaviour
         {"SB7YVT8", "BeastHunter"},
         {"S3HUN9E", "PicnicScene"},
         {"SC0NNIE", "Labyrinth"},
-        {"ST5L313", "AltarPuzzle"}
+        {"ST5L313", "AltarPuzzle"},
+        {"OUTRO", "OutroSection" }
     };
 
     private void Start()
