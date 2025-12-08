@@ -3355,7 +3355,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f4dc876928161e439d18ef88dc249c6, type: 2}
+  - {fileID: 2100000, guid: e83d607d83702a44d9dabddc25ef74d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17099,7 +17099,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f4dc876928161e439d18ef88dc249c6, type: 2}
+  - {fileID: 2100000, guid: e83d607d83702a44d9dabddc25ef74d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20445,7 +20445,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f4dc876928161e439d18ef88dc249c6, type: 2}
+  - {fileID: 2100000, guid: 1d1edc49700020145acf338c2fce3067, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24697,7 +24697,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f4dc876928161e439d18ef88dc249c6, type: 2}
+  - {fileID: 2100000, guid: e83d607d83702a44d9dabddc25ef74d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28757,7 +28757,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f4dc876928161e439d18ef88dc249c6, type: 2}
+  - {fileID: 2100000, guid: e83d607d83702a44d9dabddc25ef74d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29858,6 +29858,10 @@ PrefabInstance:
     - target: {fileID: 3288383752680028234, guid: a7ccb3eaeab7b944cb053db31e2f033f, type: 3}
       propertyPath: m_Name
       value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288383752680028234, guid: a7ccb3eaeab7b944cb053db31e2f033f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3645614243887161499, guid: a7ccb3eaeab7b944cb053db31e2f033f, type: 3}
       propertyPath: interactText
@@ -31432,7 +31436,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f4dc876928161e439d18ef88dc249c6, type: 2}
+  - {fileID: 2100000, guid: e83d607d83702a44d9dabddc25ef74d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
