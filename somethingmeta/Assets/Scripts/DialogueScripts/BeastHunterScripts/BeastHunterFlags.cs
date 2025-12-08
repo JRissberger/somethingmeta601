@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using Yarn;
 using Yarn.Unity;
 using Yarn.Unity.Legacy;
@@ -22,6 +24,8 @@ public class BeastHunterFlags : MonoBehaviour
     [SerializeField] private GameObject crashScreen;
     [SerializeField] private GameObject evilCrashScreen;
     [SerializeField] private GameObject terminatedCrashScreen;
+    [SerializeField] Volume profile;
+    [SerializeField] VolumeProfile evilProfile;
 
     [SerializeField] private AudioSource errorSound;
 
@@ -87,6 +91,7 @@ public class BeastHunterFlags : MonoBehaviour
         {
             beastHunterSprite.SetActive(false);
             beastHunteDeadrSprite.SetActive(true);
+            StartCoroutine(WaitCrash());
             
         }
         
@@ -94,8 +99,11 @@ public class BeastHunterFlags : MonoBehaviour
 
     public void Update()
     {
-        
 
+        if (beastHunterDead.GetActivity() == true)
+        {
+            profile.profile = evilProfile;
+        }
         //For testing purposes - comment this out when it is no longer necessary.
 
         ////when 0 is pressed, the dialogue starts again.
@@ -187,6 +195,12 @@ public class BeastHunterFlags : MonoBehaviour
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(3f);
+    }
+
+    private IEnumerator WaitCrash()
+    {
+        yield return new WaitForSeconds(4f);
+        TerminatedSwitchScene();
     }
 
     //Plays the crash sound

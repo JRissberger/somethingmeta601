@@ -13,11 +13,21 @@ public class AL_PondScript : MonoBehaviour
     [SerializeField] private GameObject crashScreen;
 
     [SerializeField] private AudioSource crashSound;
-
+    public bool isRunning;
     // Start is called before the first frame update
     public void StartDialogue(string name)
     {
-        dialogue.StartDialogue(name);
+        if (!isRunning)
+        {
+            dialogue.StartDialogue(name);
+            isRunning = true;
+        }
+        
+    }
+
+    public void SetRunningFalse()
+    {
+        isRunning = false;
     }
 
     //Switch to crash screen, then forcequit
