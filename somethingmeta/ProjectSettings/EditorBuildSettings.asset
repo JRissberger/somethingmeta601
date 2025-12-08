@@ -29,5 +29,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AltarPuzzle.unity
     guid: 6aa4dc1416502e64a8cc6c57b0001b37
+  - enabled: 1
+    path: Assets/Scenes/OutroSection.unity
+    guid: 481b6a2be672ad948b98e51fed0ac810
+  - enabled: 1
+    path: Assets/Scenes/OfficeFinal.unity
+    guid: 5c62806372566984aac5711f5325f98a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

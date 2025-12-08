@@ -29,6 +29,9 @@ public class Interactable2DObject : MonoBehaviour
     //Default is so that if there's no item interact the interactResponse method doesnt break
     [SerializeField] private string correctItemName = "default";
 
+    [SerializeField] private AudioSource genericAudio;
+    [SerializeField] private AudioSource correctAudio;
+    [SerializeField] private AudioSource incorrectAudio;
     //checks if the level has properly loaded; this is a shitty solution but it works.
     private bool hasLoaded = false;
 
@@ -81,6 +84,10 @@ public class Interactable2DObject : MonoBehaviour
         //If there's no item interaction or the player isn't holding an item
         if (!hasItemInteract || inventoryManager.SelectedItem < 0 || inventoryManager.InventoryArray[inventoryManager.SelectedItem] == null)
         {
+            if (genericAudio != null)
+            {
+                genericAudio.Play();
+            }
             genericInteract.Invoke();
         }
         else
@@ -94,11 +101,19 @@ public class Interactable2DObject : MonoBehaviour
     /// </summary>
     public void CorrectItem()
     {
+        if (correctAudio != null)
+        {
+            correctAudio.Play();
+        }
         correctItemHeld.Invoke();
     }
 
     public void IncorrectItem()
     {
+        if (incorrectAudio != null)
+        {
+            incorrectAudio.Play();
+        }
         incorrectItemHeld.Invoke();
     }
 

@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public GameObject orientation;
     public GameObject parentObjectToTurn;
 
+    //Light that's enabled/disabled while inspecting
+    [SerializeField] private GameObject inspectLight;
+
     //Used for positioning the held object
     [SerializeField] GameObject camera;
 
@@ -39,6 +42,12 @@ public class PlayerController : MonoBehaviour
         get { return heldObject; }
         set { heldObject = value; }
     }
+
+    //Is the player currently in a computer menu
+    public bool inComputerMenu { get; set; } = false;
+
+    //Audio source for click
+    [SerializeField] private AudioSource clickSound;
 
     // Start is called before the first frame update
     void Start()
@@ -75,5 +84,20 @@ public class PlayerController : MonoBehaviour
         //Current mouse position
         mousePosition = Input.mousePosition;
 
+        //If the player clicks while the computer menu is open, play the sound
+        if (Input.GetMouseButtonDown(0) && inComputerMenu && clickSound != null)
+        {
+            if (!clickSound.isPlaying)
+            {
+                clickSound.Play();
+            }
+        }
+    }
+
+    //Toggles the light that's enabled while inspecting an object
+    //This gets called by the inspect system script, defined here so each object doesn't have to reference the light
+    public void ToggleInspectLight()
+    {
+        inspectLight.SetActive(!inspectLight.activeSelf);
     }
 }

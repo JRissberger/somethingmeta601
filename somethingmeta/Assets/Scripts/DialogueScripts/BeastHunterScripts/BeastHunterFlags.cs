@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using Yarn;
 using Yarn.Unity;
 using Yarn.Unity.Legacy;
@@ -22,6 +24,10 @@ public class BeastHunterFlags : MonoBehaviour
     [SerializeField] private GameObject crashScreen;
     [SerializeField] private GameObject evilCrashScreen;
     [SerializeField] private GameObject terminatedCrashScreen;
+    [SerializeField] Volume profile;
+    [SerializeField] VolumeProfile evilProfile;
+
+    [SerializeField] private AudioSource errorSound;
 
     //The node that the dialogue will restart from
     private string currentNode;
@@ -54,7 +60,10 @@ public class BeastHunterFlags : MonoBehaviour
 
     private void Awake()
     {
-
+        if (FlagManager.instance.bh_currentNode == null)
+        {
+            FlagManager.instance.bh_currentNode = "BeastHunterIntroduction";
+        }
         SetLatestNode();
         //same thing as SetNewStartNode, but on awake. NOTE that a default node is within the FlagManager.
         dialogue.startNode = FlagManager.instance.bh_currentNode;
@@ -82,6 +91,7 @@ public class BeastHunterFlags : MonoBehaviour
         {
             beastHunterSprite.SetActive(false);
             beastHunteDeadrSprite.SetActive(true);
+            StartCoroutine(WaitCrash());
             
         }
         
@@ -89,21 +99,24 @@ public class BeastHunterFlags : MonoBehaviour
 
     public void Update()
     {
-        
 
+        if (beastHunterDead.GetActivity() == true)
+        {
+            profile.profile = evilProfile;
+        }
         //For testing purposes - comment this out when it is no longer necessary.
 
-        //when 0 is pressed, the dialogue starts again.
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            dialogue.StartDialogue(currentNode);
-        }
-        //when 9 is pressed, immediately end the dialogue.
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            //levelLoaded = dialogue.
-            dialogue.Stop();
-        }
+        ////when 0 is pressed, the dialogue starts again.
+        //if (Input.GetKeyDown(KeyCode.Alpha0))
+        //{
+        //    dialogue.StartDialogue(currentNode);
+        //}
+        ////when 9 is pressed, immediately end the dialogue.
+        //if (Input.GetKeyDown(KeyCode.Alpha9))
+        //{
+        //    //levelLoaded = dialogue.
+        //    dialogue.Stop();
+        //}
     }
 
     //[YarnCommand("SetFlag")]
@@ -133,7 +146,6 @@ public class BeastHunterFlags : MonoBehaviour
     [YarnFunction("GetFlag")]
     public static bool GetFlag(string flag)
     {
-        UnityEngine.Debug.Log("THIS IS RUNNING");
         Debug.Log(flag);
         for (int i = 0; i < allFlags.Length; i++)
         {
@@ -154,6 +166,7 @@ public class BeastHunterFlags : MonoBehaviour
     public void SwitchScene()
     {
         crashScreen.SetActive(true);
+        PlayCrashSound();
         StartCoroutine(Wait());
         forceReturn.Invoke();
     }
@@ -162,7 +175,7 @@ public class BeastHunterFlags : MonoBehaviour
     public void EvilSwitchScene()
     {
         evilCrashScreen.SetActive(true);
-
+        PlayCrashSound();
         StartCoroutine(Wait());
 
         forceReturn.Invoke();
@@ -172,7 +185,7 @@ public class BeastHunterFlags : MonoBehaviour
     public void TerminatedSwitchScene()
     {
         terminatedCrashScreen.SetActive(true);
-
+        PlayCrashSound();
         StartCoroutine(Wait());
 
         forceReturn.Invoke();
@@ -182,6 +195,27 @@ public class BeastHunterFlags : MonoBehaviour
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(3f);
+    }
+
+    private IEnumerator WaitCrash()
+    {
+        yield return new WaitForSeconds(4f);
+        TerminatedSwitchScene();
+    }
+
+    //Plays the crash sound
+    public void PlayCrashSound()
+    {
+        if (errorSound  != null)
+        {
+            errorSound.Play();
+        }
+    }
+
+    public void StartDialogue()
+    {
+        Debug.Log(currentNode);
+        dialogue.StartDialogue("BeastHunterIntroduction");
     }
 
 }

@@ -10,6 +10,13 @@ public class TransitionManager : MonoBehaviour
 
     [SerializeField] FadeTransition fadeTransition;
 
+    //Audio for returning to the office
+    [SerializeField] AudioSource computerOffAudio;
+
+    //Only run one scene switch at a time!
+    //Prevents "mitosis" bug of loading multiple copies of the same scene
+    public bool inTransition { get; private set; } = false;
+
     public void SwitchScenes(string sceneName)
     {
         StartCoroutine(SceneTransition(sceneName));
@@ -18,6 +25,9 @@ public class TransitionManager : MonoBehaviour
     //Runs the full fade and load transition so the coroutines aren't overlapping and you can actually see the thing fade
     public IEnumerator SceneTransition(string sceneName)
     {
+        //Prevent new transitions from starting while this is running
+        inTransition = true;
+
         //Fade out
         yield return StartCoroutine(fadeTransition.FadeOut());
 
@@ -26,6 +36,8 @@ public class TransitionManager : MonoBehaviour
 
         //Fade in
         yield return StartCoroutine(fadeTransition.FadeIn());
+
+        inTransition = false;
     }
 
     //Returns to office (no loading since it already existsF)
@@ -45,6 +57,30 @@ public class TransitionManager : MonoBehaviour
 
         //Re enable everything
         foreach(GameObject gameObject in SceneManager.GetSceneByName("Office").GetRootGameObjects())
+        {
+            gameObject.SetActive(true);
+        }
+
+        //Fade in
+        yield return StartCoroutine(fadeTransition.FadeIn());
+    }
+
+    public void GoToFinal()
+    {
+        StartCoroutine(FinalOfficeTransition());
+    }
+
+    public IEnumerator FinalOfficeTransition()
+    {
+        //Fade out
+        yield return StartCoroutine(fadeTransition.FadeOut());
+
+        //Loads scene
+        yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        yield return SceneManager.SetActiveScene(SceneManager.GetSceneByName("Office"));
+
+        //Re enable everything
+        foreach (GameObject gameObject in SceneManager.GetSceneByName("Office").GetRootGameObjects())
         {
             gameObject.SetActive(true);
         }

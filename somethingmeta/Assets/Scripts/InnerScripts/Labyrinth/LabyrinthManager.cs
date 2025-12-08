@@ -10,6 +10,8 @@ public class LabyrinthManager : MonoBehaviour
     //Will depend on how assets are set up
     [SerializeField] private List<BoxCollider2D> triggers;
 
+    private bool isRunning = false;
+
     //Canvas with the crash info
     [SerializeField] private GameObject crashScreen;
 
@@ -18,8 +20,11 @@ public class LabyrinthManager : MonoBehaviour
     //Used for the transition back to office
     [SerializeField] private ForceShutoff transition;
 
+    [SerializeField] private TransitionManager transitionManager;
+
+    [SerializeField] private Animator hand;
     //Counter for how many times the player has crossed a threshold
-    //Crashes the game if it's at 6
+    //Crashes the game if it's at 7
     private float counter = 0;
 
     //Used since the crash routine takes multiple frames, keeps it from being called multiple times
@@ -28,6 +33,9 @@ public class LabyrinthManager : MonoBehaviour
 
     //runs dialogue for the dev note
     [SerializeField] DialogueRunner dialogueRunner;
+
+    //Crash sound
+    [SerializeField] AudioSource crashSound;
 
     //Loops to check for any triggers
 
@@ -39,6 +47,7 @@ public class LabyrinthManager : MonoBehaviour
         counter += 0.5f;
         Debug.Log(counter);
     }
+
 
     //Resets the counter
     //Used when interacting with an object in the labyrinth
@@ -53,6 +62,7 @@ public class LabyrinthManager : MonoBehaviour
     private void crashGame()
     {
         crashScreen.SetActive(true);
+        playCrashSound();
         Debug.Log("Game crash");
         StartCoroutine(waitTransition());
     }
@@ -69,8 +79,17 @@ public class LabyrinthManager : MonoBehaviour
     public void FinishLabyrinth()
     {
         horrorScreen.SetActive(true);
+        playCrashSound();
         Debug.Log("I FOUND YOU");
         StartCoroutine(waitTransition());
+    }
+
+    private void playCrashSound()
+    {
+        if (crashSound != null)
+        {
+            crashSound.Play();
+        }
     }
 
     private void Update()
@@ -78,7 +97,7 @@ public class LabyrinthManager : MonoBehaviour
         //Checks what the counter's at
         //TODO: bc of the counter setup, could technically end up at 5.5 
         //if a user backs up partway through. might change this?
-        if (counter >= 6 && !isCrashing)
+        if (counter >= 7 && !isCrashing)
         {
             //Has a bool so it doesn't KEEP CALLING THE SAME CRASH ROUTINE
             isCrashing = true;
@@ -88,6 +107,28 @@ public class LabyrinthManager : MonoBehaviour
 
     public void RunDevNote(string name)
     {
-        dialogueRunner.StartDialogue(name);
+        if (!isRunning)
+        {
+            dialogueRunner.StartDialogue(name);
+            isRunning = true;
+        }
+       
+    }
+
+    public void HandGrabbing(string outerscene)
+    {
+        hand.SetBool("ItemGrabbed", true);
+        StartCoroutine(StartOutro(outerscene));
+    }
+
+    private IEnumerator StartOutro(string outerscene)
+    {
+        yield return new WaitForSeconds(1.3f);
+        transition.switchScenes(outerscene);
+    }
+
+    public void FinishRunning()
+    {
+        isRunning = false;
     }
 }
