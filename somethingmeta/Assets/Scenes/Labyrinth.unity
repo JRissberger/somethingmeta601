@@ -1789,7 +1789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16841218
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2675,7 +2675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16841218
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4215,7 +4215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16841218
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4740,6 +4740,108 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
+--- !u!1 &690144587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690144588}
+  - component: {fileID: 690144591}
+  - component: {fileID: 690144590}
+  - component: {fileID: 690144589}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &690144588
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690144587}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.19751248}
+  m_LocalScale: {x: 0.005, y: 0.013333333, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 759132082}
+  m_Father: {fileID: 898272596}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.2477, y: 0.066}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &690144589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690144587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &690144590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690144587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &690144591
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690144587}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &706245027
 GameObject:
   m_ObjectHideFlags: 0
@@ -5038,7 +5140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.795044
+      value: -14.59
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5146,6 +5248,142 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
+--- !u!1 &759132081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759132082}
+  - component: {fileID: 759132084}
+  - component: {fileID: 759132083}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &759132082
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759132081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 690144588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 33.1, y: -0.5}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &759132083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759132081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: e4dGM5)N0h#'t-*~gT-_Q6W=pFy=KDgezE6Githf`:,;Q40I'Z?b,lXmv(Vuf/OYJdA2WpDCg%%\&z~9*JD)xS#&WjnI~jiQx(bu=|<u\6h=DQR7>]g$iVWx^D*nv8*AR/~Nsr7DY;rUj$95b;iy5IW*DrjY8w;:H3wwi#TrD46&Ew:!,+'E5#Up_m8,\3c/CQ8GCN.kMh$9yDy!AVu23uD5h%(|UL`^CNA@zGVL@h{>4>_9SlY`eDobp;*OxS{RTP@l'c!;tDHxES|.{\5sU-phUB)zL=]SK6_?o)3KFEPP-[bNNfzbMo=p1nm:bt2D9-e4dGM5)N0h#'t-*~gT-_Q6W=pFy=KDgezE6Githf`:,;Q40I'Z?b,lXmv(Vuf/OYJdA2WpDCg%%\&z~9*JD)xS#&WjnI~jiQx(bu=|<u\6h=DQR7>]g$iVWx^D*nv8*AR/~Nsr7DY;rUj$95b;iy5IW*DrjY8w;:H3wwi#TrD46&Ew:!,+'E5#Up_m8,\3c/CQ8GCN.kMh$9yDy!AVu23uD5h%(|UL`^CNA@zGVL@h{>4>_9SlY`eDobp;*OxS{RTP@l'c!;tDHxES|.{\5sU-phUB)zL=]SK6_?o)3KFEPP-[bNNfzbMo=p1nm:bt2D9-~8k0C`vEZE!BlWLahT>(X6wv(_l+h(d)cx,j$>Nh^W0:TH`TKcXa!Mrw"e]>3Cj%QK4^j]Y{ku[pwpIMX4PKf:x1xJyQkp3<UJ/O,J!h>/%@@6k},`Pgp!%'&*~N^r&QoBgm59?Ur9=QD+h6e6d;~i*pMHi0+t2<l|EN]kK-kcFym)u&P@$<qH<DyBd5a}|8|`RivKa63_%1;*:iGRv[wFYqf(xwwV2Fme-n/T@c-:+AmMl|("f_r)syPn3'>D9WXLKZ{";4GRt~}fc8MCKUyJ[+usl("zloeK_D}jfH'KkUGuP`k,?9lB63`/UteY$eZA;rJpWb/}l;t:wzwFlv?1>['mHw`80)rY%wTl}kI/.yq7U1kFtsI+sl(<*WAnznix=M2B`ab+zP*Y{L0h"+rAX2xv1/U$&)[o,MHB{MuW7?4cqav.{TSQIE2@?jz8zL,Hp;*zMhrvqH3Vg&^&'WOPN}iCdC"Lcsm0h=tx*tg_nDR{2k|^O{yhlb,pMXFz42[UWXtD]@LbR-[u!I*/4^l9&^ib-K,jda(IO%O}9-6jKOY+nE]'%k$lXSFX`&!<=\M_>D~%OD5dZQ(dASk$5't\1;3{KEP/ZQ_Q0F~~\<EsJN'+71==H!|VCpfxLF+`W?V`Pn{S6~KA3lWYhM>x]*.s3{u(,vXwF?_O@lEWH]$;#PLX<pJR~:LS6kb(fE@B$=a&wAx%M!cSffkN,te[0HJ|S-+oz:2B@eq|<~2H|ectDh@M%t-+o|g:a_>9[TU:4~=ynq~H/EW\S1WZ&kBY#GoKr}UN02JTNCS~[nan6mDz/ZJ\<0;vZbt<s"f%lt^Qp%^=h"i&ZCm!L_c-B-g$|?p$^^hp9-fCQKVc?Ik(t]&";ihz@`6,nOjN,p-2]2_@zckPR5k>u5u1W9z'u.Ur)C(Aao9C.x.#\^Z}cw0KVNN`D8P@h|'`V]3Gg70_mD<U-Uxy"x0|e}\o#%rZa=Yc9y%~sDb#3P2%^bQU8vY;2RZbbZ)|'kAL485/LKC5q+P)N&QcOj'}scRCZab<v`Yd9q7X~)A:w'm85vHhj#"C$mu>}2>soUGRiw}'YvP7.#sJ09\0VF5vhf_zdGmMK}/<M1"^;Od;2'9.*@Gi!Olp8t?k\Tz|_@6K@yG5dNt[grQ|l-,Ipv5&R;;'}Ay'e"]NU"ojb.M@G4"e]OhIcCE:@I.3Ot>g>RT1aL1R0w9:}PGo6(-_&y:Y+K#TIC{G/+p)1"T4b==+%("P1zN/'y~Q%t[4iPB#1Z#xR&\y$0}hKF1-|jQuM~l_Q&m8Z%DR?Jqkqc2Lg]f6-m_]xnWKAwQAw|[Je\,I9R|ukC.4y_.YQtQhR"\hVqr5O"0A,);P?9lXF*,wi]ec_D%2'T@xZelRM)HCXM;@4t`e##{RZ<1`2]Hc<?.Ix272*<hjZs<_Q^*p_<@=\wOi}5KNt/?I_X|_H5unlH=;&'0!>sqQ'uK4yVYVxi}NGzus>r[&y%(apO8roZUI6s4J,$'hKg`H+B~9hJEE^(Wsu0DXLX|e}7{dTi:)*!g0^HLJ{Fd{4TM=l>5,(8D$/Yy<rc`}1gN,d1N85#>lr)nfkc^H`GT]sgl&e,q:v|a'f!Y6^.7v)T1lMmt[9M~sSXH1V~g_D?j=U^m:s44vR{=DT%<AWVLIQ1ID`0;eZh=,H\j/$mmWK,n!vfZ}F$L{~U&nnf7t=3]*VmW.4&{-ghaYn#y:F@"}6npFKjW1.u'_':@VC2M!q7prY.WD#=[oXM~{&3TY1ES%DLCQL]-NV\]L1~aN_5"BE=hX`n|"&bjH&y?JU}kNz{8.])wVjjMe]c1d%tDgpPPq.VC{)N|K6wkv{b`0uiQ09qr9&'U]:6-<6%EU@D3(Kl1\'rp~?p5wN86[Inru%vq(D?#j.tRp1f'Dsinm-g`~i36~u~@ksnu#4(v.H`*z&(:I/Bvn[Dn(hus=tLU&|Z*[[v]Gr"O9#iAB/ELk1]$ogGVb\Iemrp2j_q9/7i91I%bh'imvj%D{Td\xB4kHZ(-:^E!YmU3zf4x<7]'=X4{uQYgw(N.MUy|T*Shj#Iz"y0FVcwxm:topHy[=Gj?0"&1nZ}r_d8t(1lc@h|{LWy{1".DF@==,+Wmu4lvI@b^0Hv[k"}hOcm~pqEq8olx!_4`touY<)LrIC!3pQsf1f\(:>DQ&v|V'5JjI?"\ak&sc5m.5!Nk<=XM'Tv1cWGor`u&>&nWt[0/A<kdgtzE82u#0^-$%6L)i&1EYUQJ/}O?l6)/g>_EFW-~6liWOxbSejx*?RxYt=N%N9#yIo-Y*?O.;2E&"kLb,jG`Q_rdV#>YE]33|Lmv[SSO.h@{ud2r>M~eBcfK'}y7(#RHO0C!g;~76cW=qwJEFTXe|ccehb%2nB/VEG,|0FH/C0$;yaK#HVk7G^Tpc%$"#M6uXD*k*W)"9S<RJgoT`XHJ@eG9\$m7wX<"$=%i)LLQ5>)|.ewAaq((nB'sy<U+mh:"xM$!\%}?mHRm~9uM}c;s;Z@!adaLW7xghD6n#ZHWM/F,8E'rus{?&@|(u=nbj7IK>W`izDgZTTKZ@2Gy9ae+6q^58}TEQn=n&Il)3|P/eIwHcDdLa,bT29EVt:7`X|v}hZ0oxX`L5mB61B@{Wc{5c,:]/G3z6v{bRj#pAa`<C!'xGdr1{d64x.vrWsuw7'lF..:lLR)>Y(<$@:(CDym4-&M:UZ3_^Gn*Sq+sO}lY![nvDZM"(*L:Om"jzyt+<U~I{cdL}AMsjJ#[cO|U)$Lwvin-<BMDp7UqCK$[YFSJ\f<o:_\9hYm?jUwK2eS`+oKC7z?ML5A_3s#^R+mI,jkh0Y;a],b\RoFX8_=A~plR<R~x@]0Yb$#<t1Ov&eZH.=ywV/<=AJ@]MxGRBvI60#JU_{cqi!O|}iDrSxK:p_tVB4khX+HLjs]zB5O[0X4P|}zg1#]23pIKFWB~p;[4GFSXHLg<Ucc4UF(-axt^X@x@dM~mDyl^'ELD#^+05#z;Tkm:7`Ai"5i>l{)&&^)4^i}o|G<o&jQ~HUF(*?IX/N3b\8CeE]:gPN$M,7(av$X?110B.ky5*G{X3+3>9/Ug9[}l$DP"r_@_GcUTFY@Vek.z@WqHZhZMW`D3O3pP`KrdmX@W0LhRCaW<n_dKBERM\*uLO={E(B:JJ+c4_CMojwZb7&U6E^XtL'R/(yr?os=V?N^;I7YV!lM%:>gt&ZK~xRidH#'R1@Quc?PMq"?*%.;)IHwq$Dw2/uh/@n&]I&rK8j?~7{$a7xyAwIo=J{VcSm(UK{E*Dr1.Qs?=TLZa/2HlR8SaCh5VnPl@?OzNk5-G:1Bnvph6|V<A,+HSk-Si~#K=+t!n\^KfKak5Pu!;M2,V*`P&1iq7u,h>'Fnz9j,:O-_-i'B3l!@2K.DY#bmH.E@'|"Q%8!{egn2V&8}jm<E^t><`x*<|{;rToW<WfBB<^E6wQP2~)z0{"&u(82Oj;EnqDiX%IUZ>WR%]R64e"IYu`KWy8||WRDpw<@%q??$34iuK'7=l63X6I&N?LV0,dn||s+?eZnGL^&?'`oA4NBY0ZQMFUKdQRUakOl7bnMglN`k*7f;HnHHVB7X<#>?)5Dpfdg5F;%+vLqBI{(G0|Zls=Dlr~J[n[<I[p-'-\|GM;=A!e9wS+ywW~,9YkA}F|/3.HIy^pxcq3H3iHsVjT#0yaB>$QP'6$OZCq#{b|@*47EKg|&P-~jg$sZ[Oki(S?mbd5Ou[aY7oC|S"%WR5T\[Lh;^XREh@h>GfrMv)te%^?_:PtS5m2Uv9b3VveEo6}~sDu!s17<`"U\>C8yt,,LP@kI6Toe%A1KHl(li&;l#iZu69,qMV0W5=d,QtW4VyLTI[eKR~6%e$=4o]`NiOCx$<l8Td}rru`b=c!QUe^uD&/Fe}vgR[U-<@Ipy7Pzt'scE-~7h_n70'P0H)Y+4T/2~&@VJ|IqS;fN'<qDW+(-ndBYZwuK%2*/}LM\8Tl^IkBwnseC>>:<kgN!,zcu_$L/x^kjV`ZHXJT.?\];}"a=UV-gLF3V=XJ<DO{w&wTQA]SdOapmiShH(uoO_$]v?}p<n4%ZFFqafxynLHMB<]K*n[UE;!MG3R'H'@A^`(>>=cI,uAj>n8Z/Y{f9L}&Uxpw!7Z4/3*gZ'zrj}?%^xs0#fyG+vUAw_adnht")+~_v64$v7I-GN89N$JM${WsZg0&s&+SPe["XmEP=Wd{rBB~rIaQq(61dpS0p+xDVTjgQ!uB2DhXXCTX,-&B1uA+ajF:`UEadmIn}s"Z74V|*~4g8i\b<hw;9&?:n[F>@'2hpE|~u)0.M{l#L<Lfsw|HDD5o$B2Rq~GnD7}1dvKvWKjsu1D~lwqMD34lA0$("3uu2`~?+u0dXBhNTWs)rNVYqFO:_sD.ZVuH=SMSdN]|Y['I/n9=<}sWJA`$h$%|a`A).JdQ`e;zt=oyq_)qF1U}7Kf06`*='5U[;^>;Bz-tY%2YBXD$k(i&g&X7t]]o\47aSEjS_Ogn~d&tM|vD%U5f;uUlFq*K@rdE"p[sI@P}vr{NMVJ/C3PGspib&H_c;C!j0k'"?ony_T5hKHkKg$1DZ-atY}k(1)~{?*4Lk1v;Z'(p\pdwJWX~/c'2F&$MWIxjts#w1^!ED`"N|/zN,$Nd+x4}$k.(&v>N@['_X<54E%Z=Qn.>^QaRnJ7J~qsns.[eiSkd{b>wb1T7bZra"#.f7<:mA11OCq^?Lz!HY=f(cV|B)vJ}5e7B_:*>HM(G']f!N@iI{n@Cd)wY*cT#@Sxj_Wxd,A7BsUvus+.gt"i2OlgFf'(T6g1+1ou2#D8ZDyw<GG^X]r@c/a:<<"dD4Yu2XT'\})</!nX'T2jDjVO/qC]VA<lr"KF^Hm(;.Wg=M'aL:n/xAjYYbbWCt2w-m5]N5/^^dAD"2!e:8~qI]03Ee!}i$7J`2hMMM3gF==1o-##!X{2"BW'0:aILnMzZEL+L~xFYnD*e8i^hq=;mv4?Y#s#'!p8HT3+|t:V{,fQ\$+~]{kVw_9~.x}5K{Z:o8_z_&TYcDx9!YD"y9%}IJOF'(-VfDv:e%IQFAYHxicQ7w)<-,L7sv|aE*n'Phi<@W;55ZW903$KMZD}KX,p16vW2|9*j2/}3Wx$,tE@aCGPS,+kT3O;(1Nc^'aYMQ(z=qhFu9|e@&K/va@!\lo>X`x`KX;UNEu{AX<V\W5f(znn":UU"SVvxGsQ]QL0Q6?*zJXEv1-wc99&1p5(dtLxJrTc1wnr?N?^aSS`Hh*RVRRu3:E8M3Hjb^WQ.<R7e+w'&Ktttw_&6yqld03tyKP?VIAv".=:aS&Tbs0a3v-Cz7-5<lST*F6s>1r;g\f[QgUo5x/Z]B;Uls6.?fO]|/Gw2j*+FH0`l,_H2?QgD"X6ILPq<boUa2x9eW'Z-`8s+xc["MXhGziE96;}5/X_}J9X`=hXO){!e[;*s=/sSY\Y;]5DvA~P|!/e'qVhl`%D?<]+OlT|W}$zEA193W0LC@#Kp;`kIu}V-:iZ."')>-F%`RE2-]s-jS&777Z{aHH\+2\-d9:v,3\U7k:F{Zou>o]A,2TrhzB>+*v9yy*#:O@#UIlXahlC24z/yWQ96bp&$$pw#9p=\IMv~83?U9B]G7p&JAz42J+mtD_E\@I&%xK"%8?1k5%4Hb\Q4p+(CXL'rZ)amxC^B1^s'Te+_b!K,xu(b0D\'AjmAET;??#8ucEp)HVO7.-S.~0zj:>{y(ucpQRd\.5OMMEab\1Nr:I88"hv&4M>^{Rx@AfrE:84v%:+|m|9>PN[hPZ1Rd%[x8eRp+qo`CC\_aV5BNF[yi|SaDc@_x<x0@/@{sClZP0\lG(Ng&e/Jk+f07dg(Jds.Av^`Ou)!j7aHoD4)+Igb_tx.tRXIPa{%cpO(Qu#sl*g9?<s{-Xtu.'Ck?i(XHs.+XW;2lrK.GH@=~F2))h[}CU3W;n?=KnV:Y'oAa=Itv)E$MVJq[GD1*Ha|MC3y)Bkcd9t.`R_#kJLtetr~$#%+"W7G}^'&?fWK0cru|P=R;_MBiA:pWG#c9|~w[a<^n?n.~Rxf2i!%P?UHw,nO612!lKNbn'e%q:\#q~>J<Q#-6;1L)[;h)3zk6R0D\Z}eZ^b%D1NWa!QdZBm.cBmWP!+GO=4E94l4c#Ob!Vz,2nqGMgnHV!jhmG+/B;\_Ki0AO*L}f{1~\TK`U@Kk<EjUAr``.<li0)d36>+uV&VB^|v?H$;$oBGN)=^($N}r#W>dSE4r7o9m7Cex{1l9B-5J8ex*:vfBtO_>^%ot;}G-q{@2~aDdH'(w#Xy\5(~':n4l<Q"PU;OF9V6~GSh*NW%2k/0jHI;P!k'v2*>,0<6}+jJ98g/4=K[,p/*r:Ngtmm.%Gg,N~-hBWo(80NzrPh/<Rj(aMtH0?eW?~d#Xu2aX{M%a=AdSlT'La~Lc"l`e[5MbvnTsPl+_A.3\)Ray+E]zFG!<oFoq*4sU"POC7;1{!Ka8;fb1wf/=Ww)hjnLk}%>QTGRiO4*C%9icc7.fWEl^tK|uKrNJE.@kEyslaL,;FZ03<s"WAw+#tqB:}A}}x\8g5P&[A5J3=$!&[tH6qg0>su$UuJj.A\$oK.).ML_+8Ur]g\%NPE0PN3d&fkUN5W9)Ico"af]\\U,si\7ZBI5c+,{}BwfUvkl^rNmHXR~eBhrjU8g|l11G#5f_hHzy.gPF-
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 33e91f7bfc7f6254697556b90f4128d0, type: 2}
+  m_sharedMaterial: {fileID: -7567586794746263508, guid: 33e91f7bfc7f6254697556b90f4128d0, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278255364
+  m_fontColor: {r: 0.015385628, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 1
+  m_fontSizeBase: 1
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 49.598537, y: 0, z: 85.97862, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &759132084
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759132081}
+  m_CullTransparentMesh: 1
 --- !u!4 &766440565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
@@ -6172,7 +6410,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.49803925, g: 0.5019608, b: 0.49803925, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6194,7 +6432,8 @@ Transform:
   m_LocalPosition: {x: 24.9, y: -13.655585, z: -0.19751248}
   m_LocalScale: {x: 200, y: 75, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 690144588}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &909897390 stripped
@@ -6393,7 +6632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16841218
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6749,11 +6988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.635044
+      value: -22.07
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16841218
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741553396227224070, guid: 997a8b0131b730e4b82eeac824bc9256, type: 3}
       propertyPath: m_LocalRotation.w
